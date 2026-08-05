@@ -1,0 +1,82 @@
+"""AetherDEX GraphQL schema — entity & dependency graphs (Session 3)."""
+
+scalar DateTime
+
+input ScopeInput {
+  regionId: ID
+  countryId: ID
+  businessUnitId: ID
+  departmentId: ID
+}
+
+type Query {
+  application(id: ID!): Application
+  device(id: ID!): Device
+  employee(id: ID!): Employee
+  networkPath(id: ID!): NetworkPath
+  knowledgeNeighborhood(rootType: String!, rootId: ID!, depth: Int = 2): KnowledgeGraph
+}
+
+type Application {
+  id: ID!
+  name: String!
+  criticality: String
+  experienceScore: Float
+  dependencies(scope: ScopeInput): DependencyGraph
+}
+
+type Device {
+  id: ID!
+  hostnameAlias: String
+  osFamily: String
+  fleetContribution: Float
+  applications: [Application!]!
+}
+
+type Employee {
+  id: ID!
+  displayName: String @deprecated(reason: "Requires pii.employee_view; may be null")
+  dexScore: Float
+  devices: [Device!]!
+}
+
+type NetworkPath {
+  id: ID!
+  name: String!
+  qualityIndex: Float
+}
+
+type DependencyGraph {
+  nodes: [DependencyNode!]!
+  edges: [DependencyEdge!]!
+}
+
+type DependencyNode {
+  id: ID!
+  name: String!
+  kind: String!
+  health: Float
+}
+
+type DependencyEdge {
+  from: ID!
+  to: ID!
+  weight: Float
+}
+
+type KnowledgeGraph {
+  nodes: [KnowledgeNode!]!
+  edges: [KnowledgeEdge!]!
+}
+
+type KnowledgeNode {
+  id: ID!
+  label: String!
+  type: String!
+}
+
+type KnowledgeEdge {
+  from: ID!
+  to: ID!
+  relType: String!
+}

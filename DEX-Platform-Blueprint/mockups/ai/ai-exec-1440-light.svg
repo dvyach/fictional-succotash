@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<rect width="1440" height="900" fill="#F5F7FA"/>
+<text x="24" y="28" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">AI Hub  /  Executive Insights</text>
+<text x="24" y="56" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">Executive AI Insights</text>
+<rect x="24.0" y="72" width="337.5" height="88" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="36.0" y="94" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Brief Ready</text>
+<text x="36.0" y="124" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">Yes</text>
+<text x="36.0" y="146" fill="#0F9F6E" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Weekly</text>
+<rect x="375.5" y="72" width="337.5" height="88" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="387.5" y="94" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Top Risks</text>
+<text x="387.5" y="124" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">3</text>
+<text x="387.5" y="146" fill="#D97706" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">board</text>
+<rect x="727.0" y="72" width="337.5" height="88" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="739.0" y="94" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Wins</text>
+<text x="739.0" y="124" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">4</text>
+<text x="739.0" y="146" fill="#0F9F6E" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">lift proven</text>
+<rect x="1078.5" y="72" width="337.5" height="88" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="1090.5" y="94" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Confidence</text>
+<text x="1090.5" y="124" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">High</text>
+<text x="1090.5" y="146" fill="#3B82F6" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">pack</text>
+<rect x="24" y="174" width="807.3599999999999" height="708" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="40" y="200" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14" font-weight="600">Board Narrative</text>
+<text x="40" y="232" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">DEX 78.4 ▲1.2 · coverage 92%</text>
+<text x="40" y="264" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Primary risk: CRM client experience</text>
+<text x="40" y="296" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Investment: IdP HA paying +1.4 pts</text>
+<text x="40" y="328" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Recommend: CRM rollback + VPN scale</text>
+<rect x="845.3599999999999" y="174" width="570.6400000000001" height="708" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<rect x="845.3599999999999" y="174" width="4" height="708" fill="#7C5CFC"/>
+<text x="861.3599999999999" y="200" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14" font-weight="600">Share</text>
+<text x="861.3599999999999" y="232" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Export PDF exec pack</text>
+<text x="861.3599999999999" y="268" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Pin to Avery home</text>
+</svg>

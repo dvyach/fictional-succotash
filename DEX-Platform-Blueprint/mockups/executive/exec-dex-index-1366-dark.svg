@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1366" height="900" viewBox="0 0 1366 900">
+<rect width="1366" height="900" fill="#0B1220"/>
+<rect width="1366" height="900" fill="#0B1220"/>
+<rect x="0" y="0" width="248" height="900" fill="#0E1626" stroke="#243148" stroke-width="1"/>
+<circle cx="36" cy="28" r="12" fill="#3B82F6"/>
+<path d="M30 28 L36 22 L42 28 L36 34 Z" fill="white" opacity="0.9"/>
+<text x="56" y="33" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="16" font-weight="600">AetherDEX</text>
+<text x="24" y="64" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11" font-weight="500" letter-spacing="0.04em">OVERVIEW</text>
+<text x="28" y="86" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="400">Home</text>
+<text x="24" y="130" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11" font-weight="500" letter-spacing="0.04em">EXECUTIVE</text>
+<rect x="12" y="136" width="224" height="32" rx="8" fill="#142A4A"/>
+<rect x="12" y="142" width="3" height="20" rx="1.5" fill="#3B82F6"/>
+<text x="28" y="152" fill="#3B82F6" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="600">DEX Index</text>
+<text x="28" y="188" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="400">Risk &amp; Investment</text>
+<text x="24" y="232" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11" font-weight="500" letter-spacing="0.04em">EXPERIENCE</text>
+<text x="28" y="254" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="400">Overview</text>
+<text x="28" y="290" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="400">Journeys</text>
+<text x="28" y="326" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="400">Sentiment</text>
+<text x="24" y="370" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11" font-weight="500" letter-spacing="0.04em">ENDPOINTS</text>
+<text x="28" y="392" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="400">Fleet Health</text>
+<text x="28" y="428" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="400">Stability</text>
+<text x="28" y="464" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="400">Lifecycle</text>
+<text x="24" y="508" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11" font-weight="500" letter-spacing="0.04em">APPLICATIONS</text>
+<text x="28" y="530" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="400">Portfolio</text>
+<rect x="248" y="0" width="1118" height="56" fill="#0E1626" stroke="#243148" stroke-width="1"/>
+<rect x="272" y="12" width="280" height="32" rx="8" fill="#162033" stroke="#243148"/>
+<text x="288" y="33" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13">Search people, devices, apps…</text>
+<rect x="568" y="12" width="160" height="32" rx="8" fill="#162033" stroke="#243148"/>
+<text x="584" y="33" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Enterprise ▾</text>
+<rect x="740" y="12" width="120" height="32" rx="8" fill="#162033" stroke="#243148"/>
+<text x="756" y="33" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Last 7 days ▾</text>
+<rect x="872" y="12" width="100" height="32" rx="8" fill="#142A4A" stroke="#3B82F6"/>
+<text x="888" y="33" fill="#3B82F6" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="500">vs WoW</text>
+<circle cx="1246" cy="28" r="14" fill="#1E1838" stroke="#A78BFA"/>
+<text x="1240" y="32" fill="#A78BFA" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11" font-weight="600">AI</text>
+<circle cx="1286" cy="28" r="14" fill="#162033" stroke="#243148"/>
+<text x="1280" y="32" fill="#F59E0B" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10" font-weight="700">3</text>
+<circle cx="1326" cy="28" r="14" fill="#3B82F6"/>
+<text x="1319" y="32" fill="white" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11" font-weight="600">AC</text>
+<text x="272" y="84" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Executive  /  DEX Index</text>
+<text x="272" y="116" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="24" font-weight="600">Digital Experience Index</text>
+<rect x="272.0" y="140" width="255.5" height="108" rx="10" fill="#121A2B" stroke="#243148" stroke-width="1"/>
+<text x="292.0" y="168" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="500">Digital Experience Index</text>
+<text x="292.0" y="204" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="28" font-weight="600">78.4</text>
+<text x="292.0" y="228" fill="#10B981" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="500">▲ 1.2 vs prior week</text>
+<polyline points="427.5,208.0 442.5,204.0 457.5,206.0 472.5,200.0 487.5,202.0 502.5,196.0 517.5,198.0" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+<rect x="543.5" y="140" width="255.5" height="108" rx="10" fill="#121A2B" stroke="#243148" stroke-width="1"/>
+<text x="563.5" y="168" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="500">Employees Impacted</text>
+<text x="563.5" y="204" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="28" font-weight="600">4,286</text>
+<text x="563.5" y="228" fill="#10B981" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="500">▼ 312 vs prior week</text>
+<polyline points="699.0,198.0 714.0,200.0 729.0,196.0 744.0,202.0 759.0,199.0 774.0,204.0 789.0,206.0" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+<rect x="815.0" y="140" width="255.5" height="108" rx="10" fill="#121A2B" stroke="#243148" stroke-width="1"/>
+<text x="835.0" y="168" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="500">Experience Risk Index</text>
+<text x="835.0" y="204" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="28" font-weight="600">34</text>
+<text x="835.0" y="228" fill="#60A5FA" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="500">▼ 3 risk points</text>
+<polyline points="970.5,206.0 985.5,203.0 1000.5,204.0 1015.5,200.0 1030.5,198.0 1045.5,196.0 1060.5,194.0" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+<rect x="1086.5" y="140" width="255.5" height="108" rx="10" fill="#121A2B" stroke="#243148" stroke-width="1"/>
+<text x="1106.5" y="168" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="500">Telemetry Coverage</text>
+<text x="1106.5" y="204" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="28" font-weight="600">92.1%</text>
+<text x="1106.5" y="228" fill="#10B981" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="500">▲ 0.4 pts</text>
+<polyline points="1242.0,196.0 1257.0,198.0 1272.0,197.0 1287.0,199.0 1302.0,198.0 1317.0,200.0 1332.0,199.0" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+<rect x="272" y="264" width="620.5999999999999" height="280" rx="10" fill="#121A2B" stroke="#243148" stroke-width="1"/>
+<text x="292" y="292" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="15" font-weight="600">DEX Trend · 30 days</text>
+<text x="292" y="312" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Employee-weighted mean · Daily rollup · Threshold bands</text>
+<rect x="312" y="334" width="540.5999999999999" height="25.5" fill="#10B981" opacity="0.08"/>
+<rect x="312" y="359.5" width="540.5999999999999" height="42.5" fill="#60A5FA" opacity="0.06"/>
+<rect x="312" y="402.0" width="540.5999999999999" height="42.5" fill="#F59E0B" opacity="0.06"/>
+<line x1="312" y1="334.0" x2="852.5999999999999" y2="334.0" stroke="#1E2A40" stroke-width="1"/>
+<line x1="312" y1="376.5" x2="852.5999999999999" y2="376.5" stroke="#1E2A40" stroke-width="1"/>
+<line x1="312" y1="419.0" x2="852.5999999999999" y2="419.0" stroke="#1E2A40" stroke-width="1"/>
+<line x1="312" y1="461.5" x2="852.5999999999999" y2="461.5" stroke="#1E2A40" stroke-width="1"/>
+<line x1="312" y1="504.0" x2="852.5999999999999" y2="504.0" stroke="#1E2A40" stroke-width="1"/>
+<path d="M 0.0,76.5 L 54.1,71.4 L 108.1,81.6 L 162.2,68.0 L 216.2,64.6 L 270.3,59.5 L 324.4,68.0 L 378.4,54.4 L 432.5,51.0 L 486.5,47.6 L 540.6,44.2 L 540.5999999999999,170 L 0,170 Z" transform="translate(312,334)" fill="#3B82F6" opacity="0.15"/>
+<path d="M 0.0,76.5 L 54.1,71.4 L 108.1,81.6 L 162.2,68.0 L 216.2,64.6 L 270.3,59.5 L 324.4,68.0 L 378.4,54.4 L 432.5,51.0 L 486.5,47.6 L 540.6,44.2" transform="translate(312,334)" fill="none" stroke="#3B82F6" stroke-width="2.5"/>
+<text x="304" y="338.0" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10" text-anchor="end">90</text>
+<text x="304" y="380.5" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10" text-anchor="end">80</text>
+<text x="304" y="423.0" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10" text-anchor="end">70</text>
+<text x="304" y="465.5" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10" text-anchor="end">60</text>
+<text x="304" y="508.0" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10" text-anchor="end">50</text>
+<text x="312" y="522" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10">Jun 30</text>
+<text x="852.5999999999999" y="522" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10" text-anchor="end">Jul 30</text>
+<rect x="908.5999999999999" y="264" width="433.4000000000001" height="280" rx="10" fill="#121A2B" stroke="#243148" stroke-width="1"/>
+<text x="928.5999999999999" y="292" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="15" font-weight="600">Experience Drivers</text>
+<text x="928.5999999999999" y="312" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Contribution to DEX · Click to cross-filter</text>
+<text x="928.5999999999999" y="334" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13">Endpoint</text>
+<text x="1322.0" y="334" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="600" text-anchor="end">76.2</text>
+<rect x="928.5999999999999" y="342" width="393.4000000000001" height="8" rx="4" fill="#162033"/>
+<rect x="928.5999999999999" y="342" width="299.77080000000007" height="8" rx="4" fill="#3B82F6"/>
+<text x="928.5999999999999" y="366" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10">Weight 30%</text>
+<text x="928.5999999999999" y="384" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13">Application</text>
+<text x="1322.0" y="384" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="600" text-anchor="end">74.8</text>
+<rect x="928.5999999999999" y="392" width="393.4000000000001" height="8" rx="4" fill="#162033"/>
+<rect x="928.5999999999999" y="392" width="294.26320000000004" height="8" rx="4" fill="#14B8A6"/>
+<text x="928.5999999999999" y="416" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10">Weight 30%</text>
+<text x="928.5999999999999" y="434" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13">Network / Collab</text>
+<text x="1322.0" y="434" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="600" text-anchor="end">81.5</text>
+<rect x="928.5999999999999" y="442" width="393.4000000000001" height="8" rx="4" fill="#162033"/>
+<rect x="928.5999999999999" y="442" width="320.62100000000004" height="8" rx="4" fill="#A78BFA"/>
+<text x="928.5999999999999" y="466" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10">Weight 20%</text>
+<text x="928.5999999999999" y="484" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13">Sentiment</text>
+<text x="1322.0" y="484" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="600" text-anchor="end">79.1</text>
+<rect x="928.5999999999999" y="492" width="393.4000000000001" height="8" rx="4" fill="#162033"/>
+<rect x="928.5999999999999" y="492" width="311.17940000000004" height="8" rx="4" fill="#FB923C"/>
+<text x="928.5999999999999" y="516" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10">Weight 20%</text>
+<rect x="272" y="560" width="385.2" height="316" rx="10" fill="#121A2B" stroke="#243148" stroke-width="1"/>
+<text x="292" y="588" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="15" font-weight="600">Regional Experience</text>
+<rect x="292.0" y="608" width="107.06666666666666" height="56" rx="8" fill="#10B981" opacity="0.18" stroke="#10B981" stroke-width="1"/>
+<text x="304.0" y="632" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">AMER</text>
+<text x="304.0" y="650" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="16" font-weight="600">81.2</text>
+<rect x="407.06666666666666" y="608" width="107.06666666666666" height="56" rx="8" fill="#60A5FA" opacity="0.18" stroke="#60A5FA" stroke-width="1"/>
+<text x="419.06666666666666" y="632" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">EMEA</text>
+<text x="419.06666666666666" y="650" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="16" font-weight="600">76.8</text>
+<rect x="522.1333333333333" y="608" width="107.06666666666666" height="56" rx="8" fill="#60A5FA" opacity="0.18" stroke="#60A5FA" stroke-width="1"/>
+<text x="534.1333333333333" y="632" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">APAC</text>
+<text x="534.1333333333333" y="650" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="16" font-weight="600">72.4</text>
+<rect x="292.0" y="672" width="107.06666666666666" height="56" rx="8" fill="#F59E0B" opacity="0.18" stroke="#F59E0B" stroke-width="1"/>
+<text x="304.0" y="696" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">LATAM</text>
+<text x="304.0" y="714" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="16" font-weight="600">68.1</text>
+<rect x="407.06666666666666" y="672" width="107.06666666666666" height="56" rx="8" fill="#10B981" opacity="0.18" stroke="#10B981" stroke-width="1"/>
+<text x="419.06666666666666" y="696" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">ANZ</text>
+<text x="419.06666666666666" y="714" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="16" font-weight="600">84.0</text>
+<rect x="522.1333333333333" y="672" width="107.06666666666666" height="56" rx="8" fill="#60A5FA" opacity="0.18" stroke="#60A5FA" stroke-width="1"/>
+<text x="534.1333333333333" y="696" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">INDIA</text>
+<text x="534.1333333333333" y="714" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="16" font-weight="600">70.5</text>
+<rect x="673.2" y="560" width="342.40000000000003" height="316" rx="10" fill="#121A2B" stroke="#243148" stroke-width="1"/>
+<text x="693.2" y="588" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="15" font-weight="600">Business Unit Leaderboard</text>
+<text x="693.2" y="612" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10">BUSINESS UNIT</text>
+<text x="925.6000000000001" y="612" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10">DEX</text>
+<text x="995.6000000000001" y="612" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10" text-anchor="end">Δ</text>
+<rect x="685.2" y="614" width="318.40000000000003" height="28" rx="4" fill="#162033" opacity="0.5"/>
+<text x="693.2" y="628" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Engineering</text>
+<text x="925.6000000000001" y="628" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">82.6</text>
+<text x="995.6000000000001" y="628" fill="#10B981" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" text-anchor="end">+0.8</text>
+<text x="693.2" y="656" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Sales</text>
+<text x="925.6000000000001" y="656" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">79.1</text>
+<text x="995.6000000000001" y="656" fill="#10B981" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" text-anchor="end">+1.4</text>
+<rect x="685.2" y="670" width="318.40000000000003" height="28" rx="4" fill="#162033" opacity="0.5"/>
+<text x="693.2" y="684" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Finance</text>
+<text x="925.6000000000001" y="684" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">77.3</text>
+<text x="995.6000000000001" y="684" fill="#EF4444" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" text-anchor="end">-0.3</text>
+<text x="693.2" y="712" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Customer Success</text>
+<text x="925.6000000000001" y="712" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">75.8</text>
+<text x="995.6000000000001" y="712" fill="#10B981" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" text-anchor="end">+0.5</text>
+<rect x="685.2" y="726" width="318.40000000000003" height="28" rx="4" fill="#162033" opacity="0.5"/>
+<text x="693.2" y="740" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Operations</text>
+<text x="925.6000000000001" y="740" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">71.2</text>
+<text x="995.6000000000001" y="740" fill="#EF4444" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" text-anchor="end">-1.1</text>
+<text x="693.2" y="768" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Marketing</text>
+<text x="925.6000000000001" y="768" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">74.0</text>
+<text x="995.6000000000001" y="768" fill="#10B981" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" text-anchor="end">+0.2</text>
+<rect x="1031.6000000000001" y="560" width="310.3999999999999" height="316" rx="10" fill="#121A2B" stroke="#243148" stroke-width="1"/>
+<rect x="1031.6000000000001" y="560" width="4" height="316" rx="2" fill="#A78BFA"/>
+<text x="1051.6000000000001" y="588" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="15" font-weight="600">AI Executive Insights</text>
+<rect x="1047.6000000000001" y="608" width="278.3999999999999" height="88" rx="10" fill="#1E1838" stroke="#A78BFA" stroke-opacity="0.35"/>
+<text x="1059.6000000000001" y="630" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="600">APAC login latency elevated</text>
+<rect x="1059.6000000000001" y="640" width="52" height="18" rx="9" fill="#A78BFA" opacity="0.2"/>
+<text x="1067.6000000000001" y="653" fill="#A78BFA" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10" font-weight="600">92%</text>
+<text x="1121.6000000000001" y="653" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10">Impact 1,140 emp</text>
+<text x="1059.6000000000001" y="676" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Endpoint login P90 +38% in APAC after IdP region failover.</text>
+<text x="1059.6000000000001" y="690" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11"></text>
+<rect x="1047.6000000000001" y="708" width="278.3999999999999" height="88" rx="10" fill="#1E1838" stroke="#A78BFA" stroke-opacity="0.35"/>
+<text x="1059.6000000000001" y="730" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="600">Collab quality recovering</text>
+<rect x="1059.6000000000001" y="740" width="52" height="18" rx="9" fill="#A78BFA" opacity="0.2"/>
+<text x="1067.6000000000001" y="753" fill="#A78BFA" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10" font-weight="600">88%</text>
+<text x="1121.6000000000001" y="753" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10">Impact EMEA</text>
+<text x="1059.6000000000001" y="776" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">A/V quality index +4.2 pts after WAN path change.</text>
+<text x="1059.6000000000001" y="790" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11"></text>
+</svg>

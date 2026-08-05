@@ -1,0 +1,12 @@
+%% AI pipeline
+flowchart TB
+  GD[Gold Facts] --> FS[Feature Store]
+  KG[Knowledge Graph] --> RAG[Retrievers]
+  FS --> MODELS[RCA / Corr / Pred / Rec / Twin]
+  RAG --> COP[Copilot LLM]
+  MODELS --> INS[Insight Store]
+  INS --> EV[Evidence Packs]
+  COP --> EV
+  EV --> UI[AI Hub / Cases / Ops]
+  UI -->|feedback| TRAIN[Feedback Loop]
+  TRAIN --> MODELS

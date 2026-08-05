@@ -1,0 +1,22 @@
+%% Deployment topology
+flowchart TB
+  subgraph Edge
+    CDN[CDN Static]
+    WAF[WAF / Gateway]
+  end
+  subgraph App_K8s[Kubernetes App Cluster]
+    BFF[gateway-bff]
+    SVC[Domain Services]
+  end
+  subgraph Data
+    KAFKA[Kafka]
+    REDIS[Redis]
+    SEARCH[OpenSearch]
+    LH[Lakehouse]
+  end
+  Users --> CDN
+  Users --> WAF --> BFF --> SVC
+  SVC --> KAFKA
+  SVC --> REDIS
+  SVC --> SEARCH
+  SVC --> LH

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AetherDEX</title>
+  <style>
+    :root, [data-theme="dark"] {
+      --adx-bg-canvas: #0B1220;
+      --adx-bg-surface: #121A2B;
+      --adx-bg-subtle: #162033;
+      --adx-bg-sidebar: #0E1626;
+      --adx-bg-header: #0E1626;
+      --adx-border: #243148;
+      --adx-border-strong: #334560;
+      --adx-text: #E8EEF7;
+      --adx-text-2: #A8B8CC;
+      --adx-text-3: #7E92AB;
+      --adx-brand: #3B82F6;
+      --adx-brand-subtle: #142A4A;
+      --adx-ai: #A78BFA;
+      --adx-ai-bg: #1E1838;
+      --adx-fair: #F59E0B;
+      --adx-excellent: #10B981;
+      --adx-input: #162033;
+      --adx-shadow: 0 8px 24px rgba(0,0,0,0.45);
+    }
+    [data-theme="light"] {
+      --adx-bg-canvas: #F5F7FA;
+      --adx-bg-surface: #FFFFFF;
+      --adx-bg-subtle: #EEF2F7;
+      --adx-bg-sidebar: #FFFFFF;
+      --adx-bg-header: #FFFFFF;
+      --adx-border: #D8E0EA;
+      --adx-border-strong: #C5D0DE;
+      --adx-text: #0F1B2D;
+      --adx-text-2: #4A5D73;
+      --adx-text-3: #6B7F96;
+      --adx-brand: #1B6EF3;
+      --adx-brand-subtle: #E8F1FE;
+      --adx-ai: #7C5CFC;
+      --adx-ai-bg: #F0ECFF;
+      --adx-fair: #D97706;
+      --adx-excellent: #0F9F6E;
+      --adx-input: #FFFFFF;
+      --adx-shadow: 0 4px 12px rgba(15,27,45,0.08);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+      background: var(--adx-bg-canvas);
+      color: var(--adx-text);
+      display: grid;
+      grid-template-columns: 248px 1fr;
+      grid-template-rows: 56px 1fr;
+      overflow: hidden;
+    }
+
+    /* —— Header —— */
+    .adx-header {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 16px 0 20px;
+      background: var(--adx-bg-header);
+      border-bottom: 1px solid var(--adx-border);
+      z-index: 20;
+    }
+    .adx-brand {
+      display: flex; align-items: center; gap: 10px;
+      width: 220px; flex-shrink: 0; text-decoration: none; color: inherit;
+    }
+    .adx-mark {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--adx-brand); display: grid; place-items: center;
+      color: #fff; font-size: 12px; font-weight: 700;
+    }
+    .adx-brand strong { font-size: 16px; font-weight: 600; }
+
+    .adx-search {
+      display: flex; align-items: center; gap: 8px;
+      width: min(320px, 28vw); height: 32px; padding: 0 12px;
+      background: var(--adx-input); border: 1px solid var(--adx-border);
+      border-radius: 8px; color: var(--adx-text-3); font-size: 13px;
+    }
+    .adx-search kbd {
+      margin-left: auto; font-size: 10px; padding: 2px 5px;
+      border: 1px solid var(--adx-border); border-radius: 4px; color: var(--adx-text-3);
+    }
+    .adx-chip {
+      height: 32px; padding: 0 12px; display: inline-flex; align-items: center;
+      background: var(--adx-input); border: 1px solid var(--adx-border);
+      border-radius: 8px; color: var(--adx-text-2); font-size: 12px; cursor: pointer;
+      font-family: inherit;
+    }
+    .adx-chip.active {
+      background: var(--adx-brand-subtle); border-color: var(--adx-brand); color: var(--adx-brand); font-weight: 500;
+    }
+    .adx-header-right { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+    .adx-icon-btn {
+      width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--adx-border);
+      background: var(--adx-bg-subtle); color: var(--adx-text-2); cursor: pointer;
+      display: grid; place-items: center; font-size: 11px; font-weight: 600; font-family: inherit;
+      position: relative;
+    }
+    .adx-icon-btn.ai { background: var(--adx-ai-bg); border-color: var(--adx-ai); color: var(--adx-ai); }
+    .adx-icon-btn .badge {
+      position: absolute; top: -4px; right: -4px;
+      min-width: 16px; height: 16px; padding: 0 4px; border-radius: 999px;
+      background: var(--adx-fair); color: #111; font-size: 9px; font-weight: 700;
+      display: grid; place-items: center;
+    }
+    .adx-avatar {
+      width: 28px; height: 28px; border-radius: 50%; background: var(--adx-brand);
+      color: #fff; display: grid; place-items: center; font-size: 11px; font-weight: 600;
+    }
+
+    /* —— Sidebar —— */
+    .adx-sidebar {
+      background: var(--adx-bg-sidebar);
+      border-right: 1px solid var(--adx-border);
+      overflow: auto;
+      padding: 16px 12px 24px;
+      display: flex; flex-direction: column; gap: 4px;
+    }
+    .nav-section { margin-top: 12px; }
+    .nav-section:first-child { margin-top: 0; }
+    .nav-section-label {
+      font-size: 11px; font-weight: 500; letter-spacing: 0.06em;
+      color: var(--adx-text-3); text-transform: uppercase;
+      padding: 0 12px 8px;
+    }
+    .nav-item {
+      display: flex; align-items: center; gap: 10px;
+      width: 100%; text-align: left; text-decoration: none;
+      padding: 8px 12px; margin: 0; border: 0; border-radius: 8px;
+      background: transparent; color: var(--adx-text-2);
+      font: inherit; font-size: 13px; cursor: pointer;
+      position: relative;
+    }
+    .nav-item:hover:not(:disabled):not(.soon) {
+      background: var(--adx-brand-subtle); color: var(--adx-text);
+    }
+    .nav-item.active {
+      background: var(--adx-brand-subtle); color: var(--adx-brand); font-weight: 600;
+    }
+    .nav-item.active::before {
+      content: ""; position: absolute; left: 0; top: 6px; bottom: 6px; width: 3px;
+      border-radius: 0 2px 2px 0; background: var(--adx-brand);
+    }
+    .nav-item.soon, .nav-item:disabled {
+      opacity: 0.55; cursor: not-allowed;
+    }
+    .nav-item .soon-badge {
+      margin-left: auto; font-size: 10px; font-weight: 600;
+      color: var(--adx-text-3); background: var(--adx-bg-subtle);
+      border: 1px solid var(--adx-border); border-radius: 999px; padding: 2px 7px;
+    }
+    .nav-icon { width: 16px; opacity: 0.85; flex-shrink: 0; }
+
+    /* —— Main / stage —— */
+    .adx-main {
+      display: flex; flex-direction: column; min-width: 0; min-height: 0;
+      background: var(--adx-bg-canvas);
+    }
+    .adx-toolbar {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+      padding: 8px 16px;
+      border-bottom: 1px solid var(--adx-border);
+      background: color-mix(in srgb, var(--adx-bg-surface) 88%, transparent);
+      backdrop-filter: blur(10px);
+    }
+    .adx-toolbar label {
+      font-size: 12px; color: var(--adx-text-3); display: inline-flex; align-items: center; gap: 6px;
+    }
+    .adx-toolbar select {
+      height: 28px; border-radius: 6px; border: 1px solid var(--adx-border);
+      background: var(--adx-input); color: var(--adx-text); font: inherit; font-size: 12px; padding: 0 8px;
+    }
+    .adx-route {
+      font-size: 12px; color: var(--adx-text-3); font-family: "IBM Plex Mono", ui-monospace, monospace;
+    }
+    .adx-toolbar .spacer { flex: 1; }
+
+    .adx-stage {
+      flex: 1; overflow: auto; padding: 0;
+      background: var(--adx-bg-canvas);
+    }
+    .adx-stage-inner {
+      min-height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .adx-canvas-frame {
+      width: 100%;
+      background: var(--adx-bg-canvas);
+    }
+    .adx-canvas-frame svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+    }
+
+    .adx-empty, .adx-home {
+      max-width: 960px; margin: 40px auto; padding: 0 24px;
+    }
+    .adx-home h1 { font-size: 24px; font-weight: 600; margin: 0 0 8px; }
+    .adx-home p { color: var(--adx-text-2); margin: 0 0 24px; font-size: 14px; line-height: 1.5; }
+    .home-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px;
+    }
+    .home-card {
+      text-align: left; padding: 16px; border-radius: 10px; cursor: pointer;
+      background: var(--adx-bg-surface); border: 1px solid var(--adx-border);
+      color: inherit; font: inherit; box-shadow: var(--adx-shadow);
+    }
+    .home-card:hover { border-color: var(--adx-brand); }
+    .home-card strong { display: block; font-size: 14px; margin-bottom: 4px; }
+    .home-card span { font-size: 12px; color: var(--adx-text-3); }
+
+    .adx-toast {
+      position: fixed; bottom: 20px; right: 20px; z-index: 50;
+      background: var(--adx-bg-surface); border: 1px solid var(--adx-border);
+      color: var(--adx-text-2); padding: 10px 14px; border-radius: 10px;
+      font-size: 13px; box-shadow: var(--adx-shadow); display: none;
+    }
+    .adx-toast.show { display: block; }
+
+    /* Keep full labeled IA visible in the blueprint viewer */
+  </style>
+</head>
+<body>
+  <header class="adx-header">
+    <a class="adx-brand" href="#/home" data-nav="home">
+      <div class="adx-mark">A</div>
+      <strong>AetherDEX</strong>
+    </a>
+    <div class="adx-search" title="Omnisearch (⌘K)">
+      <span>⌕</span>
+      <span>Search people, devices, apps…</span>
+      <kbd>⌘K</kbd>
+    </div>
+    <button class="adx-chip" type="button" id="scopeChip">Enterprise ▾</button>
+    <button class="adx-chip" type="button" id="timeChip">Last 7 days ▾</button>
+    <button class="adx-chip active" type="button" id="compareChip">vs WoW</button>
+    <div class="adx-header-right">
+      <button class="adx-icon-btn ai" type="button" id="aiBtn" title="Ask AI">AI</button>
+      <button class="adx-icon-btn" type="button" id="alertBtn" title="Alerts">
+        ⚑<span class="badge">3</span>
+      </button>
+      <button class="adx-icon-btn" type="button" id="themeBtn" title="Toggle theme">◐</button>
+      <div class="adx-avatar" title="Avery Chen">AC</div>
+    </div>
+  </header>
+
+  <aside class="adx-sidebar" id="sidebar" aria-label="Primary"></aside>
+
+  <main class="adx-main">
+    <div class="adx-toolbar">
+      <span class="adx-route" id="routeLabel">/app/home</span>
+      <div class="spacer"></div>
+      <label>Viewport
+        <select id="widthSelect">
+          <option value="1920">1920</option>
+          <option value="1440">1440</option>
+          <option value="1366">1366</option>
+        </select>
+      </label>
+      <label>Mockup theme
+        <select id="mockThemeSelect">
+          <option value="follow">Follow UI</option>
+          <option value="dark">Dark</option>
+          <option value="light">Light</option>
+        </select>
+      </label>
+      <button class="adx-chip" type="button" id="openRaw">Open SVG</button>
+    </div>
+    <div class="adx-stage" id="stage"></div>
+  </main>
+
+  <div class="adx-toast" id="toast"></div>
+
+  <script>
+    /** Session 1 SVGs include chrome; Session 2 mockups are content-only */
+    const CROP_S1 = { left: 248, top: 56 };
+    const HEIGHTS = { "1920": 1080, "1440": 900, "1366": 900 };
+
+    const NAV = [
+      {
+        section: "Stories",
+        items: [
+          { id: "home", label: "Home", route: "/app/home", icon: "⌂" },
+          { id: "story-pulse", label: "Pulse", route: "/app/stories/pulse",
+            mockup: { folder: "stories", prefix: "story-pulse", crop: false }, icon: "◉",
+            blurb: "What leadership should care about right now" },
+          { id: "story-experience", label: "Experience", route: "/app/stories/experience",
+            mockup: { folder: "stories", prefix: "story-experience", crop: false }, icon: "◎",
+            blurb: "Score → friction → sentiment → segments" },
+          { id: "story-reliability", label: "Reliability", route: "/app/stories/reliability",
+            mockup: { folder: "stories", prefix: "story-reliability", crop: false }, icon: "⛓",
+            blurb: "Device · app · infra as one causal chain" },
+          { id: "story-ops", label: "Operations", route: "/app/stories/operations",
+            mockup: { folder: "stories", prefix: "story-ops", crop: false }, icon: "🛡",
+            blurb: "Impact-first detect → resolve → automate" },
+          { id: "story-decide", label: "Decide", route: "/app/stories/decide",
+            mockup: { folder: "stories", prefix: "story-decide", crop: false }, icon: "▣",
+            blurb: "Cost, risk, sustainability, investment" },
+        ],
+      },
+      {
+        section: "Depth",
+        items: [
+          { id: "inv-home", label: "Investigate", route: "/app/investigate",
+            mockup: { folder: "investigations", prefix: "inv-home", crop: false }, icon: "🔍",
+            blurb: "Entity workbench & cases" },
+          { id: "inv-device", label: "Device view", route: "/app/investigate/device/DX-48291",
+            mockup: { folder: "investigations", prefix: "inv-device", crop: false }, icon: "💻" },
+          { id: "ai-copilot", label: "AI Copilot", route: "/app/ai/copilot",
+            mockup: { folder: "ai", prefix: "ai-copilot", crop: false }, icon: "✦" },
+        ],
+      },
+      {
+        section: "Library",
+        items: [
+          { id: "lib-exec-dex", label: "DEX Index (legacy)", route: "/app/library/executive/dex-index",
+            mockup: { folder: "executive", prefix: "exec-dex-index", crop: true }, icon: "◫" },
+          { id: "lib-exp", label: "Experience Overview", route: "/app/library/experience/overview",
+            mockup: { folder: "experience", prefix: "exp-overview", crop: true }, icon: "◫" },
+          { id: "lib-fleet", label: "Fleet Health", route: "/app/library/endpoints/fleet",
+            mockup: { folder: "endpoint", prefix: "end-fleet-health", crop: true }, icon: "◫" },
+          { id: "lib-apps", label: "App Portfolio", route: "/app/library/applications/portfolio",
+            mockup: { folder: "application", prefix: "app-portfolio", crop: true }, icon: "◫" },
+          { id: "lib-ops", label: "Ops Command", route: "/app/library/operations/command",
+            mockup: { folder: "operations", prefix: "ops-command", crop: false }, icon: "◫" },
+          { id: "lib-infra", label: "Network", route: "/app/library/infrastructure/network",
+            mockup: { folder: "infrastructure", prefix: "infra-network", crop: false }, icon: "◫" },
+          { id: "lib-ai", label: "AI Command", route: "/app/library/ai/command",
+            mockup: { folder: "ai", prefix: "ai-command", crop: false }, icon: "◫" },
+        ],
+      },
+    ];
+
+    const flatNav = NAV.flatMap(s => s.items);
+    const byId = Object.fromEntries(flatNav.map(i => [i.id, i]));
+
+    const state = {
+      routeId: "story-pulse",
+      width: localStorage.getItem("adx.width") || "1920",
+      mockTheme: localStorage.getItem("adx.mockTheme") || "follow",
+      uiTheme: localStorage.getItem("adx.uiTheme") || "dark",
+    };
+
+    const sidebar = document.getElementById("sidebar");
+    const stage = document.getElementById("stage");
+    const routeLabel = document.getElementById("routeLabel");
+    const widthSelect = document.getElementById("widthSelect");
+    const mockThemeSelect = document.getElementById("mockThemeSelect");
+    const toast = document.getElementById("toast");
+
+    widthSelect.value = state.width;
+    mockThemeSelect.value = state.mockTheme;
+    document.documentElement.setAttribute("data-theme", state.uiTheme);
+
+    function effectiveMockTheme() {
+      return state.mockTheme === "follow" ? state.uiTheme : state.mockTheme;
+    }
+
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add("show");
+      clearTimeout(showToast._t);
+      showToast._t = setTimeout(() => toast.classList.remove("show"), 2200);
+    }
+
+    function renderSidebar() {
+      sidebar.innerHTML = "";
+      for (const group of NAV) {
+        const wrap = document.createElement("div");
+        wrap.className = "nav-section";
+        wrap.innerHTML = `<div class="nav-section-label">${group.section}</div>`;
+        for (const item of group.items) {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "nav-item" + (item.id === state.routeId ? " active" : "") + (item.soon ? " soon" : "");
+          btn.disabled = !!item.soon;
+          btn.dataset.id = item.id;
+          btn.setAttribute("aria-label", item.soon ? `${item.label} (coming soon)` : item.label);
+          if (item.id === state.routeId) btn.setAttribute("aria-current", "page");
+          btn.innerHTML = `
+            <span class="nav-icon" aria-hidden="true">${item.icon || "•"}</span>
+            <span class="label">${item.label}</span>
+            ${item.soon ? `<span class="soon-badge">Soon · S${item.session}</span>` : ""}
+          `;
+          btn.addEventListener("click", () => {
+            if (item.soon) {
+              showToast(`${item.label} arrives in Session ${item.session}`);
+              return;
+            }
+            navigate(item.id);
+          });
+          wrap.appendChild(btn);
+        }
+        sidebar.appendChild(wrap);
+      }
+    }
+
+    function mockupPath(item) {
+      const theme = effectiveMockTheme();
+      const { folder, prefix, crop } = item.mockup;
+      let width = state.width;
+      // Session 2 assets ship 1920 + 1440 only
+      if (!crop && width === "1366") width = "1440";
+      return `mockups/${folder}/${prefix}-${width}-${theme}.svg`;
+    }
+
+    function renderHome() {
+      routeLabel.textContent = "/app/home";
+      const card = (i) => `
+        <button class="home-card" type="button" data-go="${i.id}">
+          <strong>${i.label}</strong>
+          <span>${i.blurb || i.route}</span>
+        </button>`;
+      const storyCards = flatNav.filter(i => i.id.startsWith("story-")).map(card).join("");
+      const otherCards = flatNav.filter(i => i.mockup && !i.id.startsWith("story-")).map(card).join("");
+      stage.innerHTML = `
+        <div class="adx-home">
+          <h1>AetherDEX — stories, not dashboard sprawl</h1>
+          <p>Primary surfaces tell a decision narrative (Pulse → Experience → Reliability → Operations → Decide). The 71-item catalog lives as chapters and Library lenses. Session 1–3 specs remain the KPI/widget authority.</p>
+          <div class="home-grid">${storyCards}</div>
+          <p style="margin:28px 0 12px;font-size:12px;color:var(--adx-text-3);text-transform:uppercase;letter-spacing:0.06em;">Depth &amp; library</p>
+          <div class="home-grid">${otherCards}</div>
+        </div>`;
+      stage.querySelectorAll("[data-go]").forEach(el => {
+        el.addEventListener("click", () => navigate(el.dataset.go));
+      });
+    }
+
+    function renderDashboard(item) {
+      routeLabel.textContent = item.route;
+      const crop = item.mockup.crop !== false;
+      let widthKey = state.width;
+      if (!crop && widthKey === "1366") widthKey = "1440";
+      const w = Number(widthKey);
+      const h = crop
+        ? (widthKey === "1366" ? 900 : 1080)
+        : (widthKey === "1440" ? 900 : 1080);
+      const path = mockupPath(item);
+      const left = crop ? CROP_S1.left : 0;
+      const top = crop ? CROP_S1.top : 0;
+      const viewW = w - left;
+      const viewH = h - top;
+      stage.innerHTML = `
+        <div class="adx-stage-inner">
+          <div class="adx-canvas-frame">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="${left} ${top} ${viewW} ${viewH}"
+              role="img"
+              aria-label="${item.label} dashboard"
+              preserveAspectRatio="xMinYMin meet"
+            >
+              <image href="${path}" width="${w}" height="${h}" />
+            </svg>
+          </div>
+        </div>`;
+      document.getElementById("openRaw").onclick = () => window.open(path, "_blank");
+    }
+
+    function render() {
+      renderSidebar();
+      const item = byId[state.routeId];
+      if (!item || item.id === "home") {
+        renderHome();
+        return;
+      }
+      if (item.soon) {
+        navigate("home");
+        return;
+      }
+      if (item.mockup) renderDashboard(item);
+    }
+
+    function navigate(id) {
+      if (!byId[id] || byId[id].soon) return;
+      state.routeId = id;
+      location.hash = `#/${id}`;
+      render();
+    }
+
+    function syncFromHash() {
+      const raw = (location.hash || "#/story-pulse").replace(/^#\/?/, "") || "story-pulse";
+      const id = raw.split("/")[0];
+      if (byId[id] && !byId[id].soon) state.routeId = id;
+      else state.routeId = "home";
+      render();
+    }
+
+    widthSelect.addEventListener("change", () => {
+      state.width = widthSelect.value;
+      localStorage.setItem("adx.width", state.width);
+      render();
+    });
+    mockThemeSelect.addEventListener("change", () => {
+      state.mockTheme = mockThemeSelect.value;
+      localStorage.setItem("adx.mockTheme", state.mockTheme);
+      render();
+    });
+    document.getElementById("themeBtn").addEventListener("click", () => {
+      state.uiTheme = state.uiTheme === "dark" ? "light" : "dark";
+      localStorage.setItem("adx.uiTheme", state.uiTheme);
+      document.documentElement.setAttribute("data-theme", state.uiTheme);
+      if (state.mockTheme === "follow") render();
+    });
+    document.getElementById("aiBtn").addEventListener("click", () => showToast("AI Assistant — Session 1 stub (⌘J)"));
+    document.getElementById("alertBtn").addEventListener("click", () => showToast("3 high-impact alerts"));
+    document.getElementById("scopeChip").addEventListener("click", () => showToast("Scope: Enterprise"));
+    document.getElementById("timeChip").addEventListener("click", () => showToast("Time: Last 7 days"));
+    document.getElementById("compareChip").addEventListener("click", (e) => {
+      e.currentTarget.classList.toggle("active");
+    });
+    document.getElementById("openRaw").addEventListener("click", () => {
+      const item = byId[state.routeId];
+      if (item?.mockup) window.open(mockupPath(item), "_blank");
+    });
+
+    window.addEventListener("hashchange", syncFromHash);
+    if (!location.hash) location.hash = "#/story-pulse";
+    else syncFromHash();
+  </script>
+</body>
+</html>
