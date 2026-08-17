@@ -4,6 +4,12 @@
 **ID format:** `m.{domain}.{snake_name}`  
 **Full KPI dictionary:** Session 3 Volume 3A (expands this seed set)
 
+**Document History**
+
+| Date | Change | Status |
+|------|--------|--------|
+| 2026-08-15 | Point DEX index at executable `scoring/nh_score_v1.json` | implemented |
+
 ---
 
 ## Conventions
@@ -28,6 +34,7 @@
 | Display name | Digital Experience Index (DEX) |
 | Description | Composite 0–100 score of employee digital experience across endpoint, application, network, and sentiment signals |
 | Calculation | Weighted blend: Endpoint 30% + Application 30% + Network/Collab 20% + Sentiment 20% (weights configurable by tenant; defaults above) |
+| Executable contract | [`../scoring/nh_score_v1.json`](../scoring/nh_score_v1.json) — `nh_dex_v1` + per-metric bands (`nh_metric_score_v1`). Drill categories map into these four pillars; do not use a separate technology/sentiment 70/30 formula. |
 | Aggregation | Employee-weighted mean at any org rollup |
 | Dimensions | region, country, bu, dept, location_type, device_os, persona_segment |
 | Refresh | 5 min rollup; 1 min for critical segments |

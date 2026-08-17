@@ -5,6 +5,12 @@
 **Count:** 474 KPIs  
 **Builds on:** Session 1–2 metric catalogs (compatible; do not fork names)
 
+**Document History**
+
+| Date | Change | Status |
+|------|--------|--------|
+| 2026-08-15 | DEX index points at executable `scoring/nh_score_v1.json` (4-pillar formula unchanged) | implemented |
+
 ---
 
 # Document Control
@@ -12,6 +18,7 @@
 | Version | Status |
 |---------|--------|
 | 3.0.0 | Complete |
+| 3.0.1 | DEX executable contract pointer (no KPI count change) |
 
 # Governance
 
@@ -46,6 +53,7 @@
 | Description | Composite 0–100 employee digital experience. |
 | Business Purpose | Enterprise north-star experience metric. |
 | Formula | 0.3*Endpoint + 0.3*App + 0.2*NetworkCollab + 0.2*Sentiment (tenant weights) |
+| Executable contract | [`../../scoring/nh_score_v1.json`](../../scoring/nh_score_v1.json) — authoritative bands, category→pillar map, client/server split. Supersedes any draft using technology 70% / sentiment 30% or Frustrating/Average/Good labels. |
 | Calculation Logic | Employee-weighted mean; coverage-aware |
 | SQL Example | `SELECT emp_weighted_avg(dex_score) FROM fact_dex_employee_hourly` |
 | Aggregation Rules | Employee-weighted mean |

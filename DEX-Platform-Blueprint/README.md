@@ -19,10 +19,11 @@ Flat catalogs of 40–70 peer dashboards force decision-makers to assemble the n
 | **Operations** | What is on fire — ranked by employee impact? |
 | **Decide** | Where should investment, risk, and cost focus go? |
 
-Depth (Investigate, Device view, AI Copilot) and a **Library** of legacy specialist dashboards remain available. Spec authority for KPIs/widgets stays in Sessions 1–3.
+Depth (Investigate, Device view, AI Copilot) and a **Library** of legacy specialist dashboards remain available. Spec authority for KPIs/widgets stays in Sessions 1–3. **Executable DEX scoring** (per-metric bands + pillar rollup) lives in [`scoring/`](scoring/README.md).
 
 - Architecture: [`navigation/story-ux-architecture.md`](navigation/story-ux-architecture.md)  
 - Catalog mapping: [`navigation/catalog-story-mapping.md`](navigation/catalog-story-mapping.md)  
+- Scoring contract: [`scoring/nh_score_v1.json`](scoring/nh_score_v1.json)  
 - Mockups: [`mockups/stories/`](mockups/stories/)  
 - App: open [`index.html`](index.html) via `python3 -m http.server 8765` → [http://127.0.0.1:8765/](http://127.0.0.1:8765/)
 

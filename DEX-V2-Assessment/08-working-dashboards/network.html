@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Network Experience Outliers · Nanoheal DEX V2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0f1419;
+  --panel: #171d25;
+  --panel2: #1c2430;
+  --text: #e7ecf1;
+  --muted: #93a0b0;
+  --line: #2a3442;
+  --accent: #3d8bfd;
+  --good: #3ecf8e;
+  --warn: #e6b84d;
+  --bad: #f07178;
+  --gap: #8b7ec8;
+  --font: "IBM Plex Sans", "Source Sans 3", "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: var(--font); }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 1280px; margin: 0 auto; padding: 24px; }
+header.app { display: flex; justify-content: space-between; gap: 16px; align-items: flex-end; border-bottom: 1px solid var(--line); padding-bottom: 16px; margin-bottom: 24px; }
+header.app h1 { margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; }
+header.app .sub { color: var(--muted); font-size: 13px; margin-top: 6px; }
+.nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 24px; }
+.nav a { background: var(--panel); border: 1px solid var(--line); padding: 8px 12px; border-radius: 6px; color: var(--text); font-size: 13px; }
+.nav a.active, .nav a:hover { border-color: var(--accent); text-decoration: none; }
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
+@media (max-width: 900px) { .grid { grid-template-columns: repeat(2,1fr);} }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; }
+.card .label { color: var(--muted); font-size: 12px; margin-bottom: 6px; }
+.card .value { font-size: 28px; font-weight: 600; letter-spacing: -0.03em; }
+.card .hint { color: var(--muted); font-size: 12px; margin-top: 6px; }
+.tone-bad .value { color: var(--bad); }
+.tone-warn .value { color: var(--warn); }
+.tone-good .value { color: var(--good); }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; margin-bottom: 16px; overflow: hidden; }
+.panel h2 { margin: 0; padding: 14px 16px; font-size: 15px; border-bottom: 1px solid var(--line); background: var(--panel2); }
+.panel .body { padding: 12px 16px 16px; }
+.callout { border: 1px solid var(--line); border-left: 3px solid var(--accent); background: var(--panel2); padding: 12px 14px; border-radius: 6px; margin: 12px 0 20px; font-size: 14px; line-height: 1.45; }
+.callout.bad { border-left-color: var(--bad); }
+.callout.warn { border-left-color: var(--warn); }
+.callout.gap { border-left-color: var(--gap); }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 500; }
+tr:hover td { background: rgba(61,139,253,0.06); }
+.pill { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+.pill.bad { color: var(--bad); border-color: var(--bad); }
+.pill.warn { color: var(--warn); border-color: var(--warn); }
+.pill.good { color: var(--good); border-color: var(--good); }
+.pill.gap { color: var(--gap); border-color: var(--gap); }
+.bars { display: flex; flex-direction: column; gap: 8px; }
+.bar-row { display: grid; grid-template-columns: 160px 1fr 64px; gap: 10px; align-items: center; font-size: 12px; }
+.bar-track { height: 10px; background: #243040; border-radius: 4px; overflow: hidden; }
+.bar-fill { height: 100%; background: var(--accent); }
+.bar-fill.bad { background: var(--bad); }
+.bar-fill.warn { background: var(--warn); }
+.meta { color: var(--muted); font-size: 12px; }
+code, .sql { font-family: var(--mono); font-size: 12px; white-space: pre-wrap; background: #0c1016; border: 1px solid var(--line); padding: 12px; border-radius: 6px; display: block; overflow: auto; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 900px) { .two { grid-template-columns: 1fr; } }
+footer { color: var(--muted); font-size: 12px; margin-top: 28px; border-top: 1px solid var(--line); padding-top: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="app">
+  <div>
+    <h1>Network Experience Outliers</h1>
+    <div class="sub">Live Pinot V2 snapshot · customer-agnostic templates · no fabricated metrics</div>
+  </div>
+  <div class="meta">Source: system/process/network/url/events/compliance_v2<br/>Aggregation prefers P95 / affected counts</div>
+</header>
+<nav class="nav"><a href="index.html" class="">Overview</a><a href="device-health.html" class="">Device Health</a><a href="network.html" class="active">Network</a><a href="applications.html" class="">Applications</a><a href="remediation.html" class="">Remediation</a><a href="compliance.html" class="">Compliance</a><a href="saas.html" class="">SaaS / URL</a><a href="data-gaps.html" class="">DATA GAPS</a></nav>
+
+<div class="callout bad"><strong>Insight:</strong> Average RTT is misleading. Four devices show p95 RTT above 1 second; worst p95 is ~53.7 seconds (NHL100003). Peer devices on other branches remain near tens of ms — classic site/device concentration, not a global outage narrative.</div>
+
+
+<div class="panel"><h2>RTT percentiles by device</h2><div class="body">
+<table><thead><tr><th>Device</th><th>Site</th><th>Avg (sec)</th><th>P50</th><th>P95</th><th>Max</th><th>Flag</th></tr></thead><tbody>
+<tr><td>NHL100003</td><td>Branch_Northside</td><td>4.49s</td><td>170 ms</td><td>53704 ms</td><td>67084 ms</td><td><span class=pill bad>OUTLIER</span></td></tr><tr><td>NHL100006</td><td>Branch_Harborview</td><td>1.74s</td><td>246 ms</td><td>20639 ms</td><td>22936 ms</td><td><span class=pill bad>OUTLIER</span></td></tr><tr><td>NHL100008</td><td>Branch_Westgate</td><td>0.98s</td><td>137 ms</td><td>10941 ms</td><td>13746 ms</td><td><span class=pill bad>OUTLIER</span></td></tr><tr><td>NHL100002</td><td>Branch_Downtown</td><td>0.75s</td><td>98 ms</td><td>8526 ms</td><td>10629 ms</td><td><span class=pill bad>OUTLIER</span></td></tr><tr><td>NHL100007</td><td>Branch_Harborview</td><td>0.21s</td><td>91 ms</td><td>544 ms</td><td>589 ms</td><td><span class=pill good>OK</span></td></tr><tr><td>NHL100005</td><td>Branch_Westgate</td><td>0.17s</td><td>89 ms</td><td>508 ms</td><td>2061 ms</td><td><span class=pill good>OK</span></td></tr><tr><td>NHL100001</td><td>Branch_Downtown</td><td>0.13s</td><td>65 ms</td><td>471 ms</td><td>1375 ms</td><td><span class=pill good>OK</span></td></tr><tr><td>NHL100004</td><td>Branch_Northside</td><td>0.04s</td><td>39 ms</td><td>42 ms</td><td>43 ms</td><td><span class=pill good>OK</span></td></tr>
+</tbody></table>
+</div></div>
+<div class="panel"><h2>DNS p95</h2><div class="body">
+<table><thead><tr><th>Device</th><th>Site</th><th>Avg</th><th>P95</th><th>Max</th></tr></thead><tbody>
+<tr><td>NHL100006</td><td>Branch_Harborview</td><td>1362 ms</td><td>15764 ms</td><td>17328 ms</td></tr><tr><td>NHL100008</td><td>Branch_Westgate</td><td>816 ms</td><td>9401 ms</td><td>10818 ms</td></tr><tr><td>NHL100003</td><td>Branch_Northside</td><td>761 ms</td><td>9001 ms</td><td>10408 ms</td></tr><tr><td>NHL100002</td><td>Branch_Downtown</td><td>645 ms</td><td>7352 ms</td><td>8502 ms</td></tr><tr><td>NHL100007</td><td>Branch_Harborview</td><td>206 ms</td><td>541 ms</td><td>570 ms</td></tr><tr><td>NHL100005</td><td>Branch_Westgate</td><td>141 ms</td><td>219 ms</td><td>1874 ms</td></tr><tr><td>NHL100001</td><td>Branch_Downtown</td><td>108 ms</td><td>165 ms</td><td>1400 ms</td></tr><tr><td>NHL100004</td><td>Branch_Northside</td><td>46 ms</td><td>50 ms</td><td>51 ms</td></tr>
+</tbody></table>
+</div></div>
+
+<footer>
+Working dashboards built from real Pinot queries on 2026-08-15. Thresholds shown as examples must be replaced by customer baselines in production.
+Credentials are not embedded. Refresh snapshot via assessment export script.
+</footer>
+</div>
+</body>
+</html>
