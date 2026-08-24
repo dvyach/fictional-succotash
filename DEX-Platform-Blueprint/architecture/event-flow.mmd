@@ -1,0 +1,36 @@
+%% Event / data flow
+flowchart LR
+  subgraph Sources
+    AG[Agents/Beacons]
+    ITSM[ITSM CDC]
+    CLD[Cloud Adapters]
+    NET[Network Controllers]
+  end
+  subgraph Ingest
+    KB[Kafka Bus]
+    BT[Batch Land]
+  end
+  subgraph Lakehouse
+    BR[Bronze]
+    SV[Silver]
+    GD[Gold]
+  end
+  subgraph Serve
+    SM[Semantic Metrics]
+    FS[Feature Store]
+    API[Query APIs]
+    UI[AetherDEX UI]
+  end
+  AG --> KB
+  NET --> KB
+  CLD --> KB
+  ITSM --> BT
+  KB --> BR
+  BT --> BR
+  BR --> SV
+  SV --> GD
+  GD --> SM
+  GD --> FS
+  SM --> API
+  FS --> API
+  API --> UI

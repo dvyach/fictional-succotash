@@ -1,0 +1,13 @@
+%% API topology
+flowchart LR
+  UI[Web App] --> BFF[BFF Gateway]
+  BFF --> REST[REST Services]
+  BFF --> GQL[GraphQL Entity Graph]
+  BFF --> SSE[SSE Gateway]
+  REST --> MET[metrics-semantic]
+  REST --> CASE[cases]
+  REST --> AI[insights-ai / copilot]
+  REST --> OPS[alerting / automation]
+  GQL --> GRAPH[entity-graph]
+  SSE --> OPS
+  SSE --> CASE

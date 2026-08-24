@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<rect width="1440" height="900" fill="#0B1220"/>
+<text x="24" y="28" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Infrastructure  /  Internet Experience</text>
+<text x="24" y="56" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">Internet Experience</text>
+<rect x="24.0" y="76" width="336.0" height="92" rx="10" fill="#121A2B" stroke="#243148"/>
+<text x="38.0" y="100" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Internet Exp.</text>
+<text x="38.0" y="132" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="24" font-weight="600">81.2</text>
+<text x="38.0" y="154" fill="#10B981" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">▲ 1.4</text>
+<rect x="376.0" y="76" width="336.0" height="92" rx="10" fill="#121A2B" stroke="#243148"/>
+<text x="390.0" y="100" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">DNS P90</text>
+<text x="390.0" y="132" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="24" font-weight="600">42 ms</text>
+<text x="390.0" y="154" fill="#60A5FA" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">▼ 8</text>
+<rect x="728.0" y="76" width="336.0" height="92" rx="10" fill="#121A2B" stroke="#243148"/>
+<text x="742.0" y="100" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Egress Loss</text>
+<text x="742.0" y="132" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="24" font-weight="600">0.08%</text>
+<text x="742.0" y="154" fill="#10B981" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">stable</text>
+<rect x="1080.0" y="76" width="336.0" height="92" rx="10" fill="#121A2B" stroke="#243148"/>
+<text x="1094.0" y="100" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">ISP Incidents</text>
+<text x="1094.0" y="132" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="24" font-weight="600">2</text>
+<text x="1094.0" y="154" fill="#F59E0B" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">active</text>
+<rect x="24" y="184" width="863.04" height="696" rx="10" fill="#121A2B" stroke="#243148"/>
+<text x="42" y="212" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14" font-weight="600">ISP quality</text>
+<text x="42" y="254" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13">Comcast AMER  ·  84</text>
+<rect x="42" y="262" width="731.736" height="8" rx="4" fill="#3B82F6" opacity="0.9"/>
+<text x="42" y="290" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13">BT EMEA  ·  79</text>
+<rect x="42" y="298" width="650.432" height="8" rx="4" fill="#3B82F6" opacity="0.8"/>
+<text x="42" y="326" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13">Telefonica LATAM  ·  76</text>
+<rect x="42" y="334" width="569.1279999999999" height="8" rx="4" fill="#3B82F6" opacity="0.7"/>
+<text x="42" y="362" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13">NTT APAC  ·  71</text>
+<rect x="42" y="370" width="487.82399999999996" height="8" rx="4" fill="#3B82F6" opacity="0.6"/>
+<rect x="903.04" y="184" width="512.96" height="696" rx="10" fill="#121A2B" stroke="#243148"/>
+<rect x="903.04" y="184" width="4" height="696" fill="#A78BFA"/>
+<text x="919.04" y="212" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14" font-weight="600">AI Insights</text>
+<rect x="915.04" y="232" width="488.96000000000004" height="110" rx="10" fill="#1E1838" stroke="#A78BFA" stroke-opacity="0.3"/>
+<text x="927.04" y="262" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">Priority signal detected</text>
+<text x="927.04" y="284" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Confidence ≥ 85% · Open investigation</text>
+<text x="927.04" y="304" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Recommended action available.</text>
+</svg>

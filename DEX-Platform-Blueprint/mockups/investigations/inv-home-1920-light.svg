@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<rect width="1920" height="1080" fill="#F5F7FA"/>
+<text x="24" y="28" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Investigate  /  Cases</text>
+<text x="24" y="56" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">Investigation Home</text>
+<rect x="24.0" y="72" width="457.5" height="88" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="36.0" y="94" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Open Cases</text>
+<text x="36.0" y="124" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">19</text>
+<text x="36.0" y="146" fill="#D97706" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">6 Sev1/2</text>
+<rect x="495.5" y="72" width="457.5" height="88" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="507.5" y="94" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Median Duration</text>
+<text x="507.5" y="124" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">41 m</text>
+<text x="507.5" y="146" fill="#0F9F6E" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">▼ 8</text>
+<rect x="967.0" y="72" width="457.5" height="88" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="979.0" y="94" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Collab Active</text>
+<text x="979.0" y="124" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">7</text>
+<text x="979.0" y="146" fill="#3B82F6" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">rooms</text>
+<rect x="1438.5" y="72" width="457.5" height="88" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="1450.5" y="94" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Evidence Packs</text>
+<text x="1450.5" y="124" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">54</text>
+<text x="1450.5" y="146" fill="#3B82F6" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">7d</text>
+<rect x="24" y="174" width="1085.76" height="888" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="40" y="200" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14" font-weight="600">My Cases / Team</text>
+<text x="40" y="232" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">CASE-441  CRM hangs Sales · Live · You+Riley</text>
+<text x="40" y="264" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">CASE-438  London Teams quality · Live · Net+DEX</text>
+<text x="40" y="296" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">CASE-430  Image 24.7 crashes · Watch · Morgan</text>
+<text x="40" y="328" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">CASE-422  VPN APAC · Resolved pending close</text>
+<rect x="1123.76" y="174" width="772.24" height="888" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<rect x="1123.76" y="174" width="4" height="888" fill="#7C5CFC"/>
+<text x="1139.76" y="200" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14" font-weight="600">Start Investigation</text>
+<text x="1139.76" y="232" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Device · User · App · Incident · Alert</text>
+<text x="1139.76" y="268" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Saved templates · Bookmarks · History</text>
+</svg>

@@ -1,0 +1,170 @@
+{
+  "_readme": "Five KPI definitions ready to register in Haya's semantic layer + MIRU detectors. Field shapes verified directly against platform/modalities/miru/contracts/metric_semantic_intent.py (MiruMetricSemanticIntentV1 / MiruMetricPublishEnvelopeV1) and the detector plugin source in platform/modalities/miru/detectors/plugins/*.py in github.com/sridharsanta/haya-v1.2. 'detector' is not part of Haya's own intent schema — it's this project's shorthand for the MIRU detector definition to attach to each semantic metric once registered; adapt to whatever object shape MIRU's definition-publish API actually expects.",
+
+  "metrics": [
+    {
+      "kpi_name": "CPU utilization",
+      "semantic_metric_intent": {
+        "dataset_id": "system_telemetry_metrics_v2",
+        "measure_key": "cpu_usage_pct",
+        "grain": "P1D",
+        "filters": { "metric_name": "cpu_usage_pct" },
+        "slice_dimensions": ["customer_id", "device_group", "machine_id"]
+      },
+      "semantic_publish_envelope": {
+        "semantic_model_id": "aetherdex.endpoint.cpu_usage_pct",
+        "semantic_model_version": 1
+      },
+      "detector": {
+        "plugin": "statistical-detector",
+        "params": { "deviationFactor": 3, "method": "Z_SCORE", "direction": "BOTH" },
+        "training_window": "P30D",
+        "rationale": "Raw sampled metric with a stable-ish daily pattern per device — Z-score against a rolling 30-day mean/std is the direct analogue of the 'capacity watch' card already shipping in the dashboard, just computed server-side and scheduled instead of client-side on every page load."
+      }
+    },
+
+    {
+      "kpi_name": "Memory utilization",
+      "semantic_metric_intent": {
+        "dataset_id": "system_telemetry_metrics_v2",
+        "measure_key": "memory_usage_pct",
+        "grain": "P1D",
+        "filters": { "metric_name": "memory_usage_pct" },
+        "slice_dimensions": ["customer_id", "device_group", "machine_id"]
+      },
+      "semantic_publish_envelope": {
+        "semantic_model_id": "aetherdex.endpoint.memory_usage_pct",
+        "semantic_model_version": 1
+      },
+      "detector": {
+        "plugin": "statistical-detector",
+        "params": { "deviationFactor": 3, "method": "Z_SCORE", "direction": "BOTH" },
+        "training_window": "P30D",
+        "rationale": "Field only landed in system_telemetry_metrics_v2 mid-audit — same shape as cpu_usage_pct (raw sampled %, stable-ish daily pattern per device), so the same detector config applies directly, no new plugin needed. Notable: the device this would flag first (NHL100002, P95 95% vs. fleet ~65%) is the exact same device the CPU detector already flags — register both and a downstream correlation step gets a two-metric confirmation on the same device for free, rather than two independent single-metric alerts a human has to notice are about the same machine."
+      }
+    },
+
+    {
+      "kpi_name": "Boot & login duration",
+      "semantic_metric_intent": {
+        "dataset_id": "system_telemetry_metrics_v2",
+        "measure_key": "boot_time_total",
+        "grain": "P1D",
+        "filters": { "metric_name": "boot_time_total", "metric_family": "Startup Experience" },
+        "slice_dimensions": ["customer_id", "device_group", "machine_id"]
+      },
+      "semantic_publish_envelope": {
+        "semantic_model_id": "aetherdex.endpoint.boot_time_total",
+        "semantic_model_version": 1
+      },
+      "detector": {
+        "plugin": "statistical-detector",
+        "params": { "deviationFactor": 3, "method": "Z_SCORE", "direction": "UP" },
+        "training_window": "P90D",
+        "rationale": "direction=UP only — a faster boot is never worth alerting on, only a slower one. training_window widened to 90D (vs. 30D for CPU/memory) because boot events are inherently sparse: ~29 events/device over 6.5 weeks in the pilot, roughly one every 1.5 days, so P1D grain will have long empty stretches and needs more calendar time to accumulate a stable baseline than a continuously-sampled metric. Register logon_time_total as a second, identical entry alongside this one (same dataset, same detector shape, measure_key='logon_time_total') rather than trying to fold both into one metric — they're independent enough in the pilot data (NHL100002 leads on both, but not by the same margin: 28% slower boot vs. 33% slower logon) that collapsing them would blur which phase is actually degraded. Consider evaluating this metric on a weekly cron rather than daily, since most days won't have a new data point to score."
+      }
+    },
+
+    {
+      "kpi_name": "Network round-trip time",
+      "semantic_metric_intent": {
+        "dataset_id": "network_telemetry_v2",
+        "measure_key": "round_trip_time",
+        "grain": "P1D",
+        "filters": { "metric_name": "round_trip_time" },
+        "slice_dimensions": ["customer_id", "device_group", "machine_id"]
+      },
+      "semantic_publish_envelope": {
+        "semantic_model_id": "aetherdex.network.round_trip_time",
+        "semantic_model_version": 1
+      },
+      "detector": {
+        "plugin": "ets-detector",
+        "params": { "sensitivity": 3, "lookback": 14, "seasonalityPeriod": "P7D" },
+        "training_window": "P42D",
+        "rationale": "This is the metric behind the 'NHL100003 RTT climbed 44x' finding — a genuine trend/drift, not just noise around a flat mean. ETS (Holt-Winters) forecasts the expected value and flags residuals, which catches gradual drift that a static Z-score baseline would wash out. Needs >=14 daily points per device to train — thin in the current 8-device pilot, solid at production volume."
+      }
+    },
+
+    {
+      "kpi_name": "Auto-heal failure rate",
+      "semantic_metric_intent": {
+        "dataset_id": "events_v2",
+        "measure_key": "autoheal_failure_rate",
+        "grain": "P1D",
+        "filters": { "event_type": "autoheal_action" },
+        "slice_dimensions": ["customer_id", "device_group", "machine_id"]
+      },
+      "semantic_publish_envelope": {
+        "semantic_model_id": "aetherdex.remediation.autoheal_failure_rate",
+        "semantic_model_version": 1
+      },
+      "derived_measure_definition": {
+        "note": "NOT a raw column on events_v2 — autoheal_failure_rate must be registered in Haya's own metric registry as a computed ratio before this intent resolves to anything. Definition below is what the registration should encode; write it in whatever measure-DSL Haya's semantic model actually uses (Volume 3B's calculated-measure pattern, e.g. crash_rate = 100 * SUM(crashes) / NULLIF(SUM(device_hours),0), is the same shape).",
+        "numerator": "COUNT(*) WHERE event_type = 'autoheal_action' AND event_status = 'failed'",
+        "denominator": "COUNT(*) WHERE event_type = 'autoheal_action' AND event_status IN ('completed', 'failed')",
+        "formula": "100 * numerator / NULLIF(denominator, 0)"
+      },
+      "detector": {
+        "plugin": "statistical-detector",
+        "params": { "deviationFactor": 2, "method": "Z_SCORE", "direction": "UP" },
+        "training_window": "P30D",
+        "rationale": "This is the metric behind the 'Auto-heal succeeds 100% at Downtown, 0% elsewhere' finding. direction=UP only, since we only care about failure rate spiking, not dropping. deviationFactor=2 (looser than the default 3) because remediation reliability regressions are worth flagging earlier than a generic outlier."
+      }
+    },
+
+    {
+      "kpi_name": "Compliance pass rate (per control)",
+      "semantic_metric_intent": {
+        "dataset_id": "compliance_v2",
+        "measure_key": "compliance_pass_rate",
+        "grain": "P7D",
+        "filters": {},
+        "slice_dimensions": ["customer_id", "device_group", "machine_id", "compliance_control"]
+      },
+      "semantic_publish_envelope": {
+        "semantic_model_id": "aetherdex.compliance.pass_rate",
+        "semantic_model_version": 1
+      },
+      "derived_measure_definition": {
+        "note": "Derived per (machine_id, compliance_control, week): percentage of scans in a 'good' status. Good-status mapping already lives in dashboards/app.js as COMPLIANCE_GOOD — reuse it verbatim so the dashboard and the Haya detector never disagree on what 'compliant' means.",
+        "good_status_map": {
+          "antivirus_status": ["Running"],
+          "antivirus_enabled": ["Enabled"],
+          "firewall_enabled": ["Enabled"],
+          "uac_enabled": ["Enabled"],
+          "backup_software_status": ["Running"],
+          "windows_update_status": ["Current"]
+        },
+        "formula": "100 * COUNT(*) WHERE compliance_status IN good_status_map[compliance_control] / COUNT(*)"
+      },
+      "detector": {
+        "plugin": "threshold-detector",
+        "params": { "threshold": 90, "direction": "below" },
+        "training_window": "not applicable — static threshold, no training step",
+        "rationale": "This is the metric behind the 'NHL100005 non-compliant for 5+ consecutive weeks' finding. Compliance is a policy question, not a statistical one — a fixed 90% floor (configurable per customer) is more defensible to an auditor than 'flag if it looks unusual'. Note threshold-detector's direction values are lowercase ('below'), unlike statistical/ets which use uppercase — verified from source, an easy typo to make."
+      }
+    },
+
+    {
+      "kpi_name": "Application crash count",
+      "semantic_metric_intent": {
+        "dataset_id": "events_v2",
+        "measure_key": "application_crash_count",
+        "grain": "P1D",
+        "filters": { "event_domain": "failure", "event_type": "application_error" },
+        "slice_dimensions": ["customer_id", "device_group", "machine_id"]
+      },
+      "semantic_publish_envelope": {
+        "semantic_model_id": "aetherdex.incidents.application_crash_count",
+        "semantic_model_version": 1
+      },
+      "detector": {
+        "plugin": "percentage-change-detector",
+        "params": { "changeThreshold": 0.5, "direction": "above" },
+        "training_window": "P28D",
+        "rationale": "Crash counts are sparse and low-volume (58 total across 8 devices over ~6 weeks in the pilot as of the latest count, up from 30 at first check — this table is still actively growing) — a Z-score baseline is unstable at that volume (small denominators swing wildly), and 26 of the 58 sit on one device (NHL100006), which would itself skew a fleet-wide mean/std. Percentage-change-vs-prior-period is more robust at low sample counts: flags 'crashes this week are >50% above last week' without needing a stable mean/std first. Revisit in favor of statistical-detector once crash volume is high enough per slice for a stable baseline (rule of thumb: reconsider above ~30 events/device/window)."
+      }
+    }
+  ]
+}

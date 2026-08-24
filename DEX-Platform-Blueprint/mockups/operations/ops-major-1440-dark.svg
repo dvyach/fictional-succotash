@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<rect width="1440" height="900" fill="#0B1220"/>
+<text x="24" y="28" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Operations  /  Major Incidents</text>
+<text x="24" y="56" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">Major Incident Dashboard</text>
+<rect x="24.0" y="72" width="337.5" height="88" rx="10" fill="#121A2B" stroke="#243148"/>
+<text x="36.0" y="94" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Active Major</text>
+<text x="36.0" y="124" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">1</text>
+<text x="36.0" y="146" fill="#EF4444" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">CRM</text>
+<rect x="375.5" y="72" width="337.5" height="88" rx="10" fill="#121A2B" stroke="#243148"/>
+<text x="387.5" y="94" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Employees Impacted</text>
+<text x="387.5" y="124" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">4.2k</text>
+<text x="387.5" y="146" fill="#EF4444" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Sales+CS</text>
+<rect x="727.0" y="72" width="337.5" height="88" rx="10" fill="#121A2B" stroke="#243148"/>
+<text x="739.0" y="94" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">War Room</text>
+<text x="739.0" y="124" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">Live</text>
+<text x="739.0" y="146" fill="#F59E0B" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">12 participants</text>
+<rect x="1078.5" y="72" width="337.5" height="88" rx="10" fill="#121A2B" stroke="#243148"/>
+<text x="1090.5" y="94" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Comms Sent</text>
+<text x="1090.5" y="124" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">3</text>
+<text x="1090.5" y="146" fill="#60A5FA" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">last 40m</text>
+<rect x="24" y="174" width="807.3599999999999" height="708" rx="10" fill="#121A2B" stroke="#243148"/>
+<text x="40" y="200" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14" font-weight="600">Major Incident Timeline</text>
+<text x="40" y="232" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">T+0:00  Detected via hang rate alert</text>
+<text x="40" y="264" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">T+0:08  Bridge opened · Commander Sam</text>
+<text x="40" y="296" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">T+0:22  AI RCA: API GW p95 &gt;800ms</text>
+<text x="40" y="328" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">T+0:35  Mitigation: scale GW + cache</text>
+<text x="40" y="360" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">T+0:48  Partial recovery · monitoring</text>
+<rect x="845.3599999999999" y="174" width="570.6400000000001" height="708" rx="10" fill="#121A2B" stroke="#243148"/>
+<rect x="845.3599999999999" y="174" width="4" height="708" fill="#A78BFA"/>
+<text x="861.3599999999999" y="200" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14" font-weight="600">Business Impact</text>
+<text x="861.3599999999999" y="232" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Revenue ops at risk · Sales</text>
+<text x="861.3599999999999" y="268" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">CS queue delay +18%</text>
+<text x="861.3599999999999" y="304" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Customer SLAs watchlist ×6</text>
+</svg>

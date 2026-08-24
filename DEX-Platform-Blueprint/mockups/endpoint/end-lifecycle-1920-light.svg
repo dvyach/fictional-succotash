@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<rect width="1920" height="1080" fill="#F5F7FA"/>
+<rect x="0" y="0" width="248" height="1080" fill="#FFFFFF" stroke="#D8E0EA"/>
+<circle cx="36" cy="28" r="12" fill="#1B6EF3"/>
+<path d="M30 28 L36 22 L42 28 L36 34 Z" fill="white" opacity="0.9"/>
+<text x="56" y="33" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="16" font-weight="600">AetherDEX</text>
+<text x="24" y="64" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11" font-weight="500">OVERVIEW</text>
+<text x="28" y="86" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="400">Home</text>
+<text x="24" y="130" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11" font-weight="500">EXECUTIVE</text>
+<text x="28" y="152" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="400">DEX Index</text>
+<text x="28" y="188" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="400">Risk &amp; Investment</text>
+<text x="24" y="232" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11" font-weight="500">EXPERIENCE</text>
+<text x="28" y="254" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="400">Overview</text>
+<text x="28" y="290" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="400">Journeys</text>
+<text x="28" y="326" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="400">Sentiment</text>
+<text x="24" y="370" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11" font-weight="500">ENDPOINTS</text>
+<text x="28" y="392" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="400">Fleet Health</text>
+<text x="28" y="428" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="400">Stability</text>
+<rect x="12" y="448" width="224" height="32" rx="8" fill="#E8F1FE"/>
+<rect x="12" y="454" width="3" height="20" rx="1.5" fill="#1B6EF3"/>
+<text x="28" y="464" fill="#1B6EF3" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="600">Lifecycle</text>
+<text x="24" y="508" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11" font-weight="500">APPLICATIONS</text>
+<text x="28" y="530" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="400">Portfolio</text>
+<text x="28" y="566" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="400">App Detail</text>
+<rect x="248" y="0" width="1672" height="56" fill="#FFFFFF" stroke="#D8E0EA"/>
+<rect x="272" y="12" width="260" height="32" rx="8" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="288" y="33" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13">Search…</text>
+<rect x="548" y="12" width="140" height="32" rx="8" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="564" y="33" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Enterprise ▾</text>
+<rect x="700" y="12" width="110" height="32" rx="8" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="716" y="33" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Last 7 days ▾</text>
+<circle cx="1880" cy="28" r="14" fill="#1B6EF3"/>
+<text x="1873" y="32" fill="white" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11" font-weight="600">JH</text>
+<circle cx="1840" cy="28" r="14" fill="#F0ECFF" stroke="#7C5CFC"/>
+<text x="1834" y="32" fill="#7C5CFC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11" font-weight="600">AI</text>
+<text x="272" y="84" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Endpoints  /  Lifecycle</text>
+<text x="272" y="116" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="24" font-weight="600">Hardware Lifecycle</text>
+<rect x="272.0" y="140" width="525.3333333333334" height="100" rx="10" fill="#FFFFFF" stroke="#D8E0EA" stroke-width="1"/>
+<text x="288.0" y="166" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11" font-weight="500">Devices Past Warranty</text>
+<text x="288.0" y="200" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="26" font-weight="600">3,842</text>
+<text x="288.0" y="224" fill="#D97706" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">8.0% of fleet</text>
+<rect x="821.3333333333334" y="140" width="525.3333333333334" height="100" rx="10" fill="#FFFFFF" stroke="#D8E0EA" stroke-width="1"/>
+<text x="837.3333333333334" y="166" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11" font-weight="500">Avg Battery Health</text>
+<text x="837.3333333333334" y="200" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="26" font-weight="600">86%</text>
+<text x="837.3333333333334" y="224" fill="#3B82F6" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">▼ 1.2 pts</text>
+<rect x="1370.6666666666667" y="140" width="525.3333333333334" height="100" rx="10" fill="#FFFFFF" stroke="#D8E0EA" stroke-width="1"/>
+<text x="1386.6666666666667" y="166" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11" font-weight="500">Disk Risk Devices</text>
+<text x="1386.6666666666667" y="200" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="26" font-weight="600">1,204</text>
+<text x="1386.6666666666667" y="224" fill="#D97706" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">SMART predictors</text>
+<rect x="272" y="264" width="893.2" height="320" rx="10" fill="#FFFFFF" stroke="#D8E0EA" stroke-width="1"/>
+<text x="292" y="292" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="15" font-weight="600">Age vs Experience · Refresh Priority</text>
+<line x1="322" y1="544" x2="1135.2" y2="544" stroke="#D8E0EA"/>
+<line x1="322" y1="324" x2="322" y2="544" stroke="#D8E0EA"/>
+<circle cx="841.9818725059511" cy="336.13294577420845" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="545.6538416977678" cy="382.33720492534303" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="920.8983913581749" cy="416.8184155608036" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="1047.5204244575802" cy="335.0" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="665.106823768062" cy="348.7275328831354" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="499.7964011102903" cy="422.6818094154457" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="343.5790505469179" cy="392.7870915580251" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="850.4860248023083" cy="404.1886313617508" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="501.26231384349455" cy="433.65883605938166" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="980.2288473704086" cy="335.0" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="977.2922155904395" cy="415.8343412876415" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="598.691720032431" cy="369.8095155666656" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="1100.4056703185545" cy="359.7837609834938" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="397.4209198367363" cy="375.6655403561091" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="1011.1824187137544" cy="401.07964599131935" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="978.356711826726" cy="419.93254081349306" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="758.0606839709626" cy="466.95873581526837" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="629.824155545833" cy="420.0499725816065" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="996.4718729705355" cy="404.0273507781658" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="1022.7400513327241" cy="396.8166036567998" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="894.9578172099758" cy="335.29736765072664" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="507.3268777598379" cy="393.66480603464305" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="386.8868356342939" cy="394.33983826885645" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="404.13436239599173" cy="399.1374369929971" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="838.9385900758102" cy="381.19520318950913" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="623.031162459449" cy="375.2949748704078" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="539.106364890339" cy="476.95462536534797" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="848.9823752825299" cy="412.76334655947977" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="461.1699487146925" cy="454.83211167855075" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="454.8789079272002" cy="409.10098115510345" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="1126.6803887376793" cy="398.0561840157275" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="774.9115316375423" cy="427.7368452230579" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="1007.4071814983532" cy="424.0751327136648" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="508.2618921212097" cy="359.63958823730724" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="578.5264186816455" cy="385.9918779855433" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="493.57124840440065" cy="480.86002589497923" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="1034.6621538475742" cy="361.3372608094023" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="855.0027226177965" cy="384.1742843487893" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="1065.71009997701" cy="378.26832710580675" r="5" fill="#1B6EF3" opacity="0.7"/>
+<circle cx="537.4005513962163" cy="385.9864218582129" r="5" fill="#1B6EF3" opacity="0.7"/>
+<text x="322" y="564" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10">Device age →</text>
+<text x="314" y="334" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10" text-anchor="end">Low DEX</text>
+<rect x="1189.2" y="264" width="706.8" height="320" rx="10" fill="#FFFFFF" stroke="#D8E0EA" stroke-width="1"/>
+<text x="1209.2" y="292" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="15" font-weight="600">Refresh Priority Queue</text>
+<text x="1209.2" y="324" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="600">DX-48291</text>
+<text x="1309.2" y="324" fill="#DC2626" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="600">96</text>
+<text x="1359.2" y="324" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Finance</text>
+<rect x="1209.2" y="332" width="630.5279999999999" height="6" rx="3" fill="#D97706"/>
+<text x="1209.2" y="369" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="600">DX-33011</text>
+<text x="1309.2" y="369" fill="#DC2626" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="600">91</text>
+<text x="1359.2" y="369" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Ops</text>
+<rect x="1209.2" y="377" width="597.688" height="6" rx="3" fill="#D97706"/>
+<text x="1209.2" y="414" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="600">DX-77120</text>
+<text x="1309.2" y="414" fill="#DC2626" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="600">88</text>
+<text x="1359.2" y="414" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Sales</text>
+<rect x="1209.2" y="422" width="577.9839999999999" height="6" rx="3" fill="#D97706"/>
+<text x="1209.2" y="459" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="600">DX-12009</text>
+<text x="1309.2" y="459" fill="#DC2626" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="600">84</text>
+<text x="1359.2" y="459" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">CS</text>
+<rect x="1209.2" y="467" width="551.712" height="6" rx="3" fill="#D97706"/>
+<text x="1209.2" y="504" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="600">MBP-2211</text>
+<text x="1309.2" y="504" fill="#DC2626" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="600">81</text>
+<text x="1359.2" y="504" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Mkt</text>
+<rect x="1209.2" y="512" width="532.0079999999999" height="6" rx="3" fill="#D97706"/>
+</svg>

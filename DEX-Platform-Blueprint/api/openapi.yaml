@@ -1,0 +1,505 @@
+openapi: 3.1.0
+info:
+  title: AetherDEX API
+  version: 1.0.0
+  description: Production REST contracts for AetherDEX (Session 3). KPI IDs per Volume 3A.
+servers:
+  - url: https://{tenant}.aetherdex.example/api/v1
+    variables:
+      tenant:
+        default: acme
+security:
+  - bearerAuth: []
+tags:
+  - name: Metrics
+  - name: Search
+  - name: Insights
+  - name: Cases
+  - name: Alerts
+  - name: Automation
+  - name: Views
+  - name: Exports
+paths:
+  /metrics/{kpiId}/summary:
+    get:
+      tags: [Metrics]
+      summary: KPI summary
+      parameters:
+        - $ref: '#/components/parameters/kpiId'
+        - $ref: '#/components/parameters/from'
+        - $ref: '#/components/parameters/to'
+        - $ref: '#/components/parameters/tz'
+        - $ref: '#/components/parameters/compare'
+        - $ref: '#/components/parameters/scope'
+      responses:
+        '200':
+          description: Summary
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MetricSummary'
+        '400': { $ref: '#/components/responses/Problem' }
+        '401': { $ref: '#/components/responses/Problem' }
+        '403': { $ref: '#/components/responses/Problem' }
+  /metrics/{kpiId}/timeseries:
+    get:
+      tags: [Metrics]
+      summary: KPI timeseries
+      parameters:
+        - $ref: '#/components/parameters/kpiId'
+        - $ref: '#/components/parameters/from'
+        - $ref: '#/components/parameters/to'
+        - $ref: '#/components/parameters/tz'
+        - $ref: '#/components/parameters/compare'
+        - $ref: '#/components/parameters/scope'
+        - name: grain
+          in: query
+          schema: { type: string, enum: [auto, minute, hour, day] }
+      responses:
+        '200':
+          description: Series
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MetricTimeseries'
+  /metrics/{kpiId}/breakdown:
+    get:
+      tags: [Metrics]
+      summary: Dimensional breakdown
+      parameters:
+        - $ref: '#/components/parameters/kpiId'
+        - $ref: '#/components/parameters/from'
+        - $ref: '#/components/parameters/to'
+        - $ref: '#/components/parameters/scope'
+        - name: dim
+          in: query
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: Breakdown rows
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MetricBreakdown'
+  /catalog/kpis:
+    get:
+      tags: [Metrics]
+      summary: List KPI catalog
+      parameters:
+        - name: q
+          in: query
+          schema: { type: string }
+        - name: domain
+          in: query
+          schema: { type: string }
+        - $ref: '#/components/parameters/cursor'
+        - $ref: '#/components/parameters/limit'
+      responses:
+        '200':
+          description: Catalog page
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/KpiCatalogPage'
+  /search:
+    get:
+      tags: [Search]
+      summary: Omnisearch
+      parameters:
+        - name: q
+          in: query
+          required: true
+          schema: { type: string, minLength: 2 }
+      responses:
+        '200':
+          description: Ranked results
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+  /insights:
+    get:
+      tags: [Insights]
+      summary: List AI insights
+      parameters:
+        - name: surface
+          in: query
+          schema: { type: string }
+        - name: minConfidence
+          in: query
+          schema: { type: number }
+        - $ref: '#/components/parameters/scope'
+        - $ref: '#/components/parameters/from'
+        - $ref: '#/components/parameters/to'
+      responses:
+        '200':
+          description: Insights
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items: { $ref: '#/components/schemas/Insight' }
+  /ai/chat:
+    post:
+      tags: [Insights]
+      summary: Copilot chat (SSE)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChatRequest'
+      responses:
+        '200':
+          description: text/event-stream
+  /alerts:
+    get:
+      tags: [Alerts]
+      summary: List alerts
+      parameters:
+        - name: impact
+          in: query
+          schema: { type: string, enum: [high, medium, low, any] }
+        - name: status
+          in: query
+          schema: { type: string }
+      responses:
+        '200':
+          description: Alerts
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items: { $ref: '#/components/schemas/Alert' }
+  /alerts/{alertId}/ack:
+    post:
+      tags: [Alerts]
+      summary: Acknowledge alert
+      parameters:
+        - name: alertId
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '204': { description: Acked }
+  /cases:
+    get:
+      tags: [Cases]
+      summary: List cases
+      responses:
+        '200':
+          description: Cases
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items: { $ref: '#/components/schemas/Case' }
+    post:
+      tags: [Cases]
+      summary: Create case
+      parameters:
+        - $ref: '#/components/parameters/idempotency'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CaseCreate' }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Case' }
+  /cases/{caseId}/evidence:seal:
+    post:
+      tags: [Cases]
+      summary: Seal evidence pack
+      parameters:
+        - name: caseId
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: Sealed pack
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/EvidencePack' }
+  /views:
+    get:
+      tags: [Views]
+      summary: List saved views
+      responses:
+        '200':
+          description: Views
+    post:
+      tags: [Views]
+      summary: Save view
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/SavedView' }
+      responses:
+        '201':
+          description: Created
+  /automation/jobs:
+    post:
+      tags: [Automation]
+      summary: Queue automation job
+      parameters:
+        - $ref: '#/components/parameters/idempotency'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AutomationJobCreate' }
+      responses:
+        '202':
+          description: Accepted
+  /exports/exec-pack:
+    post:
+      tags: [Exports]
+      summary: Generate executive PDF pack
+      responses:
+        '202':
+          description: Export job accepted
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  parameters:
+    kpiId:
+      name: kpiId
+      in: path
+      required: true
+      schema: { type: string, example: kpi.dex.digital_experience_index }
+    from:
+      name: from
+      in: query
+      required: true
+      schema: { type: string, format: date-time }
+    to:
+      name: to
+      in: query
+      required: true
+      schema: { type: string, format: date-time }
+    tz:
+      name: tz
+      in: query
+      schema: { type: string, example: America/New_York }
+    compare:
+      name: compare
+      in: query
+      schema: { type: string, enum: [off, wow, mom, baseline] }
+    scope:
+      name: scope
+      in: query
+      schema: { type: string, description: Encoded scope or scopeId }
+    cursor:
+      name: cursor
+      in: query
+      schema: { type: string }
+    limit:
+      name: limit
+      in: query
+      schema: { type: integer, minimum: 1, maximum: 200, default: 50 }
+    idempotency:
+      name: Idempotency-Key
+      in: header
+      required: true
+      schema: { type: string }
+  responses:
+    Problem:
+      description: Error
+      content:
+        application/problem+json:
+          schema: { $ref: '#/components/schemas/Problem' }
+  schemas:
+    Problem:
+      type: object
+      properties:
+        type: { type: string, format: uri }
+        title: { type: string }
+        status: { type: integer }
+        detail: { type: string }
+        instance: { type: string }
+    MetricSummary:
+      type: object
+      required: [kpiId, value, meta]
+      properties:
+        kpiId: { type: string }
+        value: { type: number }
+        unit: { type: string }
+        band: { type: string }
+        delta:
+          type: object
+          properties:
+            compare: { type: string }
+            absolute: { type: number }
+        meta: { $ref: '#/components/schemas/QueryMeta' }
+    MetricTimeseries:
+      type: object
+      properties:
+        kpiId: { type: string }
+        grain: { type: string }
+        points:
+          type: array
+          items:
+            type: object
+            properties:
+              t: { type: string, format: date-time }
+              v: { type: number }
+        previous:
+          type: array
+          items:
+            type: object
+            properties:
+              t: { type: string, format: date-time }
+              v: { type: number }
+        meta: { $ref: '#/components/schemas/QueryMeta' }
+    MetricBreakdown:
+      type: object
+      properties:
+        kpiId: { type: string }
+        dim: { type: string }
+        rows:
+          type: array
+          items:
+            type: object
+            properties:
+              key: { type: string }
+              label: { type: string }
+              value: { type: number }
+              delta: { type: number }
+        meta: { $ref: '#/components/schemas/QueryMeta' }
+    QueryMeta:
+      type: object
+      properties:
+        coverage: { type: number }
+        freshness: { type: string, format: date-time }
+        queryId: { type: string }
+        weightProfileId: { type: string }
+    KpiCatalogPage:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            type: object
+            properties:
+              id: { type: string }
+              name: { type: string }
+              domain: { type: string }
+              owner: { type: string }
+        nextCursor: { type: string }
+    SearchResponse:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            type: object
+            properties:
+              type: { type: string }
+              id: { type: string }
+              label: { type: string }
+              route: { type: string }
+    Insight:
+      type: object
+      properties:
+        id: { type: string }
+        title: { type: string }
+        summary: { type: string }
+        confidence: { type: number }
+        impactRadius:
+          type: object
+          properties:
+            employees: { type: integer }
+            devices: { type: integer }
+            apps: { type: integer }
+        evidenceIds:
+          type: array
+          items: { type: string }
+    ChatRequest:
+      type: object
+      required: [message]
+      properties:
+        message: { type: string }
+        context:
+          type: object
+          additionalProperties: true
+    Alert:
+      type: object
+      properties:
+        id: { type: string }
+        severity: { type: string }
+        title: { type: string }
+        impactEmployees: { type: integer }
+        status: { type: string }
+        openedAt: { type: string, format: date-time }
+    Case:
+      type: object
+      properties:
+        id: { type: string }
+        title: { type: string }
+        status: { type: string }
+        severity: { type: string }
+        deepLink: { type: string }
+    CaseCreate:
+      type: object
+      required: [title]
+      properties:
+        title: { type: string }
+        severity: { type: string }
+        entityRefs:
+          type: array
+          items:
+            type: object
+            properties:
+              type: { type: string }
+              id: { type: string }
+        timeRange:
+          type: object
+          properties:
+            from: { type: string, format: date-time }
+            to: { type: string, format: date-time }
+    EvidencePack:
+      type: object
+      properties:
+        id: { type: string }
+        sealedAt: { type: string, format: date-time }
+        immutable: { type: boolean }
+    SavedView:
+      type: object
+      properties:
+        name: { type: string }
+        route: { type: string }
+        state:
+          type: object
+          additionalProperties: true
+    AutomationJobCreate:
+      type: object
+      required: [playbookId, targetRefs]
+      properties:
+        playbookId: { type: string }
+        targetRefs:
+          type: array
+          items:
+            type: object
+            properties:
+              type: { type: string }
+              id: { type: string }
+        changeWindowId: { type: string }

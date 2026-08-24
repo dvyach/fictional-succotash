@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<rect width="1920" height="1080" fill="#F5F7FA"/>
+<text x="24" y="28" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Operations  /  Workflows</text>
+<text x="24" y="56" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">Workflow Dashboard</text>
+<rect x="24.0" y="72" width="457.5" height="88" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="36.0" y="94" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Active Workflows</text>
+<text x="36.0" y="124" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">36</text>
+<text x="36.0" y="146" fill="#3B82F6" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">8 critical</text>
+<rect x="495.5" y="72" width="457.5" height="88" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="507.5" y="94" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">SLA Breached Steps</text>
+<text x="507.5" y="124" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">3</text>
+<text x="507.5" y="146" fill="#D97706" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">watch</text>
+<rect x="967.0" y="72" width="457.5" height="88" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="979.0" y="94" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Avg Cycle</text>
+<text x="979.0" y="124" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">2.4 d</text>
+<text x="979.0" y="146" fill="#3B82F6" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">▼ 0.3</text>
+<rect x="1438.5" y="72" width="457.5" height="88" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="1450.5" y="94" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Bot Assisted</text>
+<text x="1450.5" y="124" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">41%</text>
+<text x="1450.5" y="146" fill="#0F9F6E" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">steps</text>
+<rect x="24" y="174" width="1085.76" height="888" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="40" y="200" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14" font-weight="600">Critical Workflows</text>
+<text x="40" y="232" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Major Incident Comms········On track</text>
+<text x="40" y="264" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Access Provisioning·········Breached step 3</text>
+<text x="40" y="296" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Hardware Refresh············On track</text>
+<text x="40" y="328" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Vulnerability Patch Ring····Watch</text>
+<rect x="1123.76" y="174" width="772.24" height="888" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<rect x="1123.76" y="174" width="4" height="888" fill="#7C5CFC"/>
+<text x="1139.76" y="200" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14" font-weight="600">Bottlenecks</text>
+<text x="1139.76" y="232" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Approval wait · Access step 3</text>
+<text x="1139.76" y="268" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Vendor response · Patch ring</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<rect width="1440" height="900" fill="#F5F7FA"/>
+<text x="24" y="28" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Operations  /  Command Center</text>
+<text x="24" y="56" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">Enterprise Operations Command Center</text>
+<rect x="24.0" y="72" width="267.2" height="88" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="36.0" y="94" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">System Availability</text>
+<text x="36.0" y="124" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">99.94%</text>
+<text x="36.0" y="146" fill="#0F9F6E" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">30d</text>
+<rect x="305.2" y="72" width="267.2" height="88" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="317.2" y="94" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Open Incidents</text>
+<text x="317.2" y="124" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">27</text>
+<text x="317.2" y="146" fill="#D97706" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">7 Sev1/2</text>
+<rect x="586.4" y="72" width="267.2" height="88" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="598.4" y="94" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">MTTA</text>
+<text x="598.4" y="124" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">6.2 m</text>
+<text x="598.4" y="146" fill="#3B82F6" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">▼ 1.1</text>
+<rect x="867.5999999999999" y="72" width="267.2" height="88" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="879.5999999999999" y="94" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Business Impact</text>
+<text x="879.5999999999999" y="124" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">41</text>
+<text x="879.5999999999999" y="146" fill="#D97706" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Moderate</text>
+<rect x="1148.8" y="72" width="267.2" height="88" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="1160.8" y="94" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Automation Queue</text>
+<text x="1160.8" y="124" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">14</text>
+<text x="1160.8" y="146" fill="#3B82F6" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">jobs</text>
+<rect x="24" y="174" width="807.3599999999999" height="708" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="40" y="200" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14" font-weight="600">Status Wall · Critical Services</text>
+<text x="40" y="232" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">● Collab Suite········Healthy</text>
+<text x="40" y="264" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">● IdP·················Degraded</text>
+<text x="40" y="296" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">● VPN EMEA············Healthy</text>
+<text x="40" y="328" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">● CRM API·············Degraded</text>
+<text x="40" y="360" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">● Email···············Healthy</text>
+<text x="40" y="392" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">● VDI Brokers·········Watch</text>
+<rect x="845.3599999999999" y="174" width="570.6400000000001" height="708" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<rect x="845.3599999999999" y="174" width="4" height="708" fill="#7C5CFC"/>
+<text x="861.3599999999999" y="200" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14" font-weight="600">Incident Timeline · Alert Feed</text>
+<text x="861.3599999999999" y="232" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">02:14  Sev2  IdP latency APAC</text>
+<text x="861.3599999999999" y="268" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">03:02  Auto  Restart vpn-apac pool</text>
+<text x="861.3599999999999" y="304" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">04:40  Sev1  CRM hang Sales</text>
+<text x="861.3599999999999" y="340" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">05:10  Alert  WAN APAC util 92%</text>
+<text x="861.3599999999999" y="376" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">06:22  Rec   Fail over SIN circuit</text>
+</svg>

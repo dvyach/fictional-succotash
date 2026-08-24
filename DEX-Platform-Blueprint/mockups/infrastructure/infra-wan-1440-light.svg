@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<rect width="1440" height="900" fill="#F5F7FA"/>
+<text x="24" y="28" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Infrastructure  /  WAN Analytics</text>
+<text x="24" y="56" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">WAN Analytics</text>
+<rect x="24.0" y="76" width="336.0" height="92" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="38.0" y="100" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">WAN Path Score</text>
+<text x="38.0" y="132" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="24" font-weight="600">84.1</text>
+<text x="38.0" y="154" fill="#0F9F6E" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">▲ 0.6</text>
+<rect x="376.0" y="76" width="336.0" height="92" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="390.0" y="100" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Circuits Degraded</text>
+<text x="390.0" y="132" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="24" font-weight="600">3</text>
+<text x="390.0" y="154" fill="#D97706" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">of 48</text>
+<rect x="728.0" y="76" width="336.0" height="92" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="742.0" y="100" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Failovers 7d</text>
+<text x="742.0" y="132" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="24" font-weight="600">5</text>
+<text x="742.0" y="154" fill="#3B82F6" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">events</text>
+<rect x="1080.0" y="76" width="336.0" height="92" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="1094.0" y="100" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Util P95</text>
+<text x="1094.0" y="132" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="24" font-weight="600">71%</text>
+<text x="1094.0" y="154" fill="#D97706" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">watch</text>
+<rect x="24" y="184" width="863.04" height="696" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="42" y="212" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14" font-weight="600">Circuit health</text>
+<text x="42" y="254" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13">HQ ↔ EMEA Hub  ·  Healthy</text>
+<rect x="42" y="262" width="731.736" height="8" rx="4" fill="#1B6EF3" opacity="0.9"/>
+<text x="42" y="290" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13">HQ ↔ AMER Hub  ·  Healthy</text>
+<rect x="42" y="298" width="650.432" height="8" rx="4" fill="#1B6EF3" opacity="0.8"/>
+<text x="42" y="326" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13">EMEA ↔ APAC  ·  Degraded</text>
+<rect x="42" y="334" width="569.1279999999999" height="8" rx="4" fill="#1B6EF3" opacity="0.7"/>
+<text x="42" y="362" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13">AMER ↔ Cloud  ·  Healthy</text>
+<rect x="42" y="370" width="487.82399999999996" height="8" rx="4" fill="#1B6EF3" opacity="0.6"/>
+<rect x="903.04" y="184" width="512.96" height="696" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<rect x="903.04" y="184" width="4" height="696" fill="#7C5CFC"/>
+<text x="919.04" y="212" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14" font-weight="600">AI Insights</text>
+<rect x="915.04" y="232" width="488.96000000000004" height="110" rx="10" fill="#F0ECFF" stroke="#7C5CFC" stroke-opacity="0.3"/>
+<text x="927.04" y="262" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">Priority signal detected</text>
+<text x="927.04" y="284" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Confidence ≥ 85% · Open investigation</text>
+<text x="927.04" y="304" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Recommended action available.</text>
+</svg>

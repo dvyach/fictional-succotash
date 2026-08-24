@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<rect width="1920" height="1080" fill="#F5F7FA"/>
+<text x="24" y="28" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Operations  /  Automation</text>
+<text x="24" y="56" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">Automation Dashboard</text>
+<rect x="24.0" y="72" width="457.5" height="88" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="36.0" y="94" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Success Rate</text>
+<text x="36.0" y="124" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">94.6%</text>
+<text x="36.0" y="146" fill="#0F9F6E" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">7d</text>
+<rect x="495.5" y="72" width="457.5" height="88" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="507.5" y="94" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Queue Depth</text>
+<text x="507.5" y="124" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">14</text>
+<text x="507.5" y="146" fill="#3B82F6" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">jobs</text>
+<rect x="967.0" y="72" width="457.5" height="88" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="979.0" y="94" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Failed 24h</text>
+<text x="979.0" y="124" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">9</text>
+<text x="979.0" y="146" fill="#D97706" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">retrying 4</text>
+<rect x="1438.5" y="72" width="457.5" height="88" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="1450.5" y="94" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Emp Hours Saved</text>
+<text x="1450.5" y="124" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">1.2k</text>
+<text x="1450.5" y="146" fill="#0F9F6E" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">modeled</text>
+<rect x="24" y="174" width="1085.76" height="888" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<text x="40" y="200" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14" font-weight="600">Automation Queue</text>
+<text x="40" y="232" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Clear DNS cache · cohort APAC · Queued</text>
+<text x="40" y="264" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Restart print spooler · 42 devices · Running</text>
+<text x="40" y="296" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Scale vpn-apac-1 · Approved · Waiting window</text>
+<text x="40" y="328" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Remediate sticky Wi‑Fi · HQ-4F · Draft</text>
+<rect x="1123.76" y="174" width="772.24" height="888" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
+<rect x="1123.76" y="174" width="4" height="888" fill="#7C5CFC"/>
+<text x="1139.76" y="200" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14" font-weight="600">Guardrails</text>
+<text x="1139.76" y="232" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Change window required for scale</text>
+<text x="1139.76" y="268" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Max 500 devices / blast radius</text>
+<text x="1139.76" y="304" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Rollback plan attached</text>
+</svg>

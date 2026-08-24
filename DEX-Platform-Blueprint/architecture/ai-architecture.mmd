@@ -1,0 +1,54 @@
+%% AetherDEX AI Architecture — Session 2
+flowchart TB
+  subgraph Ingest["Telemetry & Context"]
+    EP[Endpoint Facts]
+    APP[App Sessions]
+    NET[Network/VPN/WiFi/WAN]
+    CLOUD[Cloud/VDI/DC]
+    OPS[Alerts/Incidents/Changes]
+    DEX[DEX Composites]
+  end
+
+  subgraph Feature["Feature & Graph Layer"]
+    FS[Feature Store]
+    KG[Knowledge Graph]
+    EV[Evidence Pack Service]
+  end
+
+  subgraph Models["Model Services"]
+    RCA[Root Cause Ranker]
+    CORR[Correlation Engine]
+    PRED[Prediction Service]
+    REC[Recommendation Optimizer]
+    TWIN[Digital Twin Simulator]
+    NLP[Copilot LLM + RAG]
+  end
+
+  subgraph UX["AI Surfaces"]
+    CMD[AI Command Center]
+    COP[Copilot]
+    EXEC[Executive Insights]
+    INV[Investigation Cases]
+    OPSUI[Ops Command Center]
+  end
+
+  Ingest --> FS
+  Ingest --> KG
+  FS --> RCA
+  FS --> CORR
+  FS --> PRED
+  FS --> REC
+  FS --> TWIN
+  KG --> NLP
+  FS --> NLP
+  RCA --> EV
+  CORR --> EV
+  PRED --> EV
+  REC --> EV
+  NLP --> EV
+  EV --> CMD
+  EV --> COP
+  EV --> EXEC
+  EV --> INV
+  REC --> OPSUI
+  TWIN --> COP

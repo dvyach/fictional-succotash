@@ -1,0 +1,45 @@
+%% Widget dependency / composition map (Session 2)
+flowchart TB
+  subgraph Primitives["Primitive Catalog v2E"]
+    KPI[KPI Cards]
+    CH[Charts]
+    TB[Tables]
+    TL[Timelines]
+    GR[Graphs]
+    AI[AI Cards]
+    FL[Filters]
+    PN[Panels]
+  end
+
+  subgraph Domain["Domain Widgets"]
+    EXEC[w-exec-*]
+    EXP[w-exp-*]
+    END[w-end-*]
+    APP[w-app-*]
+    INF[w-infra-*]
+    OPS[w-ops-*]
+    AIX[w-ai-*]
+    INV[w-inv-*]
+  end
+
+  KPI --> EXEC
+  KPI --> EXP
+  KPI --> END
+  KPI --> APP
+  KPI --> INF
+  KPI --> OPS
+  CH --> EXEC
+  CH --> INF
+  CH --> AI
+  TB --> OPS
+  TB --> INV
+  TL --> OPS
+  TL --> INV
+  GR --> INF
+  GR --> AIX
+  GR --> INV
+  AI --> AIX
+  AI --> EXEC
+  FL --> Domain
+  PN --> INV
+  PN --> AIX

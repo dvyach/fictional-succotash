@@ -1,0 +1,24 @@
+%% AetherDEX Entity Model (logical Gold)
+erDiagram
+  ORGANIZATION ||--o{ REGION : has
+  REGION ||--o{ COUNTRY : has
+  COUNTRY ||--o{ SITE : has
+  BUSINESS_UNIT ||--o{ DEPARTMENT : has
+  DEPARTMENT ||--o{ EMPLOYEE : has
+  EMPLOYEE ||--o{ DEVICE_ASSIGNMENT : has
+  DEVICE ||--o{ DEVICE_ASSIGNMENT : has
+  EMPLOYEE ||--o{ SESSION : generates
+  DEVICE ||--o{ SESSION : hosts
+  APPLICATION ||--o{ SESSION : used_in
+  APPLICATION ||--o{ APP_VERSION : has
+  APPLICATION ||--o{ APP_DEPENDENCY : depends
+  EMPLOYEE ||--o{ JOURNEY_INSTANCE : runs
+  JOURNEY_INSTANCE ||--o{ FRICTION_EVENT : emits
+  NETWORK_PATH ||--o{ SESSION : contributes
+  INCIDENT ||--o{ ALERT : correlates
+  CASE ||--o{ EVIDENCE_PACK : seals
+  CASE }o--o{ EMPLOYEE : participants
+  INSIGHT ||--o{ EVIDENCE_PACK : referenced
+  CLOUD_RESOURCE ||--o{ APP_DEPENDENCY : backs
+  VDI_BROKER ||--o{ VDI_SESSION : brokers
+  EMPLOYEE ||--o{ VDI_SESSION : uses
