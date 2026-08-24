@@ -1,0 +1,827 @@
+{
+  "formula_id": "nh_score_v1",
+  "version": 1,
+  "status": "canonical_executable_contract",
+  "supersedes_draft": "Chat draft nh_score_v1 that used technology:0.7/sentiment:0.3 and frustrating/average/good bands",
+  "authority": {
+    "dex_rollup": "DEX-Platform-Blueprint Volume-3A + metric-catalog-session-1 (4 pillars)",
+    "per_metric_bands": "This file (nh_metric_score_v1 section)",
+    "demo_only": "demo_tech_v1 in Pinot seed — not product DEX"
+  },
+  "description": "Client emits per-metric/event score; server rolls drill categories into blueprint DEX pillars.",
+  "score_range": { "min": 0, "max": 100, "higher_is_better": true },
+  "display_bands": {
+    "excellent": { "min": 85, "max": 100 },
+    "good": { "min": 70, "max": 84 },
+    "fair": { "min": 55, "max": 69 },
+    "poor": { "min": 0, "max": 54 }
+  },
+  "client": {
+    "emits": ["metric_value", "score", "score_formula", "score_version"],
+    "score_formula": "nh_metric_score_v1",
+    "score_version": 1,
+    "window": {
+      "agent_sample_interval_min": 1,
+      "upload_interval_min": 30,
+      "score_stat_by_direction": {
+        "higher_worse": "p95",
+        "higher_better": "p5"
+      },
+      "score_stat_exceptions": {
+        "disk_free_pct": "min",
+        "packet_loss_pct": "max",
+        "boot_time_total": "raw_event",
+        "boot_time_desktop_ready": "raw_event",
+        "logon_time_total": "raw_event"
+      }
+    },
+    "null_means": "do_not_invent_score"
+  },
+  "server": {
+    "uses": ["category_rollups", "pillar_scores", "dex_score", "side_scores"],
+    "category_formula_id": "nh_category_score_v1",
+    "dex_formula_id": "nh_dex_v1"
+  },
+  "interp": {
+    "method": "piecewise_linear",
+    "clamp": true,
+    "round_decimals": 1,
+    "direction": {
+      "higher_worse": "value at/under first upto -> first score; at/over last upto -> last score; linear between",
+      "higher_better": "same interpolation; scores increase with value"
+    }
+  },
+
+  "nh_dex_v1": {
+    "compute_on": "server",
+    "formula": "0.3*Endpoint + 0.3*App + 0.2*NetworkCollab + 0.2*Sentiment",
+    "pillar_weights": {
+      "endpoint": 0.3,
+      "app": 0.3,
+      "network_collab": 0.2,
+      "sentiment": 0.2
+    },
+    "tenant_weights_overridable": true,
+    "side_scores_not_in_dex": ["compliance", "automation"],
+    "renormalize_empty_pillars": {
+      "enabled": true,
+      "algorithm": "proportional",
+      "description": "If a pillar has no scorable inputs in the window, drop it and renormalize remaining pillar weights so they sum to 1.0. Do not redistribute to a fixed fallback pillar."
+    },
+    "pillar_from_categories": {
+      "endpoint": { "categories": ["endpoint"], "weights": [1.0] },
+      "app": {
+        "categories": ["business_apps", "productivity_apps"],
+        "weights": [0.667, 0.333],
+        "note": "Internal split; product App pillar weight remains 0.30 of DEX"
+      },
+      "network_collab": {
+        "categories": ["network", "collaboration_apps"],
+        "weights": [0.6, 0.4],
+        "note": "Internal split; product NetworkCollab pillar weight remains 0.20 of DEX"
+      },
+      "sentiment": { "categories": ["sentiment"], "weights": [1.0] }
+    }
+  },
+
+  "nh_category_score_v1": {
+    "compute_on": "server",
+    "renormalize_weights_if_category_empty": {
+      "enabled": true,
+      "algorithm": "proportional",
+      "description": "Drop drivers/categories with null coverage; renormalize remaining weights to sum 1.0 within that category."
+    },
+    "categories": {
+      "endpoint": {
+        "metric_families": ["Device Performance", "Startup Experience"],
+        "drivers": [
+          { "metric": "cpu_usage_pct", "weight": 0.2 },
+          { "metric": "memory_usage_pct", "weight": 0.2 },
+          { "metric": "disk_free_pct", "weight": 0.15 },
+          {
+            "metric": "disk_latency_blend",
+            "weight": 0.15,
+            "blend": ["disk_read_latency", "disk_write_latency"]
+          },
+          { "metric": "boot_time_total", "weight": 0.15 },
+          { "metric": "logon_time_total", "weight": 0.1 },
+          { "metric": "crash_rate_7d", "weight": 0.025 },
+          { "metric": "hang_rate_7d", "weight": 0.025 }
+        ],
+        "omit_until_present": ["battery_charge_pct", "battery_health_pct"]
+      },
+      "business_apps": {
+        "processes": ["CoreBankingClient.exe", "TellerConnect.exe"],
+        "metric_families": ["Business Applications"],
+        "url_tags": ["banking"],
+        "drivers": [
+          { "type": "process_resource", "weight": 0.25 },
+          {
+            "type": "process_network",
+            "metrics": ["round_trip_time", "packet_loss_pct"],
+            "weight": 0.3
+          },
+          { "type": "url_http", "metric": "http_response_time", "weight": 0.3 },
+          { "type": "process_reliability", "weight": 0.15 }
+        ]
+      },
+      "productivity_apps": {
+        "processes": ["OUTLOOK.EXE", "OneDrive.exe", "chrome.exe"],
+        "drivers": [
+          { "type": "process_resource", "weight": 0.4 },
+          { "type": "process_reliability", "weight": 0.4 },
+          { "type": "url_http_optional", "weight": 0.2 }
+        ]
+      },
+      "collaboration_apps": {
+        "processes": ["ms-teams.exe"],
+        "metric_families": ["Collaboration Experience"],
+        "drivers": [
+          { "type": "process_resource", "weight": 0.35 },
+          {
+            "type": "process_network",
+            "metrics": ["round_trip_time", "dns_lookup_time", "packet_loss_pct"],
+            "weight": 0.45
+          },
+          { "type": "process_reliability", "weight": 0.2 }
+        ],
+        "omit_until_present": [
+          "collab_packet_loss_pct",
+          "collab_jitter_ms",
+          "collab_rtt_ms"
+        ]
+      },
+      "network": {
+        "metric_families": ["Network Experience"],
+        "drivers": [
+          { "metric": "round_trip_time", "scope": "device_or_median", "weight": 0.4 },
+          { "metric": "dns_lookup_time", "weight": 0.25 },
+          { "metric": "packet_loss_pct", "weight": 0.3 },
+          { "metric": "wifi_signal_dbm", "weight": 0.05 }
+        ],
+        "omit_until_present": ["vpn_connected", "link_util_upload_pct", "link_util_download_pct"]
+      },
+      "sentiment": {
+        "metric": "sentiment_score_normalized",
+        "aggregate": "avg",
+        "demo_attribute": "attributes.demo === true marks illustrative only; exclude from product DEX when demo"
+      },
+      "compliance": {
+        "side_score": true,
+        "aggregate": "mean_of_control_scores"
+      },
+      "automation": {
+        "side_score": true,
+        "metric": "autoheal_success_rate",
+        "penalty": {
+          "if_event": "network.condition_recurrence",
+          "delta": -15,
+          "floor": 0
+        }
+      }
+    }
+  },
+
+  "metrics": {
+    "cpu_usage_pct": {
+      "kind": "gauge",
+      "unit": "%",
+      "direction": "higher_worse",
+      "client_score": true,
+      "bands": [
+        { "upto": 40, "score": 100 },
+        { "upto": 70, "score": 75 },
+        { "upto": 85, "score": 55 },
+        { "upto": 95, "score": 25 },
+        { "upto": 100, "score": 5 }
+      ]
+    },
+    "memory_usage_pct": {
+      "kind": "gauge",
+      "unit": "%",
+      "direction": "higher_worse",
+      "client_score": true,
+      "bands": [
+        { "upto": 50, "score": 100 },
+        { "upto": 75, "score": 70 },
+        { "upto": 85, "score": 55 },
+        { "upto": 95, "score": 25 },
+        { "upto": 100, "score": 5 }
+      ]
+    },
+    "cpu_interrupt_usage_pct": {
+      "kind": "gauge",
+      "unit": "%",
+      "direction": "higher_worse",
+      "client_score": true,
+      "bands": [
+        { "upto": 5, "score": 100 },
+        { "upto": 15, "score": 70 },
+        { "upto": 30, "score": 40 },
+        { "upto": 50, "score": 10 }
+      ]
+    },
+    "disk_free_pct": {
+      "kind": "gauge",
+      "unit": "%",
+      "direction": "higher_better",
+      "client_score": true,
+      "window_stat": "min",
+      "saturation_note": "≥50% free saturates at score 100 by design",
+      "bands": [
+        { "upto": 5, "score": 5 },
+        { "upto": 10, "score": 25 },
+        { "upto": 20, "score": 55 },
+        { "upto": 30, "score": 85 },
+        { "upto": 50, "score": 100 }
+      ]
+    },
+    "cpu_queue_length": {
+      "kind": "gauge",
+      "unit": "count",
+      "direction": "higher_worse",
+      "client_score": true,
+      "bands": [
+        { "upto": 1, "score": 100 },
+        { "upto": 2, "score": 80 },
+        { "upto": 4, "score": 55 },
+        { "upto": 8, "score": 25 },
+        { "upto": 16, "score": 5 }
+      ]
+    },
+    "disk_queue_length": {
+      "kind": "gauge",
+      "unit": "count",
+      "direction": "higher_worse",
+      "client_score": true,
+      "bands": [
+        { "upto": 0.5, "score": 100 },
+        { "upto": 2, "score": 70 },
+        { "upto": 4, "score": 45 },
+        { "upto": 8, "score": 20 },
+        { "upto": 16, "score": 5 }
+      ]
+    },
+    "disk_read_latency": {
+      "kind": "latency",
+      "unit": "ms",
+      "direction": "higher_worse",
+      "client_score": true,
+      "bands": [
+        { "upto": 5, "score": 100 },
+        { "upto": 15, "score": 75 },
+        { "upto": 30, "score": 55 },
+        { "upto": 50, "score": 30 },
+        { "upto": 100, "score": 5 }
+      ]
+    },
+    "disk_write_latency": {
+      "kind": "latency",
+      "unit": "ms",
+      "direction": "higher_worse",
+      "client_score": true,
+      "bands": [
+        { "upto": 5, "score": 100 },
+        { "upto": 20, "score": 70 },
+        { "upto": 40, "score": 45 },
+        { "upto": 80, "score": 20 },
+        { "upto": 150, "score": 5 }
+      ]
+    },
+    "boot_time_total": {
+      "kind": "latency",
+      "unit": "ms",
+      "direction": "higher_worse",
+      "client_score": true,
+      "window_stat": "raw_event",
+      "blueprint_threshold": "P90 Good ≤45s · Fair ≤90s · Poor >90s",
+      "bands": [
+        { "upto": 30000, "score": 100 },
+        { "upto": 45000, "score": 85 },
+        { "upto": 90000, "score": 55 },
+        { "upto": 180000, "score": 20 },
+        { "upto": 300000, "score": 5 }
+      ]
+    },
+    "boot_time_desktop_ready": {
+      "kind": "latency",
+      "unit": "ms",
+      "direction": "higher_worse",
+      "client_score": true,
+      "window_stat": "raw_event",
+      "bands": [
+        { "upto": 20000, "score": 100 },
+        { "upto": 35000, "score": 85 },
+        { "upto": 60000, "score": 55 },
+        { "upto": 120000, "score": 20 },
+        { "upto": 240000, "score": 5 }
+      ]
+    },
+    "logon_time_total": {
+      "kind": "latency",
+      "unit": "ms",
+      "direction": "higher_worse",
+      "client_score": true,
+      "window_stat": "raw_event",
+      "blueprint_threshold": "P90 Good ≤20s · Fair ≤45s · Poor >45s",
+      "bands": [
+        { "upto": 8000, "score": 100 },
+        { "upto": 20000, "score": 85 },
+        { "upto": 45000, "score": 55 },
+        { "upto": 90000, "score": 25 },
+        { "upto": 180000, "score": 5 }
+      ]
+    },
+    "memory_page_faults_per_sec": {
+      "kind": "rate",
+      "unit": "count/sec",
+      "direction": "higher_worse",
+      "client_score": true,
+      "bands": [
+        { "upto": 100, "score": 100 },
+        { "upto": 500, "score": 75 },
+        { "upto": 2000, "score": 45 },
+        { "upto": 5000, "score": 20 },
+        { "upto": 15000, "score": 5 }
+      ]
+    },
+    "memory_available_bytes": {
+      "kind": "util",
+      "unit": "bytes",
+      "direction": "higher_better",
+      "client_score": true,
+      "derive": {
+        "input": "avail_pct",
+        "expr": "100 * metric_value / mem_total_bytes",
+        "requires": ["mem_total_bytes"],
+        "score_null_if_missing": true
+      },
+      "saturation_note": "≥50% available saturates at score 100 by design",
+      "bands": [
+        { "upto": 5, "score": 5 },
+        { "upto": 10, "score": 25 },
+        { "upto": 20, "score": 55 },
+        { "upto": 35, "score": 85 },
+        { "upto": 50, "score": 100 }
+      ]
+    },
+    "battery_charge_pct": {
+      "kind": "gauge",
+      "unit": "%",
+      "direction": "higher_better",
+      "client_score": true,
+      "requires": ["battery_present"],
+      "score_null_if_missing": true,
+      "bands": [
+        { "upto": 5, "score": 10 },
+        { "upto": 15, "score": 40 },
+        { "upto": 30, "score": 70 },
+        { "upto": 50, "score": 90 },
+        { "upto": 80, "score": 100 }
+      ]
+    },
+    "battery_health_pct": {
+      "kind": "gauge",
+      "unit": "%",
+      "direction": "higher_better",
+      "client_score": true,
+      "requires": ["battery_present"],
+      "score_null_if_missing": true,
+      "derive": {
+        "expr": "100 * full_charge_capacity / design_capacity",
+        "requires": ["full_charge_capacity", "design_capacity"],
+        "score_null_if_missing": true,
+        "note": "No fallback to a raw emitted % unless agent emits battery_health_pct already derived"
+      },
+      "bands": [
+        { "upto": 50, "score": 5 },
+        { "upto": 60, "score": 25 },
+        { "upto": 70, "score": 55 },
+        { "upto": 80, "score": 75 },
+        { "upto": 90, "score": 95 },
+        { "upto": 100, "score": 100 }
+      ]
+    },
+    "battery_cycle_count": {
+      "kind": "gauge",
+      "unit": "count",
+      "direction": "higher_worse",
+      "client_score": true,
+      "requires": ["battery_present"],
+      "score_null_if_missing": true,
+      "bands": [
+        { "upto": 100, "score": 100 },
+        { "upto": 300, "score": 80 },
+        { "upto": 500, "score": 55 },
+        { "upto": 800, "score": 30 },
+        { "upto": 1200, "score": 10 }
+      ]
+    },
+    "process_cpu_percent": {
+      "kind": "gauge",
+      "unit": "%",
+      "direction": "higher_worse",
+      "client_score": true,
+      "bands": [
+        { "upto": 5, "score": 100 },
+        { "upto": 15, "score": 80 },
+        { "upto": 30, "score": 55 },
+        { "upto": 50, "score": 30 },
+        { "upto": 80, "score": 5 }
+      ]
+    },
+    "process_memory_used_pct": {
+      "kind": "gauge",
+      "unit": "%",
+      "direction": "higher_worse",
+      "client_score": true,
+      "bands": [
+        { "upto": 2, "score": 100 },
+        { "upto": 8, "score": 80 },
+        { "upto": 15, "score": 55 },
+        { "upto": 25, "score": 30 },
+        { "upto": 40, "score": 5 }
+      ]
+    },
+    "process_memory_used": { "kind": "none", "client_score": false, "score": null },
+    "app_launch_ms": {
+      "kind": "latency",
+      "unit": "ms",
+      "direction": "higher_worse",
+      "client_score": true,
+      "score_null_until_emitted": true,
+      "bands": [
+        { "upto": 500, "score": 100 },
+        { "upto": 1500, "score": 80 },
+        { "upto": 3000, "score": 55 },
+        { "upto": 6000, "score": 30 },
+        { "upto": 15000, "score": 5 }
+      ]
+    },
+    "app_ready_ms": {
+      "kind": "latency",
+      "unit": "ms",
+      "direction": "higher_worse",
+      "client_score": true,
+      "score_null_until_emitted": true,
+      "bands": [
+        { "upto": 500, "score": 100 },
+        { "upto": 1500, "score": 80 },
+        { "upto": 3000, "score": 55 },
+        { "upto": 6000, "score": 30 },
+        { "upto": 15000, "score": 5 }
+      ]
+    },
+    "round_trip_time": {
+      "kind": "latency",
+      "unit": "ms",
+      "direction": "higher_worse",
+      "client_score": true,
+      "bands": [
+        { "upto": 40, "score": 100 },
+        { "upto": 80, "score": 85 },
+        { "upto": 150, "score": 70 },
+        { "upto": 300, "score": 45 },
+        { "upto": 1000, "score": 20 },
+        { "upto": 5000, "score": 5 }
+      ]
+    },
+    "dns_lookup_time": {
+      "kind": "latency",
+      "unit": "ms",
+      "direction": "higher_worse",
+      "client_score": true,
+      "bands": [
+        { "upto": 20, "score": 100 },
+        { "upto": 50, "score": 85 },
+        { "upto": 100, "score": 60 },
+        { "upto": 250, "score": 30 },
+        { "upto": 1000, "score": 5 }
+      ]
+    },
+    "packet_loss_pct": {
+      "kind": "gauge",
+      "unit": "%",
+      "direction": "higher_worse",
+      "client_score": true,
+      "window_stat": "max",
+      "bands": [
+        { "upto": 0.2, "score": 100 },
+        { "upto": 1, "score": 80 },
+        { "upto": 3, "score": 55 },
+        { "upto": 8, "score": 25 },
+        { "upto": 20, "score": 5 }
+      ]
+    },
+    "tcp_retransmits": {
+      "kind": "rate",
+      "unit": "count/min",
+      "direction": "higher_worse",
+      "client_score": true,
+      "derive": {
+        "expr": "metric_value / window_minutes",
+        "requires": ["window_minutes"],
+        "score_null_if_missing": true
+      },
+      "bands": [
+        { "upto": 0, "score": 100 },
+        { "upto": 5, "score": 80 },
+        { "upto": 20, "score": 55 },
+        { "upto": 100, "score": 25 },
+        { "upto": 500, "score": 5 }
+      ]
+    },
+    "link_util_upload_pct": {
+      "kind": "util",
+      "unit": "%",
+      "direction": "higher_worse",
+      "client_score": true,
+      "replaces_draft_metric": "network_upload_speed",
+      "derive": {
+        "input": "util_pct",
+        "expr": "100 * bytes_per_sec / (link_speed_bps / 8)",
+        "requires": ["bytes_per_sec", "link_speed_bps"],
+        "score_null_if_missing": true,
+        "note": "Score link saturation, not raw kbps. Align unit conversion with agent."
+      },
+      "bands": [
+        { "upto": 30, "score": 100 },
+        { "upto": 60, "score": 70 },
+        { "upto": 80, "score": 45 },
+        { "upto": 95, "score": 15 },
+        { "upto": 100, "score": 5 }
+      ]
+    },
+    "link_util_download_pct": {
+      "kind": "util",
+      "unit": "%",
+      "direction": "higher_worse",
+      "client_score": true,
+      "replaces_draft_metric": "network_download_speed",
+      "derive": {
+        "input": "util_pct",
+        "expr": "100 * bytes_per_sec / (link_speed_bps / 8)",
+        "requires": ["bytes_per_sec", "link_speed_bps"],
+        "score_null_if_missing": true
+      },
+      "bands": [
+        { "upto": 30, "score": 100 },
+        { "upto": 60, "score": 70 },
+        { "upto": 80, "score": 45 },
+        { "upto": 95, "score": 15 },
+        { "upto": 100, "score": 5 }
+      ]
+    },
+    "network_upload_speed": {
+      "kind": "none",
+      "client_score": false,
+      "score": null,
+      "deprecated": "Use link_util_upload_pct; do not score raw kbps"
+    },
+    "network_download_speed": {
+      "kind": "none",
+      "client_score": false,
+      "score": null,
+      "deprecated": "Use link_util_download_pct; do not score raw kbps"
+    },
+    "data_sent": { "kind": "none", "client_score": false, "score": null },
+    "data_received": { "kind": "none", "client_score": false, "score": null },
+    "tcp_established_connections": { "kind": "none", "client_score": false, "score": null },
+    "disk_read_iops": { "kind": "none", "client_score": false, "score": null },
+    "disk_write_iops": { "kind": "none", "client_score": false, "score": null },
+    "interrupt_rate_per_sec": { "kind": "none", "client_score": false, "score": null },
+    "context_switches_per_sec": { "kind": "none", "client_score": false, "score": null },
+    "processes_running": { "kind": "none", "client_score": false, "score": null },
+    "wifi_signal_dbm": {
+      "kind": "gauge",
+      "unit": "dBm",
+      "direction": "higher_better",
+      "client_score": true,
+      "score_null_if_wired": true,
+      "bands": [
+        { "upto": -90, "score": 5 },
+        { "upto": -80, "score": 20 },
+        { "upto": -70, "score": 55 },
+        { "upto": -60, "score": 85 },
+        { "upto": -50, "score": 100 }
+      ]
+    },
+    "vpn_connected": {
+      "kind": "binary",
+      "client_score": true,
+      "score_null_until_emitted": true,
+      "agent_emit_contract": "Not in current DART/Haya surface. When added, emit boolean true/false only.",
+      "by_value": { "true": 100, "false": 20, "*": null },
+      "note": "Unrecognized values -> null score. Do not mix Connected/Disconnected until agent contract is fixed."
+    },
+    "http_response_time": {
+      "kind": "latency",
+      "unit": "ms",
+      "direction": "higher_worse",
+      "client_score": true,
+      "bands": [
+        { "upto": 200, "score": 100 },
+        { "upto": 500, "score": 80 },
+        { "upto": 1000, "score": 55 },
+        { "upto": 2000, "score": 30 },
+        { "upto": 5000, "score": 10 }
+      ]
+    },
+    "ttfb": {
+      "kind": "latency",
+      "unit": "ms",
+      "direction": "higher_worse",
+      "client_score": true,
+      "bands": [
+        { "upto": 100, "score": 100 },
+        { "upto": 300, "score": 80 },
+        { "upto": 800, "score": 55 },
+        { "upto": 1500, "score": 30 },
+        { "upto": 3000, "score": 5 }
+      ]
+    },
+    "http_error_rate_pct": {
+      "kind": "rate",
+      "unit": "%",
+      "direction": "higher_worse",
+      "client_score": true,
+      "derive": {
+        "expr": "100 * count_status_ge_400 / count_requests",
+        "requires": ["count_status_ge_400", "count_requests"],
+        "score_null_if_missing": true
+      },
+      "bands": [
+        { "upto": 0.5, "score": 100 },
+        { "upto": 1, "score": 80 },
+        { "upto": 3, "score": 55 },
+        { "upto": 10, "score": 25 },
+        { "upto": 25, "score": 5 }
+      ]
+    },
+    "collab_packet_loss_pct": {
+      "kind": "gauge",
+      "unit": "%",
+      "direction": "higher_worse",
+      "client_score": true,
+      "score_null_until_emitted": true,
+      "bands": [
+        { "upto": 0.2, "score": 100 },
+        { "upto": 1, "score": 80 },
+        { "upto": 3, "score": 55 },
+        { "upto": 8, "score": 25 },
+        { "upto": 20, "score": 5 }
+      ]
+    },
+    "collab_jitter_ms": {
+      "kind": "latency",
+      "unit": "ms",
+      "direction": "higher_worse",
+      "client_score": true,
+      "score_null_until_emitted": true,
+      "bands": [
+        { "upto": 15, "score": 100 },
+        { "upto": 30, "score": 75 },
+        { "upto": 50, "score": 55 },
+        { "upto": 100, "score": 20 },
+        { "upto": 200, "score": 5 }
+      ]
+    },
+    "collab_rtt_ms": {
+      "kind": "latency",
+      "unit": "ms",
+      "direction": "higher_worse",
+      "client_score": true,
+      "score_null_until_emitted": true,
+      "bands": [
+        { "upto": 40, "score": 100 },
+        { "upto": 80, "score": 85 },
+        { "upto": 150, "score": 70 },
+        { "upto": 300, "score": 45 },
+        { "upto": 1000, "score": 20 },
+        { "upto": 5000, "score": 5 }
+      ]
+    },
+    "crash_rate_7d": {
+      "kind": "rate",
+      "unit": "per_device_day",
+      "direction": "higher_worse",
+      "client_score": true,
+      "compute_on": "client_or_server",
+      "bands": [
+        { "upto": 0, "score": 100 },
+        { "upto": 0.2, "score": 80 },
+        { "upto": 0.5, "score": 55 },
+        { "upto": 1, "score": 30 },
+        { "upto": 2, "score": 5 }
+      ]
+    },
+    "hang_rate_7d": {
+      "kind": "rate",
+      "unit": "per_device_day",
+      "direction": "higher_worse",
+      "client_score": true,
+      "compute_on": "client_or_server",
+      "bands": [
+        { "upto": 0, "score": 100 },
+        { "upto": 0.2, "score": 80 },
+        { "upto": 0.5, "score": 55 },
+        { "upto": 1, "score": 30 },
+        { "upto": 2, "score": 5 }
+      ]
+    },
+    "autoheal_success_rate": {
+      "kind": "rate",
+      "unit": "ratio_0_1",
+      "direction": "higher_better",
+      "client_score": false,
+      "compute_on": "server",
+      "bands": [
+        { "upto": 0, "score": 0 },
+        { "upto": 0.5, "score": 20 },
+        { "upto": 0.7, "score": 55 },
+        { "upto": 0.9, "score": 80 },
+        { "upto": 1.0, "score": 100 }
+      ]
+    },
+    "sentiment_score_normalized": {
+      "kind": "gauge",
+      "unit": "0-100",
+      "direction": "higher_better",
+      "client_score": true,
+      "derive": {
+        "expr": "round1((raw_1_to_5 - 1) / 4 * 100)",
+        "requires": ["raw_1_to_5"],
+        "score_null_if_missing": true
+      }
+    }
+  },
+
+  "events": {
+    "failure.application_error": {
+      "client_score": true,
+      "by_severity": { "Warning": 25, "Error": 15, "Critical": 5, "*": 15 }
+    },
+    "failure.application_hang": {
+      "client_score": true,
+      "by_severity": { "Warning": 30, "Error": 20, "Critical": 10, "*": 20 }
+    },
+    "failure.connection_failure": { "client_score": true, "score": 25 },
+    "network.connection_failure": { "client_score": true, "score": 25 },
+    "network.condition_recurrence": { "client_score": true, "score": 10 },
+    "user.logon": {
+      "client_score": true,
+      "by_status": { "completed": 100, "*": 20 }
+    },
+    "remediation.autoheal_action": {
+      "client_score": true,
+      "by_status": { "completed": 90, "failed": 25, "*": 40 }
+    },
+    "self_help.remediation_approved": {
+      "client_score": true,
+      "by_status": { "completed": 85, "executed": 85, "failed": 30, "*": 50 }
+    }
+  },
+
+  "compliance": {
+    "client_score": true,
+    "healthy_statuses": ["Enabled", "Running", "Current"],
+    "score_if_healthy": 100,
+    "score_if_unhealthy": 5,
+    "streak_days_force_zero": {
+      "days": 5,
+      "rule": "If a control is unhealthy for >= streak_days consecutive calendar days, force that control score to 0 regardless of score_if_unhealthy",
+      "requires_input": "control_unhealthy_streak_days"
+    },
+    "controls": [
+      "firewall_enabled",
+      "uac_enabled",
+      "windows_update_status",
+      "backup_software_status",
+      "antivirus_status",
+      "antivirus_enabled"
+    ]
+  },
+
+  "remediation_outcome": {
+    "client_score": false,
+    "compute_on": "server",
+    "when": "baseline_value and measured_value present",
+    "for_higher_worse_metrics": {
+      "delta_pct_expr": "100 * (baseline_value - measured_value) / abs(baseline_value)",
+      "bands_higher_better_on_delta_pct": [
+        { "upto": -10, "score": 15 },
+        { "upto": 0, "score": 35 },
+        { "upto": 10, "score": 60 },
+        { "upto": 20, "score": 80 },
+        { "upto": 100, "score": 95 }
+      ]
+    },
+    "note": "Do not invent before/after on autoheal event alone"
+  },
+
+  "migration": {
+    "from_demo_tech_v1": "Pinot seed scores are not comparable to nh_metric_score_v1; filter or recompute by score_formula",
+    "from_computeBranchScores": "Legacy linear unweighted transforms in dashboards are superseded for product DEX; keep score_formula/score_version on every stored row",
+    "persisted_fields": ["score", "score_formula", "score_version"]
+  }
+}

@@ -1,0 +1,60 @@
+%% Investigation workflow
+flowchart LR
+  A[Signal: Alert / Insight / User ask] --> B[Triage impact radius]
+  B --> C{Need case?}
+  C -->|Yes| D[Create / Open Case]
+  C -->|No| E[Transient Explore]
+  D --> F[Attach entities]
+  E --> F
+  F --> G[Timeline scrub + correlate]
+  G --> H[AI RCA hypotheses]
+  H --> I[Validate evidence]
+  I --> J{Remediate?}
+  J -->|Automation| K[Guarded job]
+  J -->|Change| L[Change / Release]
+  J -->|Remote action| M[Remote action]
+  K --> N[Monitor rebound]
+  L --> N
+  M --> N
+  N --> O[Seal evidence · Resolve case]
+
+%% Entity relationships (investigation)
+flowchart TB
+  Case --> EvidencePack
+  Case --> Participant
+  Case --> Comment
+  EvidencePack --> Insight
+  EvidencePack --> Alert
+  EvidencePack --> Device
+  EvidencePack --> Employee
+  EvidencePack --> Application
+  EvidencePack --> NetworkPath
+  Incident --> Case
+  Alert --> Incident
+
+%% Navigation
+flowchart TB
+  Home[Investigate Home] --> Device
+  Home --> User
+  Home --> App
+  Home --> Incident
+  Home --> Alert
+  Home --> Timeline
+  Device --> Timeline
+  App --> Deps[Dependencies]
+  Incident --> Case
+  Timeline --> Events
+  Deps --> Correlate
+  Case --> Graph[Relationships]
+
+%% Case lifecycle
+stateDiagram-v2
+  [*] --> New
+  New --> Active: assign owner
+  Active --> Monitoring: mitigation applied
+  Monitoring --> Active: regression
+  Active --> Resolved: confirmed recovery
+  Monitoring --> Resolved: stable window
+  Resolved --> Closed: seal + retrospective
+  Closed --> [*]
+  Active --> Closed: duplicate / cancel

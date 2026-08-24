@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AetherDEX — Live Dashboards</title>
+  <link rel="stylesheet" href="styles.css?v=3" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="header">
+      <div class="brand"><div class="mark">A</div>AetherDEX<span class="sub">live · Pinot V2</span></div>
+      <div class="header-right">
+        <span><span class="conn-dot off" id="connDot"></span><span id="connLabel">Not connected</span></span>
+      </div>
+    </header>
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="app-body">
+      <div class="toolbar" id="toolbar"></div>
+      <div id="stage"></div>
+    </main>
+  </div>
+
+  <div class="login-overlay" id="loginOverlay">
+    <div class="login-card">
+      <h2>Connect to Pinot</h2>
+      <p>Credentials are kept only in this browser tab's session storage — never written to disk or embedded in this app.</p>
+      <form id="loginForm">
+        <div class="field">
+          <label for="urlInput">Controller URL</label>
+          <input id="urlInput" type="text" placeholder="https://your-pinot-controller" required />
+        </div>
+        <div class="field">
+          <label for="userInput">Username</label>
+          <input id="userInput" type="text" autocomplete="username" required />
+        </div>
+        <div class="field">
+          <label for="passInput">Password</label>
+          <input id="passInput" type="password" autocomplete="current-password" required />
+        </div>
+        <button class="login-btn" id="loginBtn" type="submit">Connect</button>
+        <div class="login-error" id="loginError"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="pinot.js?v=3"></script>
+  <script src="charts.js?v=3"></script>
+  <script src="app.js?v=3"></script>
+</body>
+</html>

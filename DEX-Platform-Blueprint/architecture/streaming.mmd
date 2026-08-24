@@ -1,0 +1,13 @@
+%% Streaming architecture
+flowchart TB
+  PROD[Producers] --> KAFKA[Kafka Topics by domain]
+  KAFKA --> CS[Consumer Services]
+  CS --> SILVER[(Silver Stores)]
+  CS --> ALERT[Alert Enricher]
+  ALERT --> SSE[SSE / WebSocket Gateway]
+  SILVER --> GOLD_JOB[Micro-batch Gold Jobs]
+  GOLD_JOB --> GOLD[(Gold Facts)]
+  GOLD --> CACHE[Redis Query Cache]
+  CACHE --> API[REST/GraphQL]
+  SSE --> UI[NOC / Cases / Feeds]
+  API --> UI

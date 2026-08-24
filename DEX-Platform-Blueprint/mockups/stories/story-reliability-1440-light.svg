@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<rect x="0.0" y="0.0" width="1440.0" height="900.0" rx="0" fill="#F5F7FA"/>
+<text x="24.0" y="22.0" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Stories  /  Reliability</text>
+<text x="24.0" y="48.0" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">Reliability Story</text>
+<text x="234.0" y="46.0" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13">Devices · Apps · Infrastructure as one causal chain</text>
+<rect x="24.0" y="64.0" width="72.0" height="28.0" rx="8" fill="#1B6EF3" stroke="#1B6EF3"/><text x="36.0" y="82.0" fill="#fff" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11" font-weight="600">Chain</text>
+<rect x="104.0" y="64.0" width="73.0" height="28.0" rx="8" fill="#EEF2F7" stroke="#D8E0EA"/><text x="116.0" y="82.0" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Devices</text>
+<rect x="185.0" y="64.0" width="108.0" height="28.0" rx="8" fill="#EEF2F7" stroke="#D8E0EA"/><text x="197.0" y="82.0" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Applications</text>
+<rect x="301.0" y="64.0" width="73.0" height="28.0" rx="8" fill="#EEF2F7" stroke="#D8E0EA"/><text x="313.0" y="82.0" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Network</text>
+<rect x="382.0" y="64.0" width="87.0" height="28.0" rx="8" fill="#EEF2F7" stroke="#D8E0EA"/><text x="394.0" y="82.0" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Cloud/VDI</text>
+<rect x="477.0" y="64.0" width="80.0" height="28.0" rx="8" fill="#EEF2F7" stroke="#D8E0EA"/><text x="489.0" y="82.0" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Security</text>
+<rect x="565.0" y="64.0" width="87.0" height="28.0" rx="8" fill="#EEF2F7" stroke="#D8E0EA"/><text x="577.0" y="82.0" fill="#4A5D73" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Lifecycle</text>
+<rect x="24.0" y="108.0" width="1392.0" height="130.0" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/><text x="40.0" y="134.0" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14" font-weight="600">Causal chain - experience impact flows downward</text>
+<rect x="48.0" y="156.0" width="214.0" height="56.0" rx="8" fill="#EEF2F7" stroke="#D97706"/>
+<text x="60.0" y="180.0" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">User day</text>
+<text x="60.0" y="200.0" fill="#D97706" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">DEX 78</text>
+<text x="264.0" y="186.0" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14">-&gt;</text>
+<rect x="274.0" y="156.0" width="214.0" height="56.0" rx="8" fill="#EEF2F7" stroke="#D97706"/>
+<text x="286.0" y="180.0" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">Device</text>
+<text x="286.0" y="200.0" fill="#D97706" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Health 74</text>
+<text x="490.0" y="186.0" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14">-&gt;</text>
+<rect x="500.0" y="156.0" width="214.0" height="56.0" rx="8" fill="#EEF2F7" stroke="#DC2626"/>
+<text x="512.0" y="180.0" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">App</text>
+<text x="512.0" y="200.0" fill="#DC2626" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">CRM 61</text>
+<text x="716.0" y="186.0" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14">-&gt;</text>
+<rect x="726.0" y="156.0" width="214.0" height="56.0" rx="8" fill="#EEF2F7" stroke="#DC2626"/>
+<text x="738.0" y="180.0" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">Identity</text>
+<text x="738.0" y="200.0" fill="#DC2626" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">IdP 69</text>
+<text x="942.0" y="186.0" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14">-&gt;</text>
+<rect x="952.0" y="156.0" width="214.0" height="56.0" rx="8" fill="#EEF2F7" stroke="#0F9F6E"/>
+<text x="964.0" y="180.0" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">Network</text>
+<text x="964.0" y="200.0" fill="#0F9F6E" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">VPN 82</text>
+<text x="1168.0" y="186.0" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14">-&gt;</text>
+<rect x="1178.0" y="156.0" width="214.0" height="56.0" rx="8" fill="#EEF2F7" stroke="#0F9F6E"/>
+<text x="1190.0" y="180.0" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">Cloud</text>
+<text x="1190.0" y="200.0" fill="#0F9F6E" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">OK</text>
+<rect x="24.0" y="250.0" width="456.0" height="626.0" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/><text x="40.0" y="276.0" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14" font-weight="600">Devices - health &amp; stability</text>
+<rect x="40.0" y="294.0" width="424.0" height="60.0" rx="8" fill="#EEF2F7" stroke="#D8E0EA"/>
+<text x="52.0" y="316.0" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Crash-free devices</text>
+<text x="52.0" y="340.0" fill="#D97706" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="600">96.2%  ·  -0.4</text>
+<rect x="40.0" y="364.0" width="424.0" height="60.0" rx="8" fill="#EEF2F7" stroke="#D8E0EA"/>
+<text x="52.0" y="386.0" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Boot p95</text>
+<text x="52.0" y="410.0" fill="#DC2626" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="600">48s  ·  +6s WoW</text>
+<rect x="40.0" y="434.0" width="424.0" height="60.0" rx="8" fill="#EEF2F7" stroke="#D8E0EA"/>
+<text x="52.0" y="456.0" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Patch compliance</text>
+<text x="52.0" y="480.0" fill="#D97706" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="600">91%  ·  -2 pts</text>
+<rect x="40.0" y="504.0" width="424.0" height="60.0" rx="8" fill="#EEF2F7" stroke="#D8E0EA"/>
+<text x="52.0" y="526.0" fill="#6B7F96" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Aging &gt;4y</text>
+<text x="52.0" y="550.0" fill="#7C5CFC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="600">1.2k  ·  Invest signal</text>
+<rect x="492.0" y="250.0" width="456.0" height="626.0" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/><text x="508.0" y="276.0" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14" font-weight="600">Applications - portfolio pressure</text>
+<rect x="508.0" y="294.0" width="424.0" height="50.0" rx="8" fill="#EEF2F7" stroke="#D8E0EA"/>
+<text x="520.0" y="314.0" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">CRM Desktop</text>
+<text x="520.0" y="334.0" fill="#DC2626" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Health 61 · Hang rate up</text>
+<rect x="508.0" y="352.0" width="424.0" height="50.0" rx="8" fill="#EEF2F7" stroke="#D8E0EA"/>
+<text x="520.0" y="372.0" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">Teams</text>
+<text x="520.0" y="392.0" fill="#D97706" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Health 79 · Media quality</text>
+<rect x="508.0" y="410.0" width="424.0" height="50.0" rx="8" fill="#EEF2F7" stroke="#D8E0EA"/>
+<text x="520.0" y="430.0" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">Outlook</text>
+<text x="520.0" y="450.0" fill="#0F9F6E" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Health 83 · Sync backlog</text>
+<rect x="508.0" y="468.0" width="424.0" height="50.0" rx="8" fill="#EEF2F7" stroke="#D8E0EA"/>
+<text x="520.0" y="488.0" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">Browser suite</text>
+<text x="520.0" y="508.0" fill="#0F9F6E" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Health 86 · Stable</text>
+<rect x="508.0" y="526.0" width="424.0" height="50.0" rx="8" fill="#EEF2F7" stroke="#D8E0EA"/>
+<text x="520.0" y="546.0" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">ERP web</text>
+<text x="520.0" y="566.0" fill="#D97706" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Health 72 · Slow API</text>
+<rect x="960.0" y="250.0" width="456.0" height="626.0" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/><text x="976.0" y="276.0" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14" font-weight="600">Infrastructure contribution</text>
+<rect x="976.0" y="294.0" width="424.0" height="50.0" rx="8" fill="#EEF2F7" stroke="#D8E0EA"/>
+<text x="988.0" y="314.0" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">VPN EMEA</text>
+<text x="988.0" y="334.0" fill="#D97706" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Reconnect storms · Fair</text>
+<rect x="976.0" y="352.0" width="424.0" height="50.0" rx="8" fill="#EEF2F7" stroke="#D8E0EA"/>
+<text x="988.0" y="372.0" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">Wi-Fi HQ-3</text>
+<text x="988.0" y="392.0" fill="#D97706" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Roam drops · Watch</text>
+<rect x="976.0" y="410.0" width="424.0" height="50.0" rx="8" fill="#EEF2F7" stroke="#D8E0EA"/>
+<text x="988.0" y="430.0" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">Internet egress</text>
+<text x="988.0" y="450.0" fill="#0F9F6E" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Stable · Healthy</text>
+<rect x="976.0" y="468.0" width="424.0" height="50.0" rx="8" fill="#EEF2F7" stroke="#D8E0EA"/>
+<text x="988.0" y="488.0" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">Azure region</text>
+<text x="988.0" y="508.0" fill="#0F9F6E" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">OK · Healthy</text>
+<rect x="976.0" y="526.0" width="424.0" height="50.0" rx="8" fill="#EEF2F7" stroke="#D8E0EA"/>
+<text x="988.0" y="546.0" fill="#0F1B2D" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">VDI pool B</text>
+<text x="988.0" y="566.0" fill="#D97706" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Logon 42s · Watch</text>
+</svg>

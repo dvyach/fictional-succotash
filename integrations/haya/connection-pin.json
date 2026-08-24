@@ -1,0 +1,15 @@
+{
+  "connection_id": "nanoheal-pinot-prod",
+  "engine": "pinot",
+  "broker_url": "https://d1-wfwvzr.nanoheal.app",
+  "controller_url": "https://d1-wfwvzr.nanoheal.app",
+  "auth": {
+    "user": "${PINOT_USER}",
+    "password": "${PINOT_PASSWORD}"
+  },
+  "notes": [
+    "Fields match haya/cdc_manager/sql_adapters/pinot_adapter.py's connection_spec: broker_url, controller_url, user/password (falls back to PINOT_SQL_URL / PINOT_PASS env vars if omitted).",
+    "Credentials are placeholders — inject via environment/secret store when this pin is registered in Haya, never commit real values here.",
+    "This is a Haya connection PIN, distinct from the dashboards/pinot.js client — the two connect to the same Pinot broker independently for their own purposes (live dashboards vs. batch anomaly detection)."
+  ]
+}

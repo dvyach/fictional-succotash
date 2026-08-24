@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<rect x="0.0" y="0.0" width="1920.0" height="1080.0" rx="0" fill="#0B1220"/>
+<text x="24.0" y="22.0" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12">Stories  /  Decide</text>
+<text x="24.0" y="48.0" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="22" font-weight="600">Decide - Investment &amp; Risk</text>
+<text x="304.0" y="46.0" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13">Where money, risk, and sustainability meet experience</text>
+<rect x="24.0" y="64.0" width="87.0" height="28.0" rx="8" fill="#3B82F6" stroke="#3B82F6"/><text x="36.0" y="82.0" fill="#fff" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11" font-weight="600">Portfolio</text>
+<rect x="119.0" y="64.0" width="72.0" height="28.0" rx="8" fill="#162033" stroke="#243148"/><text x="131.0" y="82.0" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Cost</text>
+<rect x="199.0" y="64.0" width="72.0" height="28.0" rx="8" fill="#162033" stroke="#243148"/><text x="211.0" y="82.0" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Risk</text>
+<rect x="279.0" y="64.0" width="122.0" height="28.0" rx="8" fill="#162033" stroke="#243148"/><text x="291.0" y="82.0" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Sustainability</text>
+<rect x="409.0" y="64.0" width="101.0" height="28.0" rx="8" fill="#162033" stroke="#243148"/><text x="421.0" y="82.0" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Predictions</text>
+<rect x="518.0" y="64.0" width="72.0" height="28.0" rx="8" fill="#162033" stroke="#243148"/><text x="530.0" y="82.0" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">ROI</text>
+<rect x="24.0" y="108.0" width="459.0" height="86.0" rx="10" fill="#121A2B" stroke="#243148"/><text x="38.0" y="130.0" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">DEX at risk $</text><text x="38.0" y="160.0" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="24" font-weight="600">$4.8M /qtr</text><text x="38.0" y="182.0" fill="#F59E0B" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Productivity drag</text>
+<rect x="495.0" y="108.0" width="459.0" height="86.0" rx="10" fill="#121A2B" stroke="#243148"/><text x="509.0" y="130.0" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Recommended invest</text><text x="509.0" y="160.0" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="24" font-weight="600">$1.1M</text><text x="509.0" y="182.0" fill="#10B981" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Expected +3.2 DEX</text>
+<rect x="966.0" y="108.0" width="459.0" height="86.0" rx="10" fill="#121A2B" stroke="#243148"/><text x="980.0" y="130.0" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Risk index</text><text x="980.0" y="160.0" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="24" font-weight="600">62</text><text x="980.0" y="182.0" fill="#F59E0B" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Identity + endpoint</text>
+<rect x="1437.0" y="108.0" width="459.0" height="86.0" rx="10" fill="#121A2B" stroke="#243148"/><text x="1451.0" y="130.0" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Carbon / device</text><text x="1451.0" y="160.0" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="24" font-weight="600">48 kg</text><text x="1451.0" y="182.0" fill="#2DD4BF" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">-6% YoY</text>
+<rect x="24.0" y="206.0" width="1023.0" height="850.0" rx="10" fill="#121A2B" stroke="#243148"/><text x="40.0" y="232.0" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14" font-weight="600">Investment options ranked by DEX lift / $</text>
+<rect x="40.0" y="250.0" width="991.0" height="52.0" rx="8" fill="#162033" stroke="#243148"/>
+<text x="52.0" y="270.0" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">Refresh 1.2k aging laptops</text>
+<text x="52.0" y="290.0" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">+$1.8 DEX  ·  $720k  ·  Priority High</text>
+<rect x="40.0" y="310.0" width="991.0" height="52.0" rx="8" fill="#162033" stroke="#243148"/>
+<text x="52.0" y="330.0" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">IdP regional failover</text>
+<text x="52.0" y="350.0" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">+$0.9 DEX  ·  $180k  ·  Priority High</text>
+<rect x="40.0" y="370.0" width="991.0" height="52.0" rx="8" fill="#162033" stroke="#243148"/>
+<text x="52.0" y="390.0" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">CRM client modernization</text>
+<text x="52.0" y="410.0" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">+$1.4 DEX  ·  $410k  ·  Priority Med</text>
+<rect x="40.0" y="430.0" width="991.0" height="52.0" rx="8" fill="#162033" stroke="#243148"/>
+<text x="52.0" y="450.0" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">VPN split-tunnel redesign</text>
+<text x="52.0" y="470.0" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">+$0.5 DEX  ·  $90k  ·  Priority Med</text>
+<rect x="40.0" y="490.0" width="991.0" height="52.0" rx="8" fill="#162033" stroke="#243148"/>
+<text x="52.0" y="510.0" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">License reclaim SaaS</text>
+<text x="52.0" y="530.0" fill="#7E92AB" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Cost only  ·  -$210k  ·  Priority -</text>
+<rect x="1059.0" y="206.0" width="837.0" height="850.0" rx="10" fill="#121A2B" stroke="#243148"/><rect x="1059.0" y="206.0" width="4" height="850.0" fill="#A78BFA"/><text x="1075.0" y="232.0" fill="#E8EEF7" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14" font-weight="600">Executive brief (AI)</text>
+<text x="1083.0" y="254.0" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13">Hold the line on Sev2 CRM/IdP this week -</text>
+<text x="1083.0" y="276.0" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13">they explain most of the -1.4 DEX move.</text>
+<text x="1083.0" y="298.0" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13"> </text>
+<text x="1083.0" y="320.0" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13">Fund laptop refresh ring + IdP failover:</text>
+<text x="1083.0" y="342.0" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13">highest lift per dollar, lowers risk index.</text>
+<text x="1083.0" y="364.0" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13"> </text>
+<text x="1083.0" y="386.0" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13">Defer broad SaaS expansion until reclaim</text>
+<text x="1083.0" y="408.0" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13">cycle recovers $210k idle seats.</text>
+<text x="1083.0" y="430.0" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13"> </text>
+<text x="1083.0" y="452.0" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13">Sustainability: refresh also cuts power</text>
+<text x="1083.0" y="474.0" fill="#A8B8CC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13">draw on oldest cohort (-8% estimated).</text>
+</svg>

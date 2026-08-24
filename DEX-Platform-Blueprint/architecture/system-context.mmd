@@ -1,0 +1,16 @@
+%% System context
+flowchart TB
+  User[Analysts Execs Ops]
+  IdP[Enterprise IdP]
+  ITSM[ITSM]
+  Agents[Endpoint App Agents]
+  Cloud[Cloud Providers]
+  Net[Network Controllers]
+  ADX[AetherDEX Platform]
+  User --> ADX
+  IdP --> ADX
+  Agents --> ADX
+  Cloud --> ADX
+  Net --> ADX
+  ADX <--> ITSM
+  ADX --> Auto[Automation Targets]
