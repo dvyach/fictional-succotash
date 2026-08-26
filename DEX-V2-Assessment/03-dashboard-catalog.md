@@ -649,7 +649,7 @@ Strategic value · Customer value · Competitive importance · Data availability
 - **Drill-down:** device→connections
 - **Alert/anomaly:** Yes
 - **Insight generated:** Latency disasters hidden by averages
-- **Data required:** network_telemetry
+- **Data required:** network_connection_telemetry
 - **Scores (S/C/Comp/Data/Cx/Diff/Auto/Exec/Ops):** 5/5/5/5/2/4/5/3/5
 
 ### NW-02 — DNS Performance

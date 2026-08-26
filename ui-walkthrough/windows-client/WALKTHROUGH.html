@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Windows Client UI — Walkthrough</title>
+  <style>
+    :root {
+      --text: #1a2333;
+      --muted: #5b6b82;
+      --border: #d8e0ec;
+      --bg: #f4f6fa;
+      --card: #ffffff;
+      --accent: #1d4ed8;
+      --tag: #eef4fc;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.5;
+    }
+    header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 28px 32px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header h1 { margin: 0 0 6px; font-size: 24px; }
+    header p { margin: 0; color: var(--muted); font-size: 14px; }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    nav a {
+      font-size: 12px;
+      text-decoration: none;
+      color: var(--accent);
+      background: var(--tag);
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+    }
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px 20px 64px;
+    }
+    section { margin-bottom: 40px; }
+    section > h2 {
+      font-size: 18px;
+      margin: 0 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--accent);
+    }
+    article {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+    article h3 { margin: 0 0 8px; font-size: 17px; }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .meta span {
+      font-size: 12px;
+      background: var(--tag);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 2px 8px;
+      color: var(--muted);
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    .meta .proposed {
+      background: #ecfdf5;
+      border-color: #86efac;
+      color: #166534;
+    }
+    article .desc { margin: 0 0 14px; color: var(--text); font-size: 14px; }
+    article .note {
+      margin: 0 0 14px;
+      font-size: 13px;
+      color: #9a3412;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      border-radius: 8px;
+      padding: 8px 12px;
+    }
+    figure {
+      margin: 0 0 12px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #e8eef6;
+    }
+    figure:last-child { margin-bottom: 0; }
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      vertical-align: top;
+    }
+    figcaption {
+      font-size: 12px;
+      color: var(--muted);
+      padding: 8px 12px;
+      background: #fafbfd;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Windows Client UI — Walkthrough</h1>
+    <p>Nanoheal Electron launcher (<code>NH_Client_UI</code>) · screenshots from New UI Pages 3.docx + proposed Survey &amp; Chatbot UIs · 2026-08-25</p>
+    <nav>
+      <a href="#install">Installation</a>
+      <a href="#home">Home &amp; device</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#support">Support footer</a>
+      <a href="#proposed">Proposed UIs</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="install">
+      <h2>1. Installation pages</h2>
+
+      <article id="prerequisite">
+        <h3>Prerequisite — System Requirements Verification</h3>
+        <div class="meta"><span>Route: /prerequisite</span></div>
+        <p class="desc">Pre-install gate. Runs system checks (proxy, drivers, OS, RAM, connectivity, disk, certificates). Progress bar shows verification state; all green means the device is ready to install.</p>
+        <figure>
+          <img src="screenshots/01-prerequisite.png" alt="Prerequisite page — system requirements verification with all checks passed" />
+          <figcaption>screenshots/01-prerequisite.png</figcaption>
+        </figure>
+      </article>
+
+      <article id="acknowledgement">
+        <h3>Acknowledgement — Terms &amp; Install</h3>
+        <div class="meta"><span>Route: /Ack</span></div>
+        <p class="desc">Legal consent before install. User must acknowledge Terms and Conditions, then Install (or Cancel). Language selector is available in the header.</p>
+        <figure>
+          <img src="screenshots/02-acknowledgement.png" alt="Acknowledgement page with terms checkbox and Install button" />
+          <figcaption>screenshots/02-acknowledgement.png</figcaption>
+        </figure>
+      </article>
+
+      <article id="please-wait">
+        <h3>Please Wait — Installation</h3>
+        <div class="meta"><span>Route: /pleaseWaitInst</span></div>
+        <p class="desc">Blocking progress UI while the client installs / configures. Shows status messaging and a progress indicator until installation finishes and the post-install shell can open.</p>
+        <figure>
+          <img src="screenshots/03-please-wait-install.png" alt="Please wait installation progress screen" />
+          <figcaption>screenshots/03-please-wait-install.png</figcaption>
+        </figure>
+        <figure>
+          <img src="screenshots/04-please-wait-install-alt.png" alt="Please wait installation alternate state" />
+          <figcaption>screenshots/04-please-wait-install-alt.png</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <section id="home">
+      <h2>2. Post-installation — home &amp; device</h2>
+
+      <article id="landing">
+        <h3>Landing Page</h3>
+        <div class="meta"><span>Route: /landingPage</span></div>
+        <p class="desc">Main self-service home. Greeting, search for resolutions, category tiles (Browser, Disk, Network, Office, Teams, etc.), Frequently used resolutions sidebar, links to Device Details and Service History, plus Still Facing Issues? footer (Call / Email / Chat).</p>
+        <p class="note">Optimize: instructional copy that says “choose a category on the left” should say “choose a category” (tiles are a 2-column grid).</p>
+        <figure>
+          <img src="screenshots/05-landing.png" alt="Landing page with solution category tiles and frequently used sidebar" />
+          <figcaption>screenshots/05-landing.png</figcaption>
+        </figure>
+      </article>
+
+      <article id="device-details">
+        <h3>Device Details</h3>
+        <div class="meta"><span>Route: /deviceDetails</span></div>
+        <p class="desc">Shows identity and hardware/software facts for the current machine (support context and troubleshooting). Entry from landing via Device Details →.</p>
+        <figure>
+          <img src="screenshots/06-device-details.png" alt="Device details page" />
+          <figcaption>screenshots/06-device-details.png</figcaption>
+        </figure>
+        <figure>
+          <img src="screenshots/07-device-details-alt.png" alt="Device details alternate view" />
+          <figcaption>screenshots/07-device-details-alt.png</figcaption>
+        </figure>
+      </article>
+
+      <article id="service-history">
+        <h3>Service History</h3>
+        <div class="meta"><span>Route: /serviceHistory</span></div>
+        <p class="desc">Audit of what Nanoheal ran on this device. Tabs: HistoryDetails / Autoheal / Selfhelp / Proactive / Schedule. Search, refresh, and export for logs (history text, date, duration).</p>
+        <figure>
+          <img src="screenshots/08-service-history.png" alt="Service history with HistoryDetails table" />
+          <figcaption>screenshots/08-service-history.png</figcaption>
+        </figure>
+      </article>
+
+      <article id="search">
+        <h3>Search results</h3>
+        <div class="meta"><span>Route: /searchResults</span></div>
+        <p class="desc">Full-text search over the resolution catalog. Each result card is a runnable fix (Outlook, Teams, performance, audio, etc.).</p>
+        <figure>
+          <img src="screenshots/09-search.png" alt="Search results list of resolution cards" />
+          <figcaption>screenshots/09-search.png</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <section id="solutions">
+      <h2>3. Solution catalog (toolbox)</h2>
+
+      <article id="l3">
+        <h3>L3 Tile — fix detail (e.g. Chrome)</h3>
+        <div class="meta"><span>Route: /browserSolution</span></div>
+        <p class="desc">Master–detail for a product/topic. Left: list of fixes; right: description + Fix now. Breadcrumb Home → topic. Knowledge Base Update Now syncs catalog. Footer support strip remains available.</p>
+        <figure>
+          <img src="screenshots/10-l3-tile.png" alt="L3 Chrome fix detail with Fix now button" />
+          <figcaption>screenshots/10-l3-tile.png</figcaption>
+        </figure>
+      </article>
+
+      <article id="l2">
+        <h3>L2 Tile — category (e.g. Browser Solutions)</h3>
+        <div class="meta"><span>Route: /m365Migration (L2 pattern)</span></div>
+        <p class="desc">Category picker (Chrome / Firefox / IE, etc.). Selecting an item and View Solutions drills into the L3 fix list.</p>
+        <figure>
+          <img src="screenshots/11-l2-tile.png" alt="L2 Browser Solutions category picker" />
+          <figcaption>screenshots/11-l2-tile.png</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <section id="support">
+      <h2>4. Support footer (Still Facing Issues?)</h2>
+
+      <article id="call-us">
+        <h3>Call Us</h3>
+        <p class="desc">Modal tab with regional support numbers and hours. Opened from the landing/solution footer.</p>
+        <figure>
+          <img src="screenshots/12-footer-chat-phone.png" alt="Still Facing Issues Call Us modal with regional numbers" />
+          <figcaption>screenshots/12-footer-chat-phone.png</figcaption>
+        </figure>
+      </article>
+
+      <article id="email-us">
+        <h3>Email Us</h3>
+        <p class="desc">Modal tab to email support (preconfigured address from site variables).</p>
+        <figure>
+          <img src="screenshots/13-footer-email.png" alt="Still Facing Issues Email Us modal" />
+          <figcaption>screenshots/13-footer-email.png</figcaption>
+        </figure>
+      </article>
+
+      <article id="chat-entry">
+        <h3>Chat entry (existing)</h3>
+        <p class="desc">Footer / modal entry for chat. Today this typically opens an external chat link (ChatLinkNew) or optional Haya iframe widget (WidgetLink). See proposed chatbot UIs below for in-app designs.</p>
+        <figure>
+          <img src="screenshots/14-footer-still-facing.png" alt="Still Facing Issues footer and chat entry" />
+          <figcaption>screenshots/14-footer-still-facing.png</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <section id="proposed">
+      <h2>5. Proposed UIs (added)</h2>
+      <p style="color:var(--muted);font-size:14px;margin:0 0 16px;">
+        Landing UI is unchanged (attached home screenshot). Survey = centered modal; chat = separate bottom-right widget only.
+        Greeting is <strong>Hi</strong>. Nanoheal icon only — no Haya, no ADM. Mockups in <code>mockups/</code>.
+      </p>
+
+      <article id="survey">
+        <h3>User Survey — modal on existing landing</h3>
+        <div class="meta"><span class="proposed">Proposed</span><span>mockups/survey.html</span></div>
+        <p class="desc">Overlay on the real home page after a fix. Star rating, outcome chips, optional note. Nanoheal icon top-left of the modal header.</p>
+        <figure>
+          <img src="screenshots/15-user-survey.png" alt="User survey modal on unchanged landing page" />
+          <figcaption>screenshots/15-user-survey.png</figcaption>
+        </figure>
+      </article>
+
+      <article id="chatbot-panel">
+        <h3>Chatbot — open (FAB widget)</h3>
+        <div class="meta"><span class="proposed">Aligned</span><span>mockups/chatbot-widget.html · WidgetIframe.tsx</span></div>
+        <p class="desc">Panel fixed bottom 4rem / right 2rem, 340px × ~80vh, radius 16px. Nanoheal header + Online. Greeting: Hi. No Haya / no ADM.</p>
+        <figure>
+          <img src="screenshots/16-chatbot-panel.png" alt="Floating Nanoheal chat widget bottom-right on landing" />
+          <figcaption>screenshots/16-chatbot-panel.png</figcaption>
+        </figure>
+      </article>
+
+      <article id="chatbot-widget">
+        <h3>Chatbot — FAB closed</h3>
+        <div class="meta"><span class="proposed">Aligned</span><span>mockups/chatbot.html · WidgetIframe.tsx</span></div>
+        <p class="desc">Closed FAB bottom 1rem / right 1rem — Nanoheal icon only (no blue circle).</p>
+        <figure>
+          <img src="screenshots/17-chatbot-widget.png" alt="Landing with Nanoheal chat FAB bottom-right" />
+          <figcaption>screenshots/17-chatbot-widget.png</figcaption>
+        </figure>
+      </article>
+
+      <article id="chat-signin">
+        <h3>Chat Now — Sign in (ADM replaced with Nanoheal)</h3>
+        <div class="meta"><span class="proposed">Branding</span><span>screenshots/18-chat-signin-nanoheal.png</span></div>
+        <p class="desc">Microsoft sign-in window after Chat Now. ADM logo removed; Nanoheal logo applied. Live branding is controlled by Entra ID company branding for the chat URL tenant.</p>
+        <figure>
+          <img src="screenshots/18-chat-signin-nanoheal.png" alt="Sign in window with Nanoheal logo instead of ADM" />
+          <figcaption>screenshots/18-chat-signin-nanoheal.png</figcaption>
+        </figure>
+      </article>
+    </section>
+
+  </main>
+</body>
+</html>

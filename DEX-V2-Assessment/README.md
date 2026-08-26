@@ -46,7 +46,7 @@ Current V2 data can support a **credible endpoint operations + remediation analy
 |-------|------|
 | `system_telemetry_metrics_v2` | Device CPU, memory, disk, boot/logon, NIC speed (+ demo `score`) |
 | `process_telemetry_metrics_v2` | Per-process CPU / memory % |
-| `network_telemetry_v2` | RTT, DNS, bytes, TCP, packet loss / retransmits |
+| `network_connection_telemetry_v2` | Process-scoped RTT (`avg_rtt_ms`), DNS, bytes, TCP, packet loss / retransmits (NIC counters on `system_telemetry_metrics_v2`) |
 | `url_telemetry_v2` | HTTP response time by URL/domain |
 | `events_v2` | Crashes, hangs, network failures, remediation, logon |
 | `compliance_v2` | AV / firewall / UAC / update / backup controls |

@@ -51,7 +51,7 @@ For each gap: why it matters, which use cases need it, priority, collection mode
 | Data | Why | Priority notes |
 |------|-----|----------------|
 | Sentiment surveys / pulse | Nexthink-class combined DEX | **Demo:** `sentiment_pulse_v2` seeded. **Live:** usersurvey→Pinot still P2 |
-| Packet loss % / retransmits | Network experience without loss is incomplete | **Demo:** `packet_loss_pct` / `tcp_retransmits` on `network_telemetry_v2`. **Live:** agent mapper pending |
+| Packet loss % / retransmits | Network experience without loss is incomplete | **Demo:** `packet_loss_pct` / `tcp_retransmits` on `network_connection_telemetry_v2`. **Live:** agent mapper pending |
 | Populate / compute `score` | Experience score product | **Demo:** `demo_tech_v1` on system rows. **Live:** may still be 0 until mapper |
 | Synthetic URL probes from offices | Isolate client vs service | P2 |
 | ISP / geo IP enrichment | Network outliers | P2 |

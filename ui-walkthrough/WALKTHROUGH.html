@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Live AEX product — UI walkthrough</title>
+  <style>
+:root { --text:#1a2333; --muted:#5b6b82; --border:#d8e0ec; --bg:#f4f6fa; --card:#fff; --accent:#1d4ed8; --tag:#eef4fc; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:"Segoe UI",system-ui,-apple-system,sans-serif; color:var(--text); background:var(--bg); line-height:1.5; }
+    header { background:#fff; border-bottom:1px solid var(--border); padding:28px 32px; position:sticky; top:0; z-index:10; }
+    header h1 { margin:0 0 6px; font-size:24px; }
+    header p { margin:0; color:var(--muted); font-size:14px; }
+    nav { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+    nav a { font-size:12px; text-decoration:none; color:var(--accent); background:var(--tag); padding:4px 10px; border-radius:999px; border:1px solid var(--border); }
+    main { max-width:980px; margin:0 auto; padding:24px 20px 64px; }
+    section { margin-bottom:40px; }
+    section > h2 { font-size:18px; margin:0 0 16px; padding-bottom:8px; border-bottom:2px solid var(--accent); }
+    article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; margin-bottom:16px; }
+    article h3 { margin:0 0 8px; font-size:17px; }
+    .meta { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:10px; }
+    .meta span { font-size:12px; background:var(--tag); border:1px solid var(--border); border-radius:6px; padding:2px 8px; color:var(--muted); font-family:ui-monospace,Menlo,monospace; }
+    .desc { margin:0 0 14px; font-size:14px; }
+    figure { margin:0; border:1px solid var(--border); border-radius:10px; overflow:hidden; background:#e8eef6; }
+    figure img { display:block; width:100%; height:auto; }
+    figcaption { font-size:12px; color:var(--muted); padding:8px 12px; background:#fafbfd; border-top:1px solid var(--border); }
+    .toc { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px 20px; margin-bottom:28px; font-size:14px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Live AEX product — UI walkthrough</h1>
+    <p>Nanoheal Live AEX console · <code>http://localhost:5176</code> · 2026-08-25T12:18:10 · 112 screens</p>
+    <nav><a href="#home">Home</a><a href="#automate">Automate</a><a href="#innovate">Innovate</a><a href="#experience">Experience</a><a href="#manage">Manage</a><a href="#administration">Administration</a><a href="#settings">Settings</a><a href="#header">Header</a><a href="#dex-report-views">DEX report views</a><a href="#create-edit-overlays">Create / edit overlays</a><a href="#device-detail">Device detail</a><a href="#disabled-menu">Disabled menu</a><a href="#workflow-builder-deep">Workflow Builder deep</a><a href="#software-distribution-deep">Software Distribution deep</a><a href="#recapture">Recapture</a></nav>
+  </header>
+  <main>
+    <div class="toc">
+      <p><strong>How to read:</strong> Each card is one navigable surface or overlay. <em>Coming soon / placeholder</em> means nav is wired but UI is limited. <em>Menu disabled</em> means the sidebar item is off but the URL still works.</p>
+      <p>Also available as Word: <code>Live-AEX-UI-Walkthrough.docx</code> · Markdown: <code>README.md</code></p>
+    </div>
+    <section id="home">
+      <h2>Home</h2>
+      <article>
+        <h3>Overview</h3>
+        <div class="meta"><span>Path: /home</span></div>
+        <p class="desc">Tenant home / control tower. Device health, compliance posture, open alerts, and recommended actions for the selected site.</p>
+        <figure>
+          <img src="screenshots/001-home-overview.png" alt="Overview" loading="lazy" />
+          <figcaption>screenshots/001-home-overview.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Recent Activity — Activity logs</h3>
+        <div class="meta"><span>Path: /settings/audit/activity-log</span></div>
+        <p class="desc">Operational activity log — who changed automations, published surveys, pushed software, or linked profiles.</p>
+        <figure>
+          <img src="screenshots/097-home-recent-activity-seeded.png" alt="Recent Activity — Activity logs" loading="lazy" />
+          <figcaption>screenshots/097-home-recent-activity-seeded.png</figcaption>
+        </figure>
+      </article>
+    </section>
+    <section id="automate">
+      <h2>Automate</h2>
+      <article>
+        <h3>Automation — Profiles</h3>
+        <div class="meta"><span>Path: /actions/library</span></div>
+        <p class="desc">Automation library of self-help, autoheal, and scheduler profiles. Browse remediations, open details, link scope to device groups.</p>
+        <figure>
+          <img src="screenshots/098-automate-automation-profiles-seeded.png" alt="Automation — Profiles" loading="lazy" />
+          <figcaption>screenshots/098-automate-automation-profiles-seeded.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Workflow Builder</h3>
+        <div class="meta"><span>Path: /actions/library/visual-builder</span></div>
+        <p class="desc">Workflow Builder for authoring automations visually: template or custom, actions, When triggers, Matches conditions, save, then link scope.</p>
+        <figure>
+          <img src="screenshots/111-workflow-builder-deep-01-hub-templates-create-custom.png" alt="Workflow Builder" loading="lazy" />
+          <figcaption>screenshots/111-workflow-builder-deep-01-hub-templates-create-custom.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Survey — Campaigns</h3>
+        <div class="meta"><span>Path: /actions/campaigns</span></div>
+        <p class="desc">Survey campaigns for desktop satisfaction, employee satisfaction, and sentiment.</p>
+        <figure>
+          <img src="screenshots/099-automate-survey-campaigns-seeded.png" alt="Survey — Campaigns" loading="lazy" />
+          <figcaption>screenshots/099-automate-survey-campaigns-seeded.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Data Collection</h3>
+        <div class="meta"><span>Path: /actions/catalogs/data-collection</span></div>
+        <p class="desc">Data-collection profiles (performance, storage, user activity, network) for DEX and compliance telemetry.</p>
+        <figure>
+          <img src="screenshots/006-automate-data-collection.png" alt="Data Collection" loading="lazy" />
+          <figcaption>screenshots/006-automate-data-collection.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Device Protection — Protection policies</h3>
+        <div class="meta"><span>Path: /actions/catalogs/device-protection</span></div>
+        <p class="desc">Device protection profiles (registry, services, application control, paths, USB).</p>
+        <figure>
+          <img src="screenshots/007-automate-device-protection.png" alt="Device Protection — Protection policies" loading="lazy" />
+          <figcaption>screenshots/007-automate-device-protection.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>GPO — Policy templates (ADMX)</h3>
+        <div class="meta"><span>Path: /actions/catalogs/gpo-templates</span></div>
+        <p class="desc">ADMX policy template browser for Windows desired-state policies.</p>
+        <figure>
+          <img src="screenshots/100-automate-gpo-admx-active-only.png" alt="GPO — Policy templates (ADMX)" loading="lazy" />
+          <figcaption>screenshots/100-automate-gpo-admx-active-only.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Pending Publish — Pending Configuration Changes</h3>
+        <div class="meta"><span>Path: /actions/pending-publish</span></div>
+        <p class="desc">Pending Publish — staged configuration changes per machine group before they go live.</p>
+        <figure>
+          <img src="screenshots/101-automate-pending-publish-seeded.png" alt="Pending Publish — Pending Configuration Changes" loading="lazy" />
+          <figcaption>screenshots/101-automate-pending-publish-seeded.png</figcaption>
+        </figure>
+      </article>
+    </section>
+    <section id="innovate">
+      <h2>Innovate</h2>
+      <article>
+        <h3>AI Helpdesk</h3>
+        <div class="meta"><span>Path: /innovate/conversation</span></div>
+        <p class="desc">Conversational AI Helpdesk (Haya) for plain-language estate questions.</p>
+        <figure>
+          <img src="screenshots/010-innovate-ai-helpdesk.png" alt="AI Helpdesk" loading="lazy" />
+          <figcaption>screenshots/010-innovate-ai-helpdesk.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Investigations</h3>
+        <div class="meta"><span>Path: /innovate/haya</span></div>
+        <p class="desc">Investigation workspace on the Haya conversation surface.</p>
+        <figure>
+          <img src="screenshots/011-innovate-investigations.png" alt="Investigations" loading="lazy" />
+          <figcaption>screenshots/011-innovate-investigations.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Anomaly Detection — Clusters</h3>
+        <div class="meta"><span>Path: /innovate/clusters</span></div>
+        <p class="desc">Anomaly clusters for unusual device or experience patterns.</p>
+        <figure>
+          <img src="screenshots/012-innovate-anomaly-detection.png" alt="Anomaly Detection — Clusters" loading="lazy" />
+          <figcaption>screenshots/012-innovate-anomaly-detection.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Forecasting — Forecasts</h3>
+        <div class="meta"><span>Path: /innovate/forecasts</span></div>
+        <p class="desc">Forecast instances bound to Studio-published definitions.</p>
+        <figure>
+          <img src="screenshots/013-innovate-forecasting.png" alt="Forecasting — Forecasts" loading="lazy" />
+          <figcaption>screenshots/013-innovate-forecasting.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Query Builder</h3>
+        <div class="meta"><span>Path: /insights/exploration/query-builder</span></div>
+        <p class="desc">Ad-hoc analytics: dimensions, measures, JSON filters, Execute.</p>
+        <figure>
+          <img src="screenshots/014-innovate-query-builder.png" alt="Query Builder" loading="lazy" />
+          <figcaption>screenshots/014-innovate-query-builder.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Agent Workbench</h3>
+        <div class="meta"><span>Path: /insights/exploration/agent-workbench</span></div>
+        <p class="desc">Agent chat workbench with smart recommendations from telemetry.</p>
+        <figure>
+          <img src="screenshots/015-innovate-agent-workbench.png" alt="Agent Workbench" loading="lazy" />
+          <figcaption>screenshots/015-innovate-agent-workbench.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Alerts</h3>
+        <div class="meta"><span>Path: /innovate/haya?feature=alerts</span></div>
+        <p class="desc">Alert triage surface (Haya conversation in this build).</p>
+        <figure>
+          <img src="screenshots/016-innovate-alerts.png" alt="Alerts" loading="lazy" />
+          <figcaption>screenshots/016-innovate-alerts.png</figcaption>
+        </figure>
+      </article>
+    </section>
+    <section id="experience">
+      <h2>Experience</h2>
+      <article>
+        <h3>Dashboards catalog — 24 DEX &amp; Device Reports</h3>
+        <div class="meta"><span>Path: /experience/dashboards</span></div>
+        <p class="desc">Catalog of Digital Experience (DEX) and device reports.</p>
+        <figure>
+          <img src="screenshots/017-experience-dashboards-catalog.png" alt="Dashboards catalog — 24 DEX &amp; Device Reports" loading="lazy" />
+          <figcaption>screenshots/017-experience-dashboards-catalog.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Reports — Digital Experience Overview</h3>
+        <div class="meta"><span>Path: /experience/reports</span></div>
+        <p class="desc">Executive Digital Experience Overview for leadership.</p>
+        <figure>
+          <img src="screenshots/018-experience-reports.png" alt="Reports — Digital Experience Overview" loading="lazy" />
+          <figcaption>screenshots/018-experience-reports.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Employee Experience</h3>
+        <div class="meta"><span>Path: /experience/employee</span></div>
+        <p class="desc">Employee Experience story: sentiment and complaint themes.</p>
+        <figure>
+          <img src="screenshots/019-experience-employee-experience.png" alt="Employee Experience" loading="lazy" />
+          <figcaption>screenshots/019-experience-employee-experience.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Device Experience</h3>
+        <div class="meta"><span>Path: /experience/device</span></div>
+        <p class="desc">Device Experience story: satisfaction and boot/hardware health.</p>
+        <figure>
+          <img src="screenshots/020-experience-device-experience.png" alt="Device Experience" loading="lazy" />
+          <figcaption>screenshots/020-experience-device-experience.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Application Experience</h3>
+        <div class="meta"><span>Path: /experience/application</span></div>
+        <p class="desc">Application Experience story: business and collaboration apps.</p>
+        <figure>
+          <img src="screenshots/021-experience-application-experience.png" alt="Application Experience" loading="lazy" />
+          <figcaption>screenshots/021-experience-application-experience.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Network Experience</h3>
+        <div class="meta"><span>Path: /experience/network</span></div>
+        <p class="desc">Network Experience story: latency and connectivity by site.</p>
+        <figure>
+          <img src="screenshots/022-experience-network-experience.png" alt="Network Experience" loading="lazy" />
+          <figcaption>screenshots/022-experience-network-experience.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Digital Experience — DEX Score Overview</h3>
+        <div class="meta"><span>Path: /experience/compliance-score</span></div>
+        <p class="desc">Digital Experience dashboard (fleet DEX score) — not an external BI login.</p>
+        <figure>
+          <img src="screenshots/102-experience-digital-experience-dashboard.png" alt="Digital Experience — DEX Score Overview" loading="lazy" />
+          <figcaption>screenshots/102-experience-digital-experience-dashboard.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Benchmarks — End-User Experience Improvement</h3>
+        <div class="meta"><span>Path: /experience/benchmarks</span></div>
+        <p class="desc">Benchmarks comparing satisfaction vs endpoint performance.</p>
+        <figure>
+          <img src="screenshots/024-experience-benchmarks.png" alt="Benchmarks — End-User Experience Improvement" loading="lazy" />
+          <figcaption>screenshots/024-experience-benchmarks.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Trends</h3>
+        <div class="meta"><span>Path: /experience/trends</span><span>coming soon / placeholder</span></div>
+        <p class="desc">Trends placeholder for historical posture reporting.</p>
+        <figure>
+          <img src="screenshots/025-experience-trends.png" alt="Trends" loading="lazy" />
+          <figcaption>screenshots/025-experience-trends.png</figcaption>
+        </figure>
+      </article>
+    </section>
+    <section id="manage">
+      <h2>Manage</h2>
+      <article>
+        <h3>Device Explorer</h3>
+        <div class="meta"><span>Path: /devices/inventory/device-explorer</span><span>coming soon / placeholder</span></div>
+        <p class="desc">Coming soon — device search + full profile explorer.</p>
+        <figure>
+          <img src="screenshots/027-manage-device-explorer.png" alt="Device Explorer" loading="lazy" />
+          <figcaption>screenshots/027-manage-device-explorer.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Remote Execution</h3>
+        <div class="meta"><span>Path: /actions/execution/remediation</span></div>
+        <p class="desc">Remote Execution — run a linked remediation now on site, group, or device.</p>
+        <figure>
+          <img src="screenshots/104-manage-remote-execution.png" alt="Remote Execution" loading="lazy" />
+          <figcaption>screenshots/104-manage-remote-execution.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Software Distribution — Software install profiles</h3>
+        <div class="meta"><span>Path: /devices/software/software-distribution</span></div>
+        <p class="desc">Software Distribution — install/uninstall profiles and snippets.</p>
+        <figure>
+          <img src="screenshots/105-manage-software-distribution-seeded.png" alt="Software Distribution — Software install profiles" loading="lazy" />
+          <figcaption>screenshots/105-manage-software-distribution-seeded.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Patch Management</h3>
+        <div class="meta"><span>Path: /devices/software/patch-management</span><span>coming soon / placeholder</span></div>
+        <p class="desc">Coming soon — Windows Update / patch tracking.</p>
+        <figure>
+          <img src="screenshots/032-manage-patch-management.png" alt="Patch Management" loading="lazy" />
+          <figcaption>screenshots/032-manage-patch-management.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Violations</h3>
+        <div class="meta"><span>Path: /innovate/haya?feature=violations</span></div>
+        <p class="desc">Violations triage (Haya conversation in this build).</p>
+        <figure>
+          <img src="screenshots/033-manage-violations.png" alt="Violations" loading="lazy" />
+          <figcaption>screenshots/033-manage-violations.png</figcaption>
+        </figure>
+      </article>
+    </section>
+    <section id="administration">
+      <h2>Administration</h2>
+      <article>
+        <h3>Tenants</h3>
+        <div class="meta"><span>Path: /settings/organization/tenants</span></div>
+        <p class="desc">Organisation tenants/sites — names, org, keys, installs, license pools.</p>
+        <figure>
+          <img src="screenshots/107-administration-tenants-nanoheal-org.png" alt="Tenants" loading="lazy" />
+          <figcaption>screenshots/107-administration-tenants-nanoheal-org.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Branding</h3>
+        <div class="meta"><span>Path: /manage/organisation/branding</span><span>coming soon / placeholder</span></div>
+        <p class="desc">Coming soon — branding on the IA roadmap.</p>
+        <figure>
+          <img src="screenshots/035-administration-branding.png" alt="Branding" loading="lazy" />
+          <figcaption>screenshots/035-administration-branding.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Licensing</h3>
+        <div class="meta"><span>Path: /settings/licensing</span></div>
+        <p class="desc">License pools — entitlements and seat usage.</p>
+        <figure>
+          <img src="screenshots/036-administration-licensing.png" alt="Licensing" loading="lazy" />
+          <figcaption>screenshots/036-administration-licensing.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Integrations — Connectors</h3>
+        <div class="meta"><span>Path: /settings/integrations</span></div>
+        <p class="desc">Integrations hub: connectors, API keys, catalog, event subscriptions.</p>
+        <figure>
+          <img src="screenshots/037-administration-integrations.png" alt="Integrations — Connectors" loading="lazy" />
+          <figcaption>screenshots/037-administration-integrations.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Agent Management — Versions &amp; rings</h3>
+        <div class="meta"><span>Path: /settings/agents</span></div>
+        <p class="desc">Agent Management — versions &amp; rings, updates, version catalog, uploads.</p>
+        <figure>
+          <img src="screenshots/038-administration-agent-management.png" alt="Agent Management — Versions &amp; rings" loading="lazy" />
+          <figcaption>screenshots/038-administration-agent-management.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Users &amp; Access — User accounts</h3>
+        <div class="meta"><span>Path: /settings/users</span></div>
+        <p class="desc">Users &amp; Access — accounts, RBAC, SSO, MFA.</p>
+        <figure>
+          <img src="screenshots/108-administration-users-access-seeded.png" alt="Users &amp; Access — User accounts" loading="lazy" />
+          <figcaption>screenshots/108-administration-users-access-seeded.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Security</h3>
+        <div class="meta"><span>Path: /settings/security</span><span>coming soon / placeholder</span></div>
+        <p class="desc">Coming soon — certificates/secrets and GDPR ops.</p>
+        <figure>
+          <img src="screenshots/040-administration-security.png" alt="Security" loading="lazy" />
+          <figcaption>screenshots/040-administration-security.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Classification — Device classifications</h3>
+        <div class="meta"><span>Path: /devices/organization/device-classification</span></div>
+        <p class="desc">Device classification groups for targeting.</p>
+        <figure>
+          <img src="screenshots/041-administration-classification.png" alt="Classification — Device classifications" loading="lazy" />
+          <figcaption>screenshots/041-administration-classification.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Audit — Activity logs</h3>
+        <div class="meta"><span>Path: /settings/audit</span></div>
+        <p class="desc">Administration Audit hub — activity, ticket, and system events.</p>
+        <figure>
+          <img src="screenshots/109-administration-audit-activity-logs.png" alt="Audit — Activity logs" loading="lazy" />
+          <figcaption>screenshots/109-administration-audit-activity-logs.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Score Models — Scores</h3>
+        <div class="meta"><span>Path: /compliance/policy/score-models</span></div>
+        <p class="desc">Score Models that feed DEX and operations scoring.</p>
+        <figure>
+          <img src="screenshots/110-administration-score-models-seeded.png" alt="Score Models — Scores" loading="lazy" />
+          <figcaption>screenshots/110-administration-score-models-seeded.png</figcaption>
+        </figure>
+      </article>
+    </section>
+    <section id="settings">
+      <h2>Settings</h2>
+      <article>
+        <h3>Profile</h3>
+        <div class="meta"><span>Path: /account/profile</span></div>
+        <p class="desc">Personal profile for the signed-in operator.</p>
+        <figure>
+          <img src="screenshots/044-settings-profile.png" alt="Profile" loading="lazy" />
+          <figcaption>screenshots/044-settings-profile.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Preferences</h3>
+        <div class="meta"><span>Path: /account/preferences</span></div>
+        <p class="desc">Theme and accent color preferences.</p>
+        <figure>
+          <img src="screenshots/045-settings-preferences.png" alt="Preferences" loading="lazy" />
+          <figcaption>screenshots/045-settings-preferences.png</figcaption>
+        </figure>
+      </article>
+    </section>
+    <section id="header">
+      <h2>Header</h2>
+      <article>
+        <h3>Help &amp; Feedback</h3>
+        <div class="meta"><span>Path: /experience/help</span></div>
+        <p class="desc">Help &amp; Feedback from the header.</p>
+        <figure>
+          <img src="screenshots/046-header-help-feedback.png" alt="Help &amp; Feedback" loading="lazy" />
+          <figcaption>screenshots/046-header-help-feedback.png</figcaption>
+        </figure>
+      </article>
+    </section>
+    <section id="dex-report-views">
+      <h2>DEX report views</h2>
+      <article>
+        <h3>DEX Score Overview</h3>
+        <div class="meta"><span>Path: /experience/dashboard/view/dex-score-overview</span></div>
+        <p class="desc">Fleet-wide digital experience score, location impact, and drivers across the estate.</p>
+        <figure>
+          <img src="screenshots/059-dex-report-views-dex-score-overview.png" alt="DEX Score Overview" loading="lazy" />
+          <figcaption>screenshots/059-dex-report-views-dex-score-overview.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>What Changed — Device &amp; DEX Drivers — Anomaly &amp; Degradation Intelligence</h3>
+        <div class="meta"><span>Path: /experience/dashboard/view/anomaly-degradation-intelligence</span></div>
+        <p class="desc">Period-over-period DEX movement driven by boot time, crashes, patch gaps, and network latency on managed devices.</p>
+        <figure>
+          <img src="screenshots/060-dex-report-views-what-changed-device-dex-drivers.png" alt="What Changed — Device &amp; DEX Drivers — Anomaly &amp; Degradation Intelligence" loading="lazy" />
+          <figcaption>screenshots/060-dex-report-views-what-changed-device-dex-drivers.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>IT Leadership — Experience Summary — Digital Experience Overview</h3>
+        <div class="meta"><span>Path: /experience/dashboard/view/dex-executive-reports</span></div>
+        <p class="desc">Cross-pillar endpoint experience: device performance, application stability, sentiment, and service-desk load.</p>
+        <figure>
+          <img src="screenshots/061-dex-report-views-it-leadership-experience-summary.png" alt="IT Leadership — Experience Summary — Digital Experience Overview" loading="lazy" />
+          <figcaption>screenshots/061-dex-report-views-it-leadership-experience-summary.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Device Friction → Productivity Loss — Experience-to-Productivity Impact</h3>
+        <div class="meta"><span>Path: /experience/dashboard/view/experience-productivity-impact</span></div>
+        <p class="desc">Correlate slow boot, login delays, and degradation events with lost work time by persona and site.</p>
+        <figure>
+          <img src="screenshots/062-dex-report-views-device-friction-productivity-loss.png" alt="Device Friction → Productivity Loss — Experience-to-Productivity Impact" loading="lazy" />
+          <figcaption>screenshots/062-dex-report-views-device-friction-productivity-loss.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Endpoint Experience Scorecard — Device Experience</h3>
+        <div class="meta"><span>Path: /experience/dashboard/view/device-experience-report</span></div>
+        <p class="desc">Boot and logon times, stability, battery health, and satisfaction by device model and region.</p>
+        <figure>
+          <img src="screenshots/063-dex-report-views-endpoint-experience-scorecard.png" alt="Endpoint Experience Scorecard — Device Experience" loading="lazy" />
+          <figcaption>screenshots/063-dex-report-views-endpoint-experience-scorecard.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Boot &amp; Logon Performance — Experience Engineering Deep Dive</h3>
+        <div class="meta"><span>Path: /experience/dashboard/view/experience-engineering-deep-dive</span></div>
+        <p class="desc">Windows startup and sign-in duration trends — identify fleets with slow boot or profile load issues.</p>
+        <figure>
+          <img src="screenshots/064-dex-report-views-boot-logon-performance.png" alt="Boot &amp; Logon Performance — Experience Engineering Deep Dive" loading="lazy" />
+          <figcaption>screenshots/064-dex-report-views-boot-logon-performance.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Device Lifecycle &amp; Refresh Readiness — Lifecycle &amp; Device Health Intelligence</h3>
+        <div class="meta"><span>Path: /experience/dashboard/view/lifecycle-device-health</span></div>
+        <p class="desc">Device age, warranty status, battery wear, vulnerability exposure, and lifecycle risk for refresh planning.</p>
+        <figure>
+          <img src="screenshots/065-dex-report-views-device-lifecycle-refresh-readiness.png" alt="Device Lifecycle &amp; Refresh Readiness — Lifecycle &amp; Device Health Intelligence" loading="lazy" />
+          <figcaption>screenshots/065-dex-report-views-device-lifecycle-refresh-readiness.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>CPU, Memory &amp; Right-Sizing — Right-Sizing &amp; Performance Optimization</h3>
+        <div class="meta"><span>Path: /experience/dashboard/view/right-sizing-performance</span></div>
+        <p class="desc">Saturation events, headroom, and over/under-provisioned laptops — right-size hardware before users hit limits.</p>
+        <figure>
+          <img src="screenshots/066-dex-report-views-cpu-memory-right-sizing.png" alt="CPU, Memory &amp; Right-Sizing — Right-Sizing &amp; Performance Optimization" loading="lazy" />
+          <figcaption>screenshots/066-dex-report-views-cpu-memory-right-sizing.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Business Application Health — Application Experience</h3>
+        <div class="meta"><span>Path: /experience/dashboard/view/application-experience-report</span></div>
+        <p class="desc">ERP, Office, and line-of-business app stability scores, crash rates, and license utilization on managed PCs.</p>
+        <figure>
+          <img src="screenshots/067-dex-report-views-business-application-health.png" alt="Business Application Health — Application Experience" loading="lazy" />
+          <figcaption>screenshots/067-dex-report-views-business-application-health.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>App Crashes &amp; Instability — Autonomous Operations Control</h3>
+        <div class="meta"><span>Path: /experience/dashboard/view/autonomous-operations-control</span></div>
+        <p class="desc">Crash frequency, degradation velocity, and devices with recurring application failures.</p>
+        <figure>
+          <img src="screenshots/068-dex-report-views-app-crashes-instability.png" alt="App Crashes &amp; Instability — Autonomous Operations Control" loading="lazy" />
+          <figcaption>screenshots/068-dex-report-views-app-crashes-instability.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Software Inventory &amp; License Use — License &amp; Software Efficiency</h3>
+        <div class="meta"><span>Path: /experience/dashboard/view/license-software-efficiency</span></div>
+        <p class="desc">Installed software utilization, reclaimable licenses, and unused apps across the endpoint estate.</p>
+        <figure>
+          <img src="screenshots/069-dex-report-views-software-inventory-license-use.png" alt="Software Inventory &amp; License Use — License &amp; Software Efficiency" loading="lazy" />
+          <figcaption>screenshots/069-dex-report-views-software-inventory-license-use.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Teams, Outlook &amp; Meeting Apps — Autonomous Operations Control</h3>
+        <div class="meta"><span>Path: /experience/dashboard/view/autonomous-operations-control</span></div>
+        <p class="desc">Collaboration tool performance on endpoints — crashes, latency impact, and auto-remediation outcomes.</p>
+        <figure>
+          <img src="screenshots/070-dex-report-views-teams-outlook-meeting-apps.png" alt="Teams, Outlook &amp; Meeting Apps — Autonomous Operations Control" loading="lazy" />
+          <figcaption>screenshots/070-dex-report-views-teams-outlook-meeting-apps.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Network, Wi‑Fi &amp; VPN Quality — Network Experience</h3>
+        <div class="meta"><span>Path: /experience/dashboard/view/network-experience-report</span></div>
+        <p class="desc">Latency, jitter, and packet loss for office and remote workers — tie network issues to DEX drops.</p>
+        <figure>
+          <img src="screenshots/071-dex-report-views-network-wi-fi-vpn-quality.png" alt="Network, Wi‑Fi &amp; VPN Quality — Network Experience" loading="lazy" />
+          <figcaption>screenshots/071-dex-report-views-network-wi-fi-vpn-quality.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Device Degradation &amp; Anomalies — Anomaly &amp; Degradation Intelligence</h3>
+        <div class="meta"><span>Path: /experience/dashboard/view/anomaly-degradation-intelligence</span></div>
+        <p class="desc">Devices trending worse: degradation events, stability variance, and MTTR for endpoint incidents by team.</p>
+        <figure>
+          <img src="screenshots/072-dex-report-views-device-degradation-anomalies.png" alt="Device Degradation &amp; Anomalies — Anomaly &amp; Degradation Intelligence" loading="lazy" />
+          <figcaption>screenshots/072-dex-report-views-device-degradation-anomalies.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Employee Device Satisfaction — Employee Experience</h3>
+        <div class="meta"><span>Path: /experience/dashboard/view/employee-experience-report</span></div>
+        <p class="desc">End-user sentiment on devices, boot speed, and IT support — scores from DEX pulse surveys.</p>
+        <figure>
+          <img src="screenshots/073-dex-report-views-employee-device-satisfaction.png" alt="Employee Device Satisfaction — Employee Experience" loading="lazy" />
+          <figcaption>screenshots/073-dex-report-views-employee-device-satisfaction.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Top Employee Complaints (IT) — Employee Experience</h3>
+        <div class="meta"><span>Path: /experience/dashboard/view/employee-experience-report</span></div>
+        <p class="desc">What users report: slow laptops, VPN, apps, printers, and meeting rooms — prioritized by volume.</p>
+        <figure>
+          <img src="screenshots/074-dex-report-views-top-employee-complaints-it.png" alt="Top Employee Complaints (IT) — Employee Experience" loading="lazy" />
+          <figcaption>screenshots/074-dex-report-views-top-employee-complaints-it.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>DEX vs Industry Benchmark — End-User Experience Improvement</h3>
+        <div class="meta"><span>Path: /experience/dashboard/view/adoption-benchmarks-report</span></div>
+        <p class="desc">Compare your endpoint DEX and boot/login performance against peer organizations.</p>
+        <figure>
+          <img src="screenshots/075-dex-report-views-dex-vs-industry-benchmark.png" alt="DEX vs Industry Benchmark — End-User Experience Improvement" loading="lazy" />
+          <figcaption>screenshots/075-dex-report-views-dex-vs-industry-benchmark.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>DEX by Site, Persona &amp; Working Style — End-User Experience Improvement</h3>
+        <div class="meta"><span>Path: /experience/dashboard/view/adoption-benchmarks-report</span></div>
+        <p class="desc">Internal benchmark: office vs remote, region, and role — find where device experience lags.</p>
+        <figure>
+          <img src="screenshots/076-dex-report-views-dex-by-site-persona-working-style.png" alt="DEX by Site, Persona &amp; Working Style — End-User Experience Improvement" loading="lazy" />
+          <figcaption>screenshots/076-dex-report-views-dex-by-site-persona-working-style.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Predictive Device Risk — Predictive &amp; Risk Modeling</h3>
+        <div class="meta"><span>Path: /experience/dashboard/view/predictive-risk-modeling</span></div>
+        <p class="desc">Forecast devices at risk of failure, chronic degradation, and refresh candidates before tickets spike.</p>
+        <figure>
+          <img src="screenshots/077-dex-report-views-predictive-device-risk.png" alt="Predictive Device Risk — Predictive &amp; Risk Modeling" loading="lazy" />
+          <figcaption>screenshots/077-dex-report-views-predictive-device-risk.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Endpoint Auto-Remediation — Autonomous Operations Control</h3>
+        <div class="meta"><span>Path: /experience/dashboard/view/autonomous-operations-control</span></div>
+        <p class="desc">Self-heal success rate on devices, ticket deflection, and RCA confidence for endpoint issues.</p>
+        <figure>
+          <img src="screenshots/078-dex-report-views-endpoint-auto-remediation.png" alt="Endpoint Auto-Remediation — Autonomous Operations Control" loading="lazy" />
+          <figcaption>screenshots/078-dex-report-views-endpoint-auto-remediation.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Device-Related Ticket Volume — ITSM &amp; Ticket Optimization</h3>
+        <div class="meta"><span>Path: /experience/dashboard/view/itsm-ticket-optimization</span></div>
+        <p class="desc">Help-desk tickets tied to endpoints, deflection from automation, and cost per device incident.</p>
+        <figure>
+          <img src="screenshots/079-dex-report-views-device-related-ticket-volume.png" alt="Device-Related Ticket Volume — ITSM &amp; Ticket Optimization" loading="lazy" />
+          <figcaption>screenshots/079-dex-report-views-device-related-ticket-volume.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Endpoint Incident MTTR — MTTR &amp; Operational Efficiency</h3>
+        <div class="meta"><span>Path: /experience/dashboard/view/mttr-operational-efficiency</span></div>
+        <p class="desc">Mean time to restore device experience — resolution speed by fault domain and persona.</p>
+        <figure>
+          <img src="screenshots/080-dex-report-views-endpoint-incident-mttr.png" alt="Endpoint Incident MTTR — MTTR &amp; Operational Efficiency" loading="lazy" />
+          <figcaption>screenshots/080-dex-report-views-endpoint-incident-mttr.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Device Ops — Cost &amp; ROI — Financial Impact &amp; ROI</h3>
+        <div class="meta"><span>Path: /experience/dashboard/view/financial-impact-roi</span></div>
+        <p class="desc">CapEx avoided through right-sizing, ticket savings, and lifecycle governance on the PC fleet.</p>
+        <figure>
+          <img src="screenshots/081-dex-report-views-device-ops-cost-roi.png" alt="Device Ops — Cost &amp; ROI — Financial Impact &amp; ROI" loading="lazy" />
+          <figcaption>screenshots/081-dex-report-views-device-ops-cost-roi.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Endpoint Compliance &amp; Posture — Governance &amp; Privilege Control</h3>
+        <div class="meta"><span>Path: /experience/dashboard/view/governance-privilege-control</span></div>
+        <p class="desc">Patch compliance, vulnerability exposure, and governance scores across managed devices.</p>
+        <figure>
+          <img src="screenshots/082-dex-report-views-endpoint-compliance-posture.png" alt="Endpoint Compliance &amp; Posture — Governance &amp; Privilege Control" loading="lazy" />
+          <figcaption>screenshots/082-dex-report-views-endpoint-compliance-posture.png</figcaption>
+        </figure>
+      </article>
+    </section>
+    <section id="create-edit-overlays">
+      <h2>Create / edit overlays</h2>
+      <article>
+        <h3>Users — Create overlay — User accounts</h3>
+        <div class="meta"><span>Path: /settings/users</span></div>
+        <p class="desc">Home Users Users RBAC SSO / SAML MFA Policy User accounts 43 records · Search users, open profiles, and manage roles and access. Create Columns All users 43 Pending approval 0 / Filters Email First Name Last Name Status User Type Last Login Tenant admin@nanoheal.com admin nanohea</p>
+        <figure>
+          <img src="screenshots/083-create-edit-overlays-users-create-overlay.png" alt="Users — Create overlay — User accounts" loading="lazy" />
+          <figcaption>screenshots/083-create-edit-overlays-users-create-overlay.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Classification — Create overlay — Device classifications</h3>
+        <div class="meta"><span>Path: /devices/organization/device-classification</span></div>
+        <p class="desc">Home Device Classification Device classifications 89 classifications · Group devices by classification for targeting and policy. Create Columns / Filters Name Type Machine group Device Count Created By Created On Last Modified Engineering CSV Machine group 1 admin admin@nanoheal.</p>
+        <figure>
+          <img src="screenshots/084-create-edit-overlays-classification-create-overlay.png" alt="Classification — Create overlay — Device classifications" loading="lazy" />
+          <figcaption>screenshots/084-create-edit-overlays-classification-create-overlay.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Tenants — Create overlay — Tenants</h3>
+        <div class="meta"><span>Path: /settings/organization/tenants</span></div>
+        <p class="desc">Home Tenants Tenants 31 records · Browse sites and open tenant settings, versions, and security. Create Columns / Filters ID Tenant Name Organization Tenant key Contact email Active installs License pool 1 Default nanoheal-deploy-default-site-1 0 5e9d7820… (Unlimited) 8 Axiom_4 4</p>
+        <figure>
+          <img src="screenshots/085-create-edit-overlays-tenants-create-overlay.png" alt="Tenants — Create overlay — Tenants" loading="lazy" />
+          <figcaption>screenshots/085-create-edit-overlays-tenants-create-overlay.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Automation — Create overlay — Workflow builder</h3>
+        <div class="meta"><span>Path: /actions/library</span></div>
+        <p class="desc">Home Visual Builder Workflow builder What needs fixing? Describe the issue in natural language. We&#x27;ll suggest a workflow you can customise. What needs fixing? / to automation library Type a problem to continue Continue QUICK STARTS ⚡ 60 - Clear files from folders and sub-folders </p>
+        <figure>
+          <img src="screenshots/086-create-edit-overlays-automation-create-overlay.png" alt="Automation — Create overlay — Workflow builder" loading="lazy" />
+          <figcaption>screenshots/086-create-edit-overlays-automation-create-overlay.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Data Collection — Create overlay — Data collection</h3>
+        <div class="meta"><span>Path: /actions/catalogs/data-collection</span></div>
+        <p class="desc">Home Data Collection Data collection 9 · Profiles for performance, storage, user activity, and network monitoring. Create Columns / Filters Profile Description Monitoring Collectors Status Last modified Disk health Disk health — 0 Not Attached 3 days ago Device health Device heal</p>
+        <figure>
+          <img src="screenshots/087-create-edit-overlays-data-collection-create-overlay.png" alt="Data Collection — Create overlay — Data collection" loading="lazy" />
+          <figcaption>screenshots/087-create-edit-overlays-data-collection-create-overlay.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Device Protection — Create overlay — Protection policies</h3>
+        <div class="meta"><span>Path: /actions/catalogs/device-protection</span></div>
+        <p class="desc">Home Device Protection Protection policies 7 · Profiles for registry, services, application control, paths, and USB. Create Columns / Filters Profile Policies Count Status Last modified spooler check 0 Not Attached — new device 0 Not Attached — device neww 0 Not Attached — device</p>
+        <figure>
+          <img src="screenshots/088-create-edit-overlays-device-protection-create-overlay.png" alt="Device Protection — Create overlay — Protection policies" loading="lazy" />
+          <figcaption>screenshots/088-create-edit-overlays-device-protection-create-overlay.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Integrations — Add connector — Connectors</h3>
+        <div class="meta"><span>Path: /settings/integrations</span></div>
+        <p class="desc">Home Integrations Connectors API Keys API catalog Event Subscriptions Connectors 5 connectors · Connect Nanoheal to a product (ServiceNow, Teams, Slack). To send Nanoheal events to a URL, use Event Subscriptions. Add connector Columns / Filters Site Name Type Description Status C</p>
+        <figure>
+          <img src="screenshots/089-create-edit-overlays-integrations-add-connector.png" alt="Integrations — Add connector — Connectors" loading="lazy" />
+          <figcaption>screenshots/089-create-edit-overlays-integrations-add-connector.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Inventory — Add device — Devices</h3>
+        <div class="meta"><span>Path: /devices/inventory/census</span></div>
+        <p class="desc">Home Devices Inventory Devices 63 devices · Healthy 0 Pending sync 0 · Inventory, classify, and manage managed endpoints. Add device Export Columns All Devices 63 Windows 47 macOS 10 Android 0 Linux 5 Unknown / Filters Device / Endpoint Status OS Last seen Agent Installed date MT</p>
+        <figure>
+          <img src="screenshots/090-create-edit-overlays-inventory-add-device.png" alt="Inventory — Add device — Devices" loading="lazy" />
+          <figcaption>screenshots/090-create-edit-overlays-inventory-add-device.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Score Models — Create overlay</h3>
+        <div class="meta"><span>Path: /compliance/policy/score-models</span><span>capture failed</span></div>
+        <p class="desc">Score Models list has no Create control in this build; list/read only.</p>
+      </article>
+      <article>
+        <h3>Software Distribution — Create overlay — Profile builder</h3>
+        <div class="meta"><span>Path: /devices/software/software-distribution</span></div>
+        <p class="desc">Home Software Distribution Profile builder DRAFT Load 7-Zip example Design History Switch to Form View ✓ Package 2 Build 3 Options 4 Review Operating system Which OS should these patches run on? Select OS BUILD SEQUENCE 1 action — pick a type or configure below the card. 1 action</p>
+        <figure>
+          <img src="screenshots/099-create-edit-overlays-software-distribution-create-overlay.png" alt="Software Distribution — Create overlay — Profile builder" loading="lazy" />
+          <figcaption>screenshots/099-create-edit-overlays-software-distribution-create-overlay.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Workflow Builder — Blank workflow — Workflow builder</h3>
+        <div class="meta"><span>Path: /actions/library/visual-builder</span></div>
+        <p class="desc">Home Visual Builder Workflow builder DRAFT 1 Actions 2 Details 3 Review WORKFLOW TIMELINE Click WHEN to change the trigger, then add what should run next. 0 actions WHEN When triggered manually DO Add your first action Pick what the device should do after this trigger — from Asse</p>
+        <figure>
+          <img src="screenshots/093-create-edit-overlays-workflow-builder-blank-workflow.png" alt="Workflow Builder — Blank workflow — Workflow builder" loading="lazy" />
+          <figcaption>screenshots/093-create-edit-overlays-workflow-builder-blank-workflow.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Users — Detail / edit drawer — User accounts</h3>
+        <div class="meta"><span>Path: /settings/users</span><span>drawer</span></div>
+        <p class="desc">Home Users Users RBAC SSO / SAML MFA Policy User accounts 43 records · Search users, open profiles, and manage roles and access. Create Columns All users 43 Pending approval 0 / Filters Email First Name Last Name Status User Type Last Login Tenant admin@nanoheal.com admin nanohea</p>
+        <figure>
+          <img src="screenshots/106-create-edit-overlays-users-detail-drawer.png" alt="Users — Detail / edit drawer — User accounts" loading="lazy" />
+          <figcaption>screenshots/106-create-edit-overlays-users-detail-drawer.png</figcaption>
+        </figure>
+      </article>
+    </section>
+    <section id="device-detail">
+      <h2>Device detail</h2>
+      <article>
+        <h3>Inventory — Device detail drawer — Devices</h3>
+        <div class="meta"><span>Path: /devices/inventory/census</span><span>drawer</span></div>
+        <p class="desc">Home Devices Inventory Devices 63 devices · Healthy 0 Pending sync 0 · Inventory, classify, and manage managed endpoints. Add device Export Columns All Devices 63 Windows 47 macOS 10 Android 0 Linux 5 Unknown / Filters Device / Endpoint Status OS Last seen Agent Installed date MT</p>
+        <figure>
+          <img src="screenshots/104-device-detail-inventory-drawer.png" alt="Inventory — Device detail drawer — Devices" loading="lazy" />
+          <figcaption>screenshots/104-device-detail-inventory-drawer.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Device detail — full page</h3>
+        <div class="meta"><span>Path: /system-settings/census/07746bef-d0d1-2aac-2a6d-32289b3c50de</span></div>
+        <p class="desc">Home 07746bef D0d1 2aac 2a6d 32289b3c50de</p>
+        <figure>
+          <img src="screenshots/105-device-detail-full-page.png" alt="Device detail — full page" loading="lazy" />
+          <figcaption>screenshots/105-device-detail-full-page.png</figcaption>
+        </figure>
+      </article>
+    </section>
+    <section id="disabled-menu">
+      <h2>Disabled menu</h2>
+      <article>
+        <h3>Haya</h3>
+        <div class="meta"><span>Path: /innovate/haya</span><span>menu disabled</span></div>
+        <p class="desc">Home Haya Search conversations CONVERSATIONS New chat No conversations yet AI HELPDESK What can I help you investigate? Ask in plain language about your estate. Responses stream here; plans, confidence, and sources open in the details panel. Try asking Which devices are offline r</p>
+        <figure>
+          <img src="screenshots/049-disabled-menu-haya.png" alt="Haya" loading="lazy" />
+          <figcaption>screenshots/049-disabled-menu-haya.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Recommendations</h3>
+        <div class="meta"><span>Path: /innovate/haya?feature=recommendations</span><span>menu disabled</span></div>
+        <p class="desc">Home Haya Search conversations CONVERSATIONS New chat No conversations yet AI HELPDESK What can I help you investigate? Ask in plain language about your estate. Responses stream here; plans, confidence, and sources open in the details panel. Try asking Which devices are offline r</p>
+        <figure>
+          <img src="screenshots/050-disabled-menu-recommendations.png" alt="Recommendations" loading="lazy" />
+          <figcaption>screenshots/050-disabled-menu-recommendations.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Automation Insights</h3>
+        <div class="meta"><span>Path: /innovate/haya?feature=automation-insights</span><span>menu disabled</span></div>
+        <p class="desc">Home Haya Search conversations CONVERSATIONS New chat No conversations yet AI HELPDESK What can I help you investigate? Ask in plain language about your estate. Responses stream here; plans, confidence, and sources open in the details panel. Try asking Which devices are offline r</p>
+        <figure>
+          <img src="screenshots/051-disabled-menu-automation-insights.png" alt="Automation Insights" loading="lazy" />
+          <figcaption>screenshots/051-disabled-menu-automation-insights.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Knowledge</h3>
+        <div class="meta"><span>Path: /innovate/haya?feature=knowledge</span><span>menu disabled</span></div>
+        <p class="desc">Home Haya Search conversations CONVERSATIONS New chat No conversations yet AI HELPDESK What can I help you investigate? Ask in plain language about your estate. Responses stream here; plans, confidence, and sources open in the details panel. Try asking Which devices are offline r</p>
+        <figure>
+          <img src="screenshots/052-disabled-menu-knowledge.png" alt="Knowledge" loading="lazy" />
+          <figcaption>screenshots/052-disabled-menu-knowledge.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Alert rules</h3>
+        <div class="meta"><span>Path: /innovate/haya?feature=alert-rules</span><span>menu disabled</span></div>
+        <p class="desc">Home Haya Search conversations CONVERSATIONS New chat No conversations yet AI HELPDESK What can I help you investigate? Ask in plain language about your estate. Responses stream here; plans, confidence, and sources open in the details panel. Try asking Which devices are offline r</p>
+        <figure>
+          <img src="screenshots/053-disabled-menu-alert-rules.png" alt="Alert rules" loading="lazy" />
+          <figcaption>screenshots/053-disabled-menu-alert-rules.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Updates — Device updates</h3>
+        <div class="meta"><span>Path: /devices/software/device-updates</span><span>menu disabled</span></div>
+        <p class="desc">Home Device Updates Device updates 57 records · Client update status, compliance, and attempt history. Columns All 57 Needs attention 25 / Filters Device ID Actual version Desired version Policy compliant Version gap Site OS Platform Policy status Computed at Update status Last a</p>
+        <figure>
+          <img src="screenshots/055-disabled-menu-updates.png" alt="Updates — Device updates" loading="lazy" />
+          <figcaption>screenshots/055-disabled-menu-updates.png</figcaption>
+        </figure>
+      </article>
+    </section>
+    <section id="workflow-builder-deep">
+      <h2>Workflow Builder deep</h2>
+      <article>
+        <h3>01 Hub — templates &amp; create custom — Workflow builder</h3>
+        <div class="meta"><span>Path: /actions/library/visual-builder</span></div>
+        <p class="desc">Home Visual Builder Workflow builder What needs fixing? Describe the issue in natural language. We&#x27;ll suggest a workflow you can customise. What needs fixing? / to automation library Type a problem to continue Continue QUICK STARTS 🖥 Slow Computer 🧹 Recover Disk Space 🔄 Restart A</p>
+        <figure>
+          <img src="screenshots/111-workflow-builder-deep-01-hub-templates-create-custom.png" alt="01 Hub — templates &amp; create custom — Workflow builder" loading="lazy" />
+          <figcaption>screenshots/111-workflow-builder-deep-01-hub-templates-create-custom.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>02 Actions canvas — Disk Cleanup</h3>
+        <div class="meta"><span>Path: /actions/library/visual-builder</span></div>
+        <p class="desc">Home Visual Builder Disk Cleanup DRAFT Workflow builder 1 Actions 2 Details 3 Review Workflow valid Complete device condition rules Live validation WORKFLOW TIMELINE Drag actions to reorder · click to configure 8 actions Add action WHEN Event: High disk usage alert DO Copy of Cop</p>
+        <figure>
+          <img src="screenshots/112-workflow-builder-deep-02-actions-canvas.png" alt="02 Actions canvas — Disk Cleanup" loading="lazy" />
+          <figcaption>screenshots/112-workflow-builder-deep-02-actions-canvas.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>03 Details — When (On demand / Event / Schedule) — Disk Cleanup</h3>
+        <div class="meta"><span>Path: /actions/library/visual-builder</span></div>
+        <p class="desc">Home Visual Builder Disk Cleanup DRAFT Workflow builder ✓ Actions 2 Details 3 Review Workflow valid Complete device condition rules Live validation WORKFLOW TIMELINE Drag actions to reorder · click to configure 8 actions Add action WHEN Event: High disk usage alert DO Copy of Cop</p>
+        <figure>
+          <img src="screenshots/113-workflow-builder-deep-03-details-when-on-demand-event-schedule.png" alt="03 Details — When (On demand / Event / Schedule) — Disk Cleanup" loading="lazy" />
+          <figcaption>screenshots/113-workflow-builder-deep-03-details-when-on-demand-event-schedule.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>04 When — On demand (selfhelp) — Disk Cleanup</h3>
+        <div class="meta"><span>Path: /actions/library/visual-builder</span></div>
+        <p class="desc">Home Visual Builder Disk Cleanup DRAFT Workflow builder ✓ Actions 2 Details 3 Review Workflow valid Trigger configured Live validation WORKFLOW TIMELINE Drag actions to reorder · click to configure 8 actions Add action WHEN On demand: High disk usage alert DO Copy of Copy of Copy</p>
+        <figure>
+          <img src="screenshots/114-workflow-builder-deep-04-when-on-demand-selfhelp.png" alt="04 When — On demand (selfhelp) — Disk Cleanup" loading="lazy" />
+          <figcaption>screenshots/114-workflow-builder-deep-04-when-on-demand-selfhelp.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>05 When — Event Trigger (autoheal) — Disk Cleanup</h3>
+        <div class="meta"><span>Path: /actions/library/visual-builder</span></div>
+        <p class="desc">Home Visual Builder Disk Cleanup DRAFT Workflow builder ✓ Actions 2 Details 3 Review Workflow valid Complete device condition rules Live validation WORKFLOW TIMELINE Drag actions to reorder · click to configure 8 actions Add action WHEN Event: High disk usage alert DO Copy of Cop</p>
+        <figure>
+          <img src="screenshots/115-workflow-builder-deep-05-when-event-trigger-autoheal.png" alt="05 When — Event Trigger (autoheal) — Disk Cleanup" loading="lazy" />
+          <figcaption>screenshots/115-workflow-builder-deep-05-when-event-trigger-autoheal.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>06 When — Schedule (scheduler) — Disk Cleanup</h3>
+        <div class="meta"><span>Path: /actions/library/visual-builder</span></div>
+        <p class="desc">Home Visual Builder Disk Cleanup DRAFT Workflow builder ✓ Actions 2 Details 3 Review Workflow valid Trigger configured Live validation WORKFLOW TIMELINE Drag actions to reorder · click to configure 8 actions Add action WHEN every weekday at 9:00 AM DO Copy of Copy of Copy of Clea</p>
+        <figure>
+          <img src="screenshots/116-workflow-builder-deep-06-when-schedule-scheduler.png" alt="06 When — Schedule (scheduler) — Disk Cleanup" loading="lazy" />
+          <figcaption>screenshots/116-workflow-builder-deep-06-when-schedule-scheduler.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>07 Conditions — Matches / Does not match — Disk Cleanup</h3>
+        <div class="meta"><span>Path: /actions/library/visual-builder</span></div>
+        <p class="desc">Home Visual Builder Disk Cleanup DRAFT Workflow builder ✓ Actions 2 Details 3 Review Workflow valid Trigger configured Live validation WORKFLOW TIMELINE Drag actions to reorder · click to configure 8 actions Add action WHEN every weekday at 9:00 AM DO Copy of Copy of Copy of Clea</p>
+        <figure>
+          <img src="screenshots/117-workflow-builder-deep-07-conditions-matches-does-not-match.png" alt="07 Conditions — Matches / Does not match — Disk Cleanup" loading="lazy" />
+          <figcaption>screenshots/117-workflow-builder-deep-07-conditions-matches-does-not-match.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>08 Review before save — Disk Cleanup</h3>
+        <div class="meta"><span>Path: /actions/library/visual-builder</span></div>
+        <p class="desc">Home Visual Builder Disk Cleanup DRAFT Workflow builder ✓ Actions 2 Details 3 Review Workflow valid Trigger configured Live validation WORKFLOW TIMELINE Drag actions to reorder · click to configure 8 actions Add action WHEN every weekday at 9:00 AM DO Copy of Copy of Copy of Clea</p>
+        <figure>
+          <img src="screenshots/118-workflow-builder-deep-08-review-before-save.png" alt="08 Review before save — Disk Cleanup" loading="lazy" />
+          <figcaption>screenshots/118-workflow-builder-deep-08-review-before-save.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>09 Library inspector — edit / link — Profiles</h3>
+        <div class="meta"><span>Path: /actions/library</span></div>
+        <p class="desc">Home Library Profiles Playbooks Profiles 51 profiles · Browse, create, and assign profiles. Create Columns / Filters Name Description Type Status Last Modified Teams Cache Remediation Recovers a broken Microsoft Teams desktop session after crashes or a stuck “Signing in…” loop. S</p>
+        <figure>
+          <img src="screenshots/119-workflow-builder-deep-09-library-inspector-edit-link.png" alt="09 Library inspector — edit / link — Profiles" loading="lazy" />
+          <figcaption>screenshots/119-workflow-builder-deep-09-library-inspector-edit-link.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>10 Link scope confirm — Profiles</h3>
+        <div class="meta"><span>Path: /actions/library</span></div>
+        <p class="desc">Home Library Profiles Playbooks Profiles 51 profiles · Browse, create, and assign profiles. Create Columns / Filters Name Description Type Status Last Modified Teams Cache Remediation Recovers a broken Microsoft Teams desktop session after crashes or a stuck “Signing in…” loop. S</p>
+        <figure>
+          <img src="screenshots/120-workflow-builder-deep-10-link-scope-confirm.png" alt="10 Link scope confirm — Profiles" loading="lazy" />
+          <figcaption>screenshots/120-workflow-builder-deep-10-link-scope-confirm.png</figcaption>
+        </figure>
+      </article>
+    </section>
+    <section id="software-distribution-deep">
+      <h2>Software Distribution deep</h2>
+      <article>
+        <h3>01 Install profiles list — Software install profiles</h3>
+        <div class="meta"><span>Path: /devices/software/software-distribution</span></div>
+        <p class="desc">Home Software Distribution Software install profiles Software uninstall profiles Reusable SWD snippets Deploy Software install profiles 3 profiles · Profiles that install software on managed devices. Create profile Columns / Filters Profile name Category Description Status Create</p>
+        <figure>
+          <img src="screenshots/121-software-distribution-deep-01-install-profiles-list.png" alt="01 Install profiles list — Software install profiles" loading="lazy" />
+          <figcaption>screenshots/121-software-distribution-deep-01-install-profiles-list.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>02 Create software distribution profile — Profile builder</h3>
+        <div class="meta"><span>Path: /devices/software/software-distribution</span></div>
+        <p class="desc">Home Software Distribution Profile builder DRAFT Load 7-Zip example Design History Switch to Form View ✓ Package 2 Build 3 Options 4 Review Operating system Which OS should these patches run on? Select OS BUILD SEQUENCE 1 action — pick a type or configure below the card. 1 action</p>
+        <figure>
+          <img src="screenshots/122-software-distribution-deep-02-create-software-distribution-profile.png" alt="02 Create software distribution profile — Profile builder" loading="lazy" />
+          <figcaption>screenshots/122-software-distribution-deep-02-create-software-distribution-profile.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>05 Deploy tab — Software distribution — Deploy</h3>
+        <div class="meta"><span>Path: /devices/software/swd-push-audit</span></div>
+        <p class="desc">Home Swd Push Audit Software distribution — Deploy 0 rows · Deploy queue and per-device audit for software install and uninstall jobs. Columns / Filters No deploy rows Rows appear after software distribution jobs are pushed to devices.</p>
+        <figure>
+          <img src="screenshots/106-manage-deploy-seeded.png" alt="05 Deploy tab — Software distribution — Deploy" loading="lazy" />
+          <figcaption>screenshots/106-manage-deploy-seeded.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>06 Deploy page (queue &amp; audit) — Software distribution — Deploy</h3>
+        <div class="meta"><span>Path: /devices/software/swd-push-audit</span></div>
+        <p class="desc">Home Swd Push Audit Software distribution — Deploy 0 rows · Deploy queue and per-device audit for software install and uninstall jobs. Columns / Filters No deploy rows Rows appear after software distribution jobs are pushed to devices.</p>
+        <figure>
+          <img src="screenshots/106-manage-deploy-seeded.png" alt="06 Deploy page (queue &amp; audit) — Software distribution — Deploy" loading="lazy" />
+          <figcaption>screenshots/106-manage-deploy-seeded.png</figcaption>
+        </figure>
+      </article>
+    </section>
+    <section id="recapture">
+      <h2>Recapture</h2>
+      <article>
+        <h3>census — Devices</h3>
+        <div class="meta"><span>Path: /devices/inventory/census</span></div>
+        <p class="desc">Device inventory (Census) — OS filters, search, export, health chips.</p>
+        <figure>
+          <img src="screenshots/104-device-detail-inventory-drawer.png" alt="census — Devices" loading="lazy" />
+          <figcaption>screenshots/104-device-detail-inventory-drawer.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>actions-results — Execution history</h3>
+        <div class="meta"><span>Path: /manage/execution-history</span></div>
+        <p class="desc">Execution History of solutions pushed to devices (success, failed, pending).</p>
+        <figure>
+          <img src="screenshots/103-manage-execution-history-seeded.png" alt="actions-results — Execution history" loading="lazy" />
+          <figcaption>screenshots/103-manage-execution-history-seeded.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>swd-push-audit — Software distribution — Deploy</h3>
+        <div class="meta"><span>Path: /devices/software/swd-push-audit</span></div>
+        <p class="desc">Software distribution Deploy queue — per-device install/uninstall audit.</p>
+        <figure>
+          <img src="screenshots/106-manage-deploy-seeded.png" alt="swd-push-audit — Software distribution — Deploy" loading="lazy" />
+          <figcaption>screenshots/106-manage-deploy-seeded.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>automate-scheduling — Schedules</h3>
+        <div class="meta"><span>Path: /actions/scheduling</span><span>menu disabled</span></div>
+        <p class="desc">Scheduling hub — deployed workflows on a recurring schedule.</p>
+        <figure>
+          <img src="screenshots/047-disabled-menu-scheduling.png" alt="automate-scheduling — Schedules" loading="lazy" />
+          <figcaption>screenshots/047-disabled-menu-scheduling.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>monitoring-profiles</h3>
+        <div class="meta"><span>Path: /actions/catalogs/monitoring</span><span>menu disabled</span></div>
+        <p class="desc">Monitoring / Data Collection profiles hub.</p>
+        <figure>
+          <img src="screenshots/095-disabled-menu-monitoring.png" alt="monitoring-profiles" loading="lazy" />
+          <figcaption>screenshots/095-disabled-menu-monitoring.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>admin-deployment</h3>
+        <div class="meta"><span>Path: /settings/deployment</span><span>menu disabled</span></div>
+        <p class="desc">Client enrolment packages hub (placeholder until package UI ships).</p>
+        <figure>
+          <img src="screenshots/096-disabled-menu-deployment.png" alt="admin-deployment" loading="lazy" />
+          <figcaption>screenshots/096-disabled-menu-deployment.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>version-catalog — Version catalog</h3>
+        <div class="meta"><span>Path: /settings/agents</span><span>menu disabled</span></div>
+        <p class="desc">Version catalog of client packages sites can target for updates.</p>
+        <figure>
+          <img src="screenshots/097-disabled-menu-version-catalog.png" alt="version-catalog — Version catalog" loading="lazy" />
+          <figcaption>screenshots/097-disabled-menu-version-catalog.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>gpo-policies</h3>
+        <div class="meta"><span>Path: /compliance/gpo-policies</span><span>menu disabled</span></div>
+        <p class="desc">GPO / desired-state policy definitions list.</p>
+        <figure>
+          <img src="screenshots/098-disabled-menu-gpo-policies.png" alt="gpo-policies" loading="lazy" />
+          <figcaption>screenshots/098-disabled-menu-gpo-policies.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>compliance-policy-execution — Policy execution</h3>
+        <div class="meta"><span>Path: /compliance/policy-execution</span><span>menu disabled</span></div>
+        <p class="desc">Per-device policy execution status.</p>
+        <figure>
+          <img src="screenshots/058-disabled-menu-policy-execution.png" alt="compliance-policy-execution — Policy execution" loading="lazy" />
+          <figcaption>screenshots/058-disabled-menu-policy-execution.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>selfhelp-library — Profiles</h3>
+        <div class="meta"><span>Path: /actions/library</span></div>
+        <p class="desc">Automation library filtered toward self-help profiles.</p>
+        <figure>
+          <img src="screenshots/125-automate-selfhelp-library.png" alt="selfhelp-library — Profiles" loading="lazy" />
+          <figcaption>screenshots/125-automate-selfhelp-library.png</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>autoheal-library — Profiles</h3>
+        <div class="meta"><span>Path: /actions/library</span></div>
+        <p class="desc">Automation library filtered toward autoheal profiles.</p>
+        <figure>
+          <img src="screenshots/126-automate-autoheal-library.png" alt="autoheal-library — Profiles" loading="lazy" />
+          <figcaption>screenshots/126-automate-autoheal-library.png</figcaption>
+        </figure>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

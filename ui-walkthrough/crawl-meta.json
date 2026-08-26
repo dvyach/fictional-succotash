@@ -1,0 +1,2246 @@
+{
+  "capturedAt": "2026-08-25T12:18:10.703Z",
+  "base": "http://localhost:5176",
+  "counts": {
+    "enabledPages": 46,
+    "disabledMenu": 12,
+    "dexReports": 24,
+    "totalResults": 110,
+    "ok": 109,
+    "retryPass": true,
+    "deepFlows": 28,
+    "consolidated": true,
+    "note": "Pass 3: seeded screens replace empty pass-2 primaries; deep flows kept"
+  },
+  "results": [
+    {
+      "section": "Home",
+      "id": "experience-dashboard",
+      "label": "Overview",
+      "path": "/home",
+      "file": "001-home-overview.png",
+      "finalUrl": "http://localhost:5176/home",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "h2": [
+          "Home"
+        ],
+        "snippet": "Home Home Home Overview of what needs attention across your tenant. Your operational control tower. Monitor device health, compliance posture, critical alerts, and recommended actions at a glance. No record data available. No record data available. No record data available. No record data available.",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Home",
+      "id": "home-recent-activity",
+      "label": "Recent Activity",
+      "path": "/settings/audit/activity-log",
+      "file": "097-home-recent-activity-seeded.png",
+      "finalUrl": "http://localhost:5176/settings/audit/activity-log",
+      "ok": true,
+      "notes": {
+        "h1": "Activity logs",
+        "snippet": "Home Activity Log Activity Log Ticket Audit System Events Activity logs 0 records · Who changed what in the app — config edits, UI actions, and audit events. Columns / Filters No activity logs Activity will appear here as users work in the app.",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Automate",
+      "id": "automation-config",
+      "label": "Automation",
+      "path": "/actions/library",
+      "file": "098-automate-automation-profiles-seeded.png",
+      "finalUrl": "http://localhost:5176/actions/library",
+      "ok": true,
+      "notes": {
+        "h1": "Profiles",
+        "snippet": "Home Library Profiles Playbooks Profiles 51 profiles · Browse, create, and assign profiles. Create Columns / Filters Name Description Type Status Last Modified Teams Cache Remediation Recovers a broken Microsoft Teams desktop session after crashes or a stuck “Signing in…” loop. Stops hung Teams processes, clears corrupted cache folders, relaunches the client, and confirms the app reaches the main ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Automate",
+      "id": "visual-builder",
+      "label": "Workflow Builder",
+      "path": "/actions/library/visual-builder",
+      "file": "111-workflow-builder-deep-01-hub-templates-create-custom.png",
+      "finalUrl": "http://localhost:5176/actions/library/visual-builder",
+      "ok": true,
+      "notes": {
+        "h1": "Workflow builder",
+        "h2": [
+          "What needs fixing?"
+        ],
+        "snippet": "Hub: templates, quick starts, create custom — see Workflow Builder deep for Actions/Details/Review/When/Link steps",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Automate",
+      "id": "insights-campaigns",
+      "label": "Survey",
+      "path": "/actions/campaigns",
+      "file": "099-automate-survey-campaigns-seeded.png",
+      "finalUrl": "http://localhost:5176/actions/campaigns",
+      "ok": true,
+      "notes": {
+        "h1": "Campaigns",
+        "snippet": "Home Campaigns Campaigns Feedback Surveys Campaigns 271 campaigns · Launch and track user survey campaigns for this site. Columns / Filters Campaign Workflow key Status Linked scopes Last modified Uninstall Legacy Agent Removes superseded agent builds before a major upgrade. Active — 8/25/2026, 5:30:38 PM Install Contoso Agent Rolls out Contoso helper agent for supported Windows devices. Active — ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Automate",
+      "id": "data-collection",
+      "label": "Data Collection",
+      "path": "/actions/catalogs/data-collection",
+      "file": "006-automate-data-collection.png",
+      "finalUrl": "http://localhost:5176/actions/catalogs/data-collection",
+      "ok": true,
+      "notes": {
+        "h1": "Data collection",
+        "h2": [],
+        "snippet": "Home Data Collection Data collection 9 · Profiles for performance, storage, user activity, and network monitoring. Create Columns / Filters Profile Description Monitoring Collectors Status Last modified Disk health Disk health — 0 Not Attached 3 days ago Device health Device health — 0 Not Attached 3 days ago Network Monitoring - for Sales Team Collects network connectivity and related network inf",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Automate",
+      "id": "protection-policies",
+      "label": "Device Protection",
+      "path": "/actions/catalogs/device-protection",
+      "file": "007-automate-device-protection.png",
+      "finalUrl": "http://localhost:5176/actions/catalogs/device-protection",
+      "ok": true,
+      "notes": {
+        "h1": "Protection policies",
+        "h2": [],
+        "snippet": "Home Device Protection Protection policies 7 · Profiles for registry, services, application control, paths, and USB. Create Columns / Filters Profile Policies Count Status Last modified spooler check 0 Not Attached — new device 0 Not Attached — device neww 0 Not Attached — device 0 Not Attached — Interactive logon: machine inactivity limit 0 Active — Microsoft Defender: real-time protection 0 Acti",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Automate",
+      "id": "gpo-catalog",
+      "label": "GPO",
+      "path": "/actions/catalogs/gpo-templates",
+      "file": "100-automate-gpo-admx-active-only.png",
+      "finalUrl": "http://localhost:5176/actions/catalogs/gpo-templates",
+      "ok": true,
+      "notes": {
+        "h1": "Policy templates (ADMX)",
+        "snippet": "Home Gpo Templates Templates Policies Policy templates (ADMX) 4,080 records · Browse ADMX templates to create Windows desired-state policies. Columns / Filters Policy name Category Subcategory Catalog version Active ADR-006 Phase 1 smoke (NoAutoUpdate) ADR-006 Phase 1 Smoke / Windows Update Smoke adr006-phase1-smoke Yes Application Guard Container Proxy Browser Settings Application Guard settings ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Automate",
+      "id": "pending-changes",
+      "label": "Pending Publish",
+      "path": "/actions/pending-publish",
+      "file": "101-automate-pending-publish-seeded.png",
+      "finalUrl": "http://localhost:5176/actions/pending-publish",
+      "ok": true,
+      "notes": {
+        "h1": "Pending Configuration Changes",
+        "snippet": "Home Pending Publish Pending Configuration Changes 1 groups · Unpublished configuration changes for sites and classifications in this tenant. Columns / Filters Group Type Changes Base Version Last Modified By Last Modified Scheduled Actions Axiom_4 Site 1 109 walkthrough-seed 8/25/2026, 5:30:54 PM N/A 1–1 of 1 Show 10 25 50 100 per page Prev 1/1 Next",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Innovate",
+      "id": "innovate-assistant",
+      "label": "AI Helpdesk",
+      "path": "/innovate/conversation",
+      "file": "010-innovate-ai-helpdesk.png",
+      "finalUrl": "http://localhost:5176/innovate/conversation",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "h2": [
+          "What can I help you investigate?"
+        ],
+        "snippet": "Home Conversation Search conversations CONVERSATIONS New chat No conversations yet AI HELPDESK What can I help you investigate? Ask in plain language about your estate. Responses stream here; plans, confidence, and sources open in the details panel. Try asking Which devices are offline right now? Summarize compliance gaps this week Show patch status by site What are the top active alerts? Enter to",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Innovate",
+      "id": "innovate-investigations",
+      "label": "Investigations",
+      "path": "/innovate/haya",
+      "file": "011-innovate-investigations.png",
+      "finalUrl": "http://localhost:5176/innovate/haya",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "h2": [
+          "What can I help you investigate?"
+        ],
+        "snippet": "Home Haya Search conversations CONVERSATIONS New chat No conversations yet AI HELPDESK What can I help you investigate? Ask in plain language about your estate. Responses stream here; plans, confidence, and sources open in the details panel. Try asking Which devices are offline right now? Summarize compliance gaps this week Show patch status by site What are the top active alerts? Enter to send · ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Innovate",
+      "id": "innovate-anomaly",
+      "label": "Anomaly Detection",
+      "path": "/innovate/clusters",
+      "file": "012-innovate-anomaly-detection.png",
+      "finalUrl": "http://localhost:5176/innovate/clusters",
+      "ok": true,
+      "notes": {
+        "h1": "Clusters",
+        "h2": [],
+        "snippet": "Home Clusters Clusters Haya anomaly clusters — open a cluster for investigation. 182 Total 182 Resolved 181 High severity All statuses Active only Resolved only Expand all Collapse all 182 of 182 ▾ Branch Host Health Collapse (2 episodes) 2 episodes, latest Aug 10 ▾ Branch Core Path RTT Spike Alert (4 episodes) 4 episodes, latest Aug 9 ▾ Branch Employee Sentiment Drop Alert (5 episodes) 5 episodes",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Innovate",
+      "id": "innovate-forecasts",
+      "label": "Forecasting",
+      "path": "/innovate/forecasts",
+      "file": "013-innovate-forecasting.png",
+      "finalUrl": "http://localhost:5176/innovate/forecasts",
+      "ok": true,
+      "notes": {
+        "h1": "Forecasts",
+        "h2": [],
+        "snippet": "Home Forecasts Forecasts Forecast instances bound to published definitions. Commit/publish definitions in Studio; operate instances here. + New Forecast 15 Total 15 Enabled 15 Studio All statuses Enabled only Disabled only All origins Studio App 15 of 15 FORECAST METRIC STRATEGY SCHEDULE STATUS ACTIONS Branch Employee Sentiment Forecast Instance STUDIO sentiment_score_normalized Trend P1D Enabled ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Innovate",
+      "id": "innovate-query-builder",
+      "label": "Query Builder",
+      "path": "/insights/exploration/query-builder",
+      "file": "014-innovate-query-builder.png",
+      "finalUrl": "http://localhost:5176/insights/exploration/query-builder",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "h2": [],
+        "snippet": "Home Query Builder Query Builder Dimensions (comma-separated) Measures (comma-separated) Filters (JSON where clause) Execute",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Innovate",
+      "id": "innovate-agent-workbench",
+      "label": "Agent Workbench",
+      "path": "/insights/exploration/agent-workbench",
+      "file": "015-innovate-agent-workbench.png",
+      "finalUrl": "http://localhost:5176/insights/exploration/agent-workbench",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "h2": [
+          "Agent Workbench"
+        ],
+        "snippet": "Home Agent Workbench Agent Workbench Powered by contract config New chat Good evening, admin 👋 DART telemetry shows 512 devices monitored. Here's what needs attention. Smart Recommendations critical DEX Drop — App Crash Spike DART detected 127 devices with 35% spike in Teams/Outlook crashes. Correlates with Patch KB5031224. 92 devices eligible for auto-heal via DART remediation. Investigate root ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Innovate",
+      "id": "innovate-alerts",
+      "label": "Alerts",
+      "path": "/innovate/haya?feature=alerts",
+      "file": "016-innovate-alerts.png",
+      "finalUrl": "http://localhost:5176/innovate/haya?feature=alerts",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "h2": [
+          "What can I help you investigate?"
+        ],
+        "snippet": "Home Haya Search conversations CONVERSATIONS New chat No conversations yet AI HELPDESK What can I help you investigate? Ask in plain language about your estate. Responses stream here; plans, confidence, and sources open in the details panel. Try asking Which devices are offline right now? Summarize compliance gaps this week Show patch status by site What are the top active alerts? Enter to send · ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Experience",
+      "id": "dex-dashboards",
+      "label": "Dashboards catalog",
+      "path": "/experience/dashboards",
+      "file": "017-experience-dashboards-catalog.png",
+      "finalUrl": "http://localhost:5176/experience/dashboards",
+      "ok": true,
+      "notes": {
+        "h1": "24 DEX & Device Reports",
+        "h2": [],
+        "snippet": "Home Dashboards 24 DEX & Device Reports Experience / Reports — endpoint health, DEX scores, and IT operations dashboards All Categories Title (A-Z) App Crashes & Instability Applications on Endpoints Crash frequency, degradation velocity, and devices with recurring application failures. View Boot & Logon Performance Device Fleet & Endpoints Windows startup and sign-in duration trends — identify fl",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Experience",
+      "id": "dex-reports",
+      "label": "Reports",
+      "path": "/experience/reports",
+      "file": "018-experience-reports.png",
+      "finalUrl": "http://localhost:5176/experience/reports",
+      "ok": true,
+      "notes": {
+        "h1": "Digital Experience Overview",
+        "h2": [],
+        "snippet": "Home Reports Digital Experience Overview Executive summary — cross-pillar experience health Global Last 30 days Last 45 days Last 90 days Digital Experience Score Watch 7.1 / 10 ++0.4 Monitored Devices 1.33k Current Employee Sentiment Watch 6.8 / 10 Digital Experience Score Trend Last 45 days Digital Experience Score +0.3 over period 6.8 7 7.2 7.4 Jul 11 Jul 19 Jul 27 Aug 4 Aug 12 Aug 20 Aug 24 Au",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Experience",
+      "id": "dex-employee",
+      "label": "Employee Experience",
+      "path": "/experience/employee",
+      "file": "019-experience-employee-experience.png",
+      "finalUrl": "http://localhost:5176/experience/employee",
+      "ok": true,
+      "notes": {
+        "h1": "Employee Experience",
+        "h2": [],
+        "snippet": "Home Employee Employee Experience Employee sentiment, satisfaction breakdown, and complaint themes Global Last 30 days Last 45 days Last 90 days Employee Sentiment Score Watch 6.8 / 10 -0.3 Total Respondents 1.33k Current Digital Experience Score Watch 7.1 / 10 Sentiment Trend Last 45 days Sentiment +0.2 over period 6.6 6.7 6.8 6.9 Jul 11 Jul 19 Jul 27 Aug 4 Aug 12 Aug 20 Aug 24 Aug 24 6.9/10 Over",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Experience",
+      "id": "dex-device",
+      "label": "Device Experience",
+      "path": "/experience/device",
+      "file": "020-experience-device-experience.png",
+      "finalUrl": "http://localhost:5176/experience/device",
+      "ok": true,
+      "notes": {
+        "h1": "Device Experience",
+        "h2": [],
+        "snippet": "Home Device Device Experience Endpoint satisfaction, boot performance, and hardware health Global Last 30 days Last 45 days Last 90 days End-User Satisfaction Watch 6.7 / 10 ++0.3 Endpoint Performance Poor 6.2 / 10 Avg Boot Time 37.7 sec Last 30 days Satisfaction by Location Current Americas Watch 6.83 /10 Europe Watch 6.72 /10 Middle East Watch 6.69 /10 APAC Watch 6.66 /10 0 Warning 6.0 Good 7.5 ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Experience",
+      "id": "dex-application",
+      "label": "Application Experience",
+      "path": "/experience/application",
+      "file": "021-experience-application-experience.png",
+      "finalUrl": "http://localhost:5176/experience/application",
+      "ok": true,
+      "notes": {
+        "h1": "Application Experience",
+        "h2": [],
+        "snippet": "Home Application Application Experience Business and collaboration application performance scores Global Last 30 days Last 45 days Last 90 days Business Applications Score Poor 0.0 / 10 -0.0 Productivity & Collaboration Score Watch 6.5 / 10 Application Stability Score Poor 6.3 / 10 Business Application Scores Current Outlook Good 7.83 /10 Microsoft Teams Good 7.82 /10 Intranet Good 7.81 /10 Acroba",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Experience",
+      "id": "dex-network",
+      "label": "Network Experience",
+      "path": "/experience/network",
+      "file": "022-experience-network-experience.png",
+      "finalUrl": "http://localhost:5176/experience/network",
+      "ok": true,
+      "notes": {
+        "h1": "Network Experience",
+        "h2": [],
+        "snippet": "Home Network Network Experience Connectivity, latency, and infrastructure performance Global Last 30 days Last 45 days Last 90 days Infrastructure Performance Score Poor 5.8 / 10 -0.3 Avg Round-Trip Latency 131 ms Last 30 days Packet Loss 2% % Last 30 days Network Performance by Location Current Americas Watch 6.07 /10 APAC Watch 6.00 /10 Europe Poor 5.93 /10 Middle East Poor 5.34 /10 0 Warning 6.",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Experience",
+      "id": "compliance-score",
+      "label": "Digital Experience",
+      "path": "/experience/compliance-score",
+      "file": "102-experience-digital-experience-dashboard.png",
+      "finalUrl": "http://localhost:5176/experience/compliance-score",
+      "ok": true,
+      "notes": {
+        "h1": "DEX Score Overview",
+        "snippet": "Home Compliance Score DEX Score Overview Fleet digital experience, location impact, and experience drivers Global Last 30 days Last 45 days Last 90 days Fleet DEX Watch 7.1 / 10 -0.3 Below warning 1.33k devices DEX < 6.0 Connectivity share 1330 % Lead driver Sites impacted 1.33k of 4 DEX < 6.0 DEX trend Today · last 6 hours DEX +0.3 over period 6.8 7 7.2 7.4 Jul 11 Jul 19 Jul 27 Aug 4 Aug 12 Aug 2",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Experience",
+      "id": "dex-benchmarks",
+      "label": "Benchmarks",
+      "path": "/experience/benchmarks",
+      "file": "024-experience-benchmarks.png",
+      "finalUrl": "http://localhost:5176/experience/benchmarks",
+      "ok": true,
+      "notes": {
+        "h1": "End-User Experience Improvement",
+        "h2": [],
+        "snippet": "Home Benchmarks End-User Experience Improvement Satisfaction vs endpoint performance across domains Global Last 30 days Last 45 days Last 90 days End-User Satisfaction Index Watch 6.8 / 10 -0.2 Endpoint Performance Index Poor 6.2 / 10 Digital Experience Score Watch 7.1 / 10 Satisfaction by Location Current Americas Watch 6.83 /10 Europe Watch 6.72 /10 Middle East Watch 6.69 /10 APAC Watch 6.66 /10",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Experience",
+      "id": "compliance-trends",
+      "label": "Trends",
+      "path": "/experience/trends",
+      "file": "025-experience-trends.png",
+      "finalUrl": "http://localhost:5176/experience/trends",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "h2": [],
+        "snippet": "Home Trends Compliance Trends Historical trends and reporting over time (posture movement), not the live violation queue. Use Monitoring → Violations for current non-compliance rows. Full reporting coming soon.",
+        "comingSoon": true,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Manage",
+      "id": "census",
+      "label": "Inventory",
+      "path": "/devices/inventory/census",
+      "file": "026-manage-inventory.png",
+      "finalUrl": "http://localhost:5176/devices/inventory/census",
+      "ok": true,
+      "notes": {
+        "h1": "Devices",
+        "h2": [],
+        "snippet": "Home Devices Inventory Devices 63 devices · Healthy 0 Pending sync 0 · Inventory, classify, and manage managed endpoints. Add device Export Columns All Devices 63 Windows 47 macOS 10 Android 0 Linux 5 Unknown / Filters Device / Endpoint Status OS Last seen Agent Installed date MTL-NB-FIN-08 — Microsoft Windows 11 Pro 10.0.22631 4/2/2026, 5:15:08 PM 2.8.2.1185 2/16/2026, 5:15:08 PM RETAIL-POS-STORE",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Manage",
+      "id": "devices-device-explorer",
+      "label": "Device Explorer",
+      "path": "/devices/inventory/device-explorer",
+      "file": "027-manage-device-explorer.png",
+      "finalUrl": "http://localhost:5176/devices/inventory/device-explorer",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "h2": [],
+        "snippet": "Home Device Explorer Device Explorer Search any managed device and explore its full profile — hardware, software, patches, performance, timeline, and compliance. This Manage destination will ship as a Haya surface; navigation is wired, the experience is coming soon.",
+        "comingSoon": true,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Manage",
+      "id": "actions-results",
+      "label": "Execution History",
+      "path": "/manage/execution-history",
+      "file": "103-manage-execution-history-seeded.png",
+      "finalUrl": "http://localhost:5176/manage/execution-history",
+      "ok": true,
+      "notes": {
+        "h1": "Execution history",
+        "snippet": "Home Execution History Executions / Logs Queue Execution history 0 executions · Solutions pushed to devices — success, failed, and pending outcomes. Columns / Filters No execution records Execution rows appear here after automations run on devices.",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Manage",
+      "id": "automate-remote-execution",
+      "label": "Remote Execution",
+      "path": "/actions/execution/remediation",
+      "file": "104-manage-remote-execution.png",
+      "finalUrl": "http://localhost:5176/actions/execution/remediation",
+      "ok": true,
+      "notes": {
+        "h1": "Remote Execution",
+        "snippet": "Home Remediation Remote Execution 1–25 of 114 automations · Select a linked automation and run it now on a site, group, or device. / APPS 4 Browsers Chrome Cleanup Clear Chromium cache and GPU process leftovers after hang. Scoped for Clinical / Citrix. Use when end users report recurring failures after a simple app restart. autoheal active Always Run now Edge WebView2 Repair Repair WebView2 runtim",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Manage",
+      "id": "manage-swd",
+      "label": "Software Distribution",
+      "path": "/devices/software/software-distribution",
+      "file": "105-manage-software-distribution-seeded.png",
+      "finalUrl": "http://localhost:5176/devices/software/software-distribution",
+      "ok": true,
+      "notes": {
+        "h1": "Software install profiles",
+        "snippet": "Home Software Distribution Software install profiles Software uninstall profiles Reusable SWD snippets Deploy Software install profiles 3 profiles · Profiles that install software on managed devices. Create profile Columns / Filters Profile name Category Description Status Created Modified Uninstall Legacy Agent uninstallation Removes superseded agent builds before a major upgrade. Active 8/25/202",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Manage",
+      "id": "swd-push-audit",
+      "label": "Deploy",
+      "path": "/devices/software/swd-push-audit",
+      "file": "106-manage-deploy-seeded.png",
+      "finalUrl": "http://localhost:5176/devices/software/swd-push-audit",
+      "ok": true,
+      "notes": {
+        "h1": "Software distribution — Deploy",
+        "snippet": "Home Swd Push Audit Software distribution — Deploy 0 rows · Deploy queue and per-device audit for software install and uninstall jobs. Columns / Filters No deploy rows Rows appear after software distribution jobs are pushed to devices.",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Manage",
+      "id": "manage-patch",
+      "label": "Patch Management",
+      "path": "/devices/software/patch-management",
+      "file": "032-manage-patch-management.png",
+      "finalUrl": "http://localhost:5176/devices/software/patch-management",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "h2": [],
+        "snippet": "Home Patch Management Patch management Coming soon — Windows Update status, deployment tracking, and security patches.",
+        "comingSoon": true,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Manage",
+      "id": "issues-compliance-violations",
+      "label": "Violations",
+      "path": "/innovate/haya?feature=violations",
+      "file": "033-manage-violations.png",
+      "finalUrl": "http://localhost:5176/innovate/haya?feature=violations",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "h2": [
+          "What can I help you investigate?"
+        ],
+        "snippet": "Home Haya Search conversations CONVERSATIONS New chat No conversations yet AI HELPDESK What can I help you investigate? Ask in plain language about your estate. Responses stream here; plans, confidence, and sources open in the details panel. Try asking Which devices are offline right now? Summarize compliance gaps this week Show patch status by site What are the top active alerts? Enter to send · ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Administration",
+      "id": "tenants",
+      "label": "Tenants",
+      "path": "/settings/organization/tenants",
+      "file": "107-administration-tenants-nanoheal-org.png",
+      "finalUrl": "http://localhost:5176/settings/organization/tenants",
+      "ok": true,
+      "notes": {
+        "h1": "Tenants",
+        "snippet": "Home Tenants Tenants 31 records · Browse sites and open tenant settings, versions, and security. Create Columns / Filters ID Tenant Name Organization Tenant key Contact email Active installs License pool 1 Default nanoheal-deploy-default-site-1 8 5e9d7820… (Unlimited) 8 Axiom_4 4992455840 admin@nanoheal.com 8 de2cca9a… (100 seats) 9 Goliath_Tech 6901049927 admin@nanoheal.com 8 6bc04ecb… (100 seats",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Administration",
+      "id": "org-branding",
+      "label": "Branding",
+      "path": "/manage/organisation/branding",
+      "file": "035-administration-branding.png",
+      "finalUrl": "http://localhost:5176/manage/organisation/branding",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "h2": [],
+        "snippet": "Home Branding Coming soon This capability is on the IA roadmap. Navigation is wired; the full experience is not available yet.",
+        "comingSoon": true,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Administration",
+      "id": "admin-licensing",
+      "label": "Licensing",
+      "path": "/settings/licensing",
+      "file": "036-administration-licensing.png",
+      "finalUrl": "http://localhost:5176/settings/licensing",
+      "ok": true,
+      "notes": {
+        "h1": "Licensing",
+        "h2": [],
+        "snippet": "Home Licensing Licensing 23 entitlements · Monitor purchased entitlements, seat usage, and site assignments. Purchases are provisioned by commerce; assign sites from Tenants. Columns / Filters Product Seats (used / total) Sites Status Expires Source Nanoheal Endpoint 1 / 1 1 site Active N/A Manual Nanoheal Endpoint 10 / 10000 3 sites Active N/A Manual Nanoheal Endpoint 0 / 10000 0 sites Active N/A",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Administration",
+      "id": "platform-integration",
+      "label": "Integrations",
+      "path": "/settings/integrations",
+      "file": "037-administration-integrations.png",
+      "finalUrl": "http://localhost:5176/settings/integrations",
+      "ok": true,
+      "notes": {
+        "h1": "Connectors",
+        "h2": [],
+        "snippet": "Home Integrations Connectors API Keys API catalog Event Subscriptions Connectors 5 connectors · Connect Nanoheal to a product (ServiceNow, Teams, Slack). To send Nanoheal events to a URL, use Event Subscriptions. Add connector Columns / Filters Site Name Type Description Status Connection Created Axiom HQ ServiceNow Production ServiceNow Bidirectional ITSM sync for incidents, change requests, and ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Administration",
+      "id": "admin-agent-mgmt",
+      "label": "Agent Management",
+      "path": "/settings/agents",
+      "file": "038-administration-agent-management.png",
+      "finalUrl": "http://localhost:5176/settings/agents",
+      "ok": true,
+      "notes": {
+        "h1": "Versions & rings",
+        "h2": [],
+        "snippet": "Home Agent Management Versions & rings Device updates Version catalog Uploads Versions & rings 1 records · Desired client versions per site. Open a row to edit policy or packages. Columns / Filters Site Tenant key Windows macOS Linux Android iOS Axiom_4 4992455840 1–1 of 1 Show 10 25 50 100 per page Prev 1/1 Next",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Administration",
+      "id": "access-security",
+      "label": "Users & Access",
+      "path": "/settings/users",
+      "file": "108-administration-users-access-seeded.png",
+      "finalUrl": "http://localhost:5176/settings/users",
+      "ok": true,
+      "notes": {
+        "h1": "User accounts",
+        "snippet": "Home Users Users RBAC SSO / SAML MFA Policy User accounts 46 records · Search users, open profiles, and manage roles and access. Create Columns All users 46 Pending approval 0 / Filters Email First Name Last Name Status User Type Last Login Tenant admin@nanoheal.com admin nanoheal Active Nanoheal 8/9/2026, 10:30:20 AM Axiom_4, Goliath_Tech, Krungsri_Kyndryl, , , , , Aug_17 prerana.prabhu@nanoheal.",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Administration",
+      "id": "settings-security",
+      "label": "Security",
+      "path": "/settings/security",
+      "file": "040-administration-security.png",
+      "finalUrl": "http://localhost:5176/settings/security",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "h2": [],
+        "snippet": "Home Security Certificates & secrets GDPR / Data subject ops Coming soon This capability is on the IA roadmap. Navigation is wired; the full experience is not available yet.",
+        "comingSoon": true,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Administration",
+      "id": "device-classification",
+      "label": "Classification",
+      "path": "/devices/organization/device-classification",
+      "file": "041-administration-classification.png",
+      "finalUrl": "http://localhost:5176/devices/organization/device-classification",
+      "ok": true,
+      "notes": {
+        "h1": "Device classifications",
+        "h2": [],
+        "snippet": "Home Device Classification Device classifications 89 classifications · Group devices by classification for targeting and policy. Create Columns / Filters Name Type Machine group Device Count Created By Created On Last Modified Engineering CSV Machine group 1 admin admin@nanoheal.com 7/22/2025, 5:06:04 PM 10/22/2025, 6:05:59 PM India_South Manual Machine group 3 admin admin@nanoheal.com 11/20/2025,",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Administration",
+      "id": "audit-logs",
+      "label": "Audit",
+      "path": "/settings/audit",
+      "file": "109-administration-audit-activity-logs.png",
+      "finalUrl": "http://localhost:5176/settings/audit",
+      "ok": true,
+      "notes": {
+        "h1": "Activity logs",
+        "snippet": "Home Audit Activity Log Ticket Audit System Events Activity logs 0 records · Who changed what in the app — config edits, UI actions, and audit events. Columns / Filters No activity logs Activity will appear here as users work in the app.",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Administration",
+      "id": "scoring",
+      "label": "Score Models",
+      "path": "/compliance/policy/score-models",
+      "file": "110-administration-score-models-seeded.png",
+      "finalUrl": "http://localhost:5176/compliance/policy/score-models",
+      "ok": true,
+      "notes": {
+        "h1": "Scores",
+        "snippet": "Home Score Models Scores 0 records · Application and subcategory score records. Columns / Filters No scores Scores will appear here when available.",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Settings",
+      "id": "account-profile",
+      "label": "Profile",
+      "path": "/account/profile",
+      "file": "044-settings-profile.png",
+      "finalUrl": "http://localhost:5176/account/profile",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "h2": [
+          "admin nanoheal"
+        ],
+        "snippet": "Home Profile A admin nanoheal 1 admin@nanoheal.com Profile Update your name and timezone. Email and role are managed by your administrator. First name Last name Timezone Search timezone… Save changes Password Current password * New password * Confirm new password * Password requirements At least 8 characters One uppercase letter One lowercase letter One number One special character Update password",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Settings",
+      "id": "account-preferences",
+      "label": "Preferences",
+      "path": "/account/preferences",
+      "file": "045-settings-preferences.png",
+      "finalUrl": "http://localhost:5176/account/preferences",
+      "ok": true,
+      "notes": {
+        "h1": "Preferences",
+        "h2": [],
+        "snippet": "Home Preferences Preferences Your profile and personal preferences. About this page LOOK Theme Light Dark Color palette Accent color for buttons, links, and highlights. Nanoheal Ops Default console — soft slate canvas, white work surfaces, calm blue interaction Azure Coast Premium Warm Sunset Glow Forest Natural Lavender Dreams Cherry Blossom Midnight Pro Browse all themes (21) Font Applies to hea",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Header",
+      "id": "header-help-feedback",
+      "label": "Help & Feedback",
+      "path": "/experience/help",
+      "file": "046-header-help-feedback.png",
+      "finalUrl": "http://localhost:5176/",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "h2": [
+          "Home"
+        ],
+        "snippet": "Home Your operational control tower. Monitor device health, compliance posture, critical alerts, and recommended actions at a glance. No record data available. No record data available. No record data available. No record data available.",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Disabled menu",
+      "id": "automate-scheduling",
+      "label": "Scheduling",
+      "path": "/actions/scheduling",
+      "menuEnabled": false,
+      "file": "047-disabled-menu-scheduling.png",
+      "finalUrl": "http://localhost:5176/actions/scheduling",
+      "ok": true,
+      "notes": {
+        "h1": "Schedules",
+        "h2": [],
+        "snippet": "Home Scheduling Schedules Deployed workflows on a recurring schedule. Edit cadence here — build workflows in Workflow Builder. No scheduled deployments yet Publish a workflow with \"Run on Schedule\" in Workflow Builder.",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Disabled menu",
+      "id": "monitoring-profiles",
+      "label": "Monitoring",
+      "path": "/actions/catalogs/monitoring",
+      "menuEnabled": false,
+      "file": "095-disabled-menu-monitoring.png",
+      "finalUrl": "http://localhost:5176/actions/catalogs/monitoring",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "snippet": "Home Monitoring",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Disabled menu",
+      "id": "haya",
+      "label": "Haya",
+      "path": "/innovate/haya",
+      "menuEnabled": false,
+      "file": "049-disabled-menu-haya.png",
+      "finalUrl": "http://localhost:5176/innovate/haya",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "h2": [
+          "What can I help you investigate?"
+        ],
+        "snippet": "Home Haya Search conversations CONVERSATIONS New chat No conversations yet AI HELPDESK What can I help you investigate? Ask in plain language about your estate. Responses stream here; plans, confidence, and sources open in the details panel. Try asking Which devices are offline right now? Summarize compliance gaps this week Show patch status by site What are the top active alerts? Enter to send · ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Disabled menu",
+      "id": "innovate-recommendations",
+      "label": "Recommendations",
+      "path": "/innovate/haya?feature=recommendations",
+      "menuEnabled": false,
+      "file": "050-disabled-menu-recommendations.png",
+      "finalUrl": "http://localhost:5176/innovate/haya?feature=recommendations",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "h2": [
+          "What can I help you investigate?"
+        ],
+        "snippet": "Home Haya Search conversations CONVERSATIONS New chat No conversations yet AI HELPDESK What can I help you investigate? Ask in plain language about your estate. Responses stream here; plans, confidence, and sources open in the details panel. Try asking Which devices are offline right now? Summarize compliance gaps this week Show patch status by site What are the top active alerts? Enter to send · ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Disabled menu",
+      "id": "innovate-automation-insights",
+      "label": "Automation Insights",
+      "path": "/innovate/haya?feature=automation-insights",
+      "menuEnabled": false,
+      "file": "051-disabled-menu-automation-insights.png",
+      "finalUrl": "http://localhost:5176/innovate/haya?feature=automation-insights",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "h2": [
+          "What can I help you investigate?"
+        ],
+        "snippet": "Home Haya Search conversations CONVERSATIONS New chat No conversations yet AI HELPDESK What can I help you investigate? Ask in plain language about your estate. Responses stream here; plans, confidence, and sources open in the details panel. Try asking Which devices are offline right now? Summarize compliance gaps this week Show patch status by site What are the top active alerts? Enter to send · ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Disabled menu",
+      "id": "innovate-knowledge",
+      "label": "Knowledge",
+      "path": "/innovate/haya?feature=knowledge",
+      "menuEnabled": false,
+      "file": "052-disabled-menu-knowledge.png",
+      "finalUrl": "http://localhost:5176/innovate/haya?feature=knowledge",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "h2": [
+          "What can I help you investigate?"
+        ],
+        "snippet": "Home Haya Search conversations CONVERSATIONS New chat No conversations yet AI HELPDESK What can I help you investigate? Ask in plain language about your estate. Responses stream here; plans, confidence, and sources open in the details panel. Try asking Which devices are offline right now? Summarize compliance gaps this week Show patch status by site What are the top active alerts? Enter to send · ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Disabled menu",
+      "id": "compliance-alert-rules",
+      "label": "Alert rules",
+      "path": "/innovate/haya?feature=alert-rules",
+      "menuEnabled": false,
+      "file": "053-disabled-menu-alert-rules.png",
+      "finalUrl": "http://localhost:5176/innovate/haya?feature=alert-rules",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "h2": [
+          "What can I help you investigate?"
+        ],
+        "snippet": "Home Haya Search conversations CONVERSATIONS New chat No conversations yet AI HELPDESK What can I help you investigate? Ask in plain language about your estate. Responses stream here; plans, confidence, and sources open in the details panel. Try asking Which devices are offline right now? Summarize compliance gaps this week Show patch status by site What are the top active alerts? Enter to send · ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Disabled menu",
+      "id": "admin-deployment",
+      "label": "Deployment",
+      "path": "/settings/deployment",
+      "menuEnabled": false,
+      "file": "096-disabled-menu-deployment.png",
+      "finalUrl": "http://localhost:5176/settings/deployment",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "snippet": "Home Deployment",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Disabled menu",
+      "id": "census-device-updates",
+      "label": "Updates",
+      "path": "/devices/software/device-updates",
+      "menuEnabled": false,
+      "file": "055-disabled-menu-updates.png",
+      "finalUrl": "http://localhost:5176/devices/software/device-updates",
+      "ok": true,
+      "notes": {
+        "h1": "Device updates",
+        "h2": [],
+        "snippet": "Home Device Updates Device updates 57 records · Client update status, compliance, and attempt history. Columns All 57 Needs attention 25 / Filters Device ID Actual version Desired version Policy compliant Version gap Site OS Platform Policy status Computed at Update status Last attempt Actions 1ca2eb5d-1cac-c92c-324c-ab0677b40cc0 2.8.4.1201 2.8.4.1204 No minor-behind Axiom_4 Microsoft Windows Serv",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Disabled menu",
+      "id": "version-catalog",
+      "label": "Version Catalog",
+      "path": "/devices/software/version-catalog",
+      "menuEnabled": false,
+      "file": "097-disabled-menu-version-catalog.png",
+      "finalUrl": "http://localhost:5176/devices/software/version-catalog",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "snippet": "Home Version Catalog",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Disabled menu",
+      "id": "gpo-policies",
+      "label": "GPO Policies",
+      "path": "/compliance/gpo-policies",
+      "menuEnabled": false,
+      "file": "098-disabled-menu-gpo-policies.png",
+      "finalUrl": "http://localhost:5176/compliance/gpo-policies",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "snippet": "Home Gpo Policies",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Disabled menu",
+      "id": "compliance-policy-execution",
+      "label": "Policy Execution",
+      "path": "/compliance/policy-execution",
+      "menuEnabled": false,
+      "file": "058-disabled-menu-policy-execution.png",
+      "finalUrl": "http://localhost:5176/compliance/policy-execution",
+      "ok": true,
+      "notes": {
+        "h1": "Policy execution",
+        "h2": [],
+        "snippet": "Home Policy Execution Policy execution 0 records · Per-device status for policy execution runs. Columns / Filters No execution status Status rows will appear after policies run on devices.",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "DEX report views",
+      "id": "dex-view-dex-score-overview",
+      "label": "DEX Score Overview",
+      "path": "/experience/dashboard/view/dex-score-overview",
+      "catalogId": "dex-score-overview",
+      "category": "Digital Experience (DEX)",
+      "description": "Fleet-wide digital experience score, location impact, and drivers across the estate.",
+      "file": "059-dex-report-views-dex-score-overview.png",
+      "finalUrl": "http://localhost:5176/experience/dashboard/view/dex-score-overview",
+      "ok": true,
+      "notes": {
+        "h1": "DEX Score Overview",
+        "h2": [],
+        "snippet": "Home Dex Score Overview DEX Score Overview Fleet digital experience, location impact, and experience drivers Global Last 30 days Last 45 days Last 90 days Fleet DEX Watch 7.1 / 10 -0.3 Below warning 1.33k devices DEX < 6.0 Connectivity share 1330 % Lead driver Sites impacted 1.33k of 4 DEX < 6.0 DEX trend Today · last 6 hours DEX +0.3 over period 6.8 7 7.2 7.4 Jul 11 Jul 19 Jul 27 Aug 4 Aug 12 Aug",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "DEX report views",
+      "id": "dex-view-what-changed-dex",
+      "label": "What Changed — Device & DEX Drivers",
+      "path": "/experience/dashboard/view/anomaly-degradation-intelligence",
+      "catalogId": "what-changed-dex",
+      "category": "Digital Experience (DEX)",
+      "description": "Period-over-period DEX movement driven by boot time, crashes, patch gaps, and network latency on managed devices.",
+      "file": "060-dex-report-views-what-changed-device-dex-drivers.png",
+      "finalUrl": "http://localhost:5176/experience/dashboard/view/anomaly-degradation-intelligence",
+      "ok": true,
+      "notes": {
+        "h1": "Anomaly & Degradation Intelligence",
+        "h2": [],
+        "snippet": "Home Anomaly Degradation Intelligence Anomaly & Degradation Intelligence Anomaly clustering + trend detection Global Last 30 days Last 45 days Last 90 days Avg Degradation Frequency 0.2 -0.0 Degradation Event Frequency 60 Days Degradation Event Frequency +0.0 over period -0.2 0 0.2 0.4 Jul 11 Jul 19 Jul 27 Aug 4 Aug 12 Aug 20 Aug 24 Aug 24 0.1/10 Degradation Event Accumulation Last 60 days Degrada",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "DEX report views",
+      "id": "dex-view-executive-dex-summary",
+      "label": "IT Leadership — Experience Summary",
+      "path": "/experience/dashboard/view/dex-executive-reports",
+      "catalogId": "executive-dex-summary",
+      "category": "Digital Experience (DEX)",
+      "description": "Cross-pillar endpoint experience: device performance, application stability, sentiment, and service-desk load.",
+      "file": "061-dex-report-views-it-leadership-experience-summary.png",
+      "finalUrl": "http://localhost:5176/experience/dashboard/view/dex-executive-reports",
+      "ok": true,
+      "notes": {
+        "h1": "Digital Experience Overview",
+        "h2": [],
+        "snippet": "Home Dex Executive Reports Digital Experience Overview Executive summary — cross-pillar experience health Global Last 30 days Last 45 days Last 90 days Digital Experience Score Watch 7.1 / 10 ++0.4 Monitored Devices 1.33k Current Employee Sentiment Watch 6.8 / 10 Digital Experience Score Trend Last 45 days Digital Experience Score +0.3 over period 6.8 7 7.2 7.4 Jul 11 Jul 19 Jul 27 Aug 4 Aug 12 Au",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "DEX report views",
+      "id": "dex-view-productivity-impact",
+      "label": "Device Friction → Productivity Loss",
+      "path": "/experience/dashboard/view/experience-productivity-impact",
+      "catalogId": "productivity-impact",
+      "category": "Digital Experience (DEX)",
+      "description": "Correlate slow boot, login delays, and degradation events with lost work time by persona and site.",
+      "file": "062-dex-report-views-device-friction-productivity-loss.png",
+      "finalUrl": "http://localhost:5176/experience/dashboard/view/experience-productivity-impact",
+      "ok": true,
+      "notes": {
+        "h1": "Experience-to-Productivity Impact",
+        "h2": [],
+        "snippet": "Home Experience Productivity Impact Experience-to-Productivity Impact Business-level modeling — Open Forum / Innovation Global Last 30 days Last 45 days Last 90 days Productivity Score Trend 90 Days Productivity Score +0.0 over period 6.2 6.4 6.6 6.8 Jul 11 Jul 19 Jul 27 Aug 4 Aug 12 Aug 20 Aug 24 Aug 24 6.5/10 DEX vs Productivity Current — Poor 0.00 /10 — Poor 0.00 /10 — Poor 0.00 /10 — Poor 0.00",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "DEX report views",
+      "id": "dex-view-endpoint-experience",
+      "label": "Endpoint Experience Scorecard",
+      "path": "/experience/dashboard/view/device-experience-report",
+      "catalogId": "endpoint-experience",
+      "category": "Device Fleet & Endpoints",
+      "description": "Boot and logon times, stability, battery health, and satisfaction by device model and region.",
+      "file": "063-dex-report-views-endpoint-experience-scorecard.png",
+      "finalUrl": "http://localhost:5176/experience/dashboard/view/device-experience-report",
+      "ok": true,
+      "notes": {
+        "h1": "Device Experience",
+        "h2": [],
+        "snippet": "Home Device Experience Report Device Experience Endpoint satisfaction, boot performance, and hardware health Global Last 30 days Last 45 days Last 90 days End-User Satisfaction Watch 6.7 / 10 ++0.3 Endpoint Performance Poor 6.2 / 10 Avg Boot Time 37.7 sec Last 30 days Satisfaction by Location Current Americas Watch 6.83 /10 Europe Watch 6.72 /10 Middle East Watch 6.69 /10 APAC Watch 6.66 /10 0 War",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "DEX report views",
+      "id": "dex-view-boot-logon-performance",
+      "label": "Boot & Logon Performance",
+      "path": "/experience/dashboard/view/experience-engineering-deep-dive",
+      "catalogId": "boot-logon-performance",
+      "category": "Device Fleet & Endpoints",
+      "description": "Windows startup and sign-in duration trends — identify fleets with slow boot or profile load issues.",
+      "file": "064-dex-report-views-boot-logon-performance.png",
+      "finalUrl": "http://localhost:5176/experience/dashboard/view/experience-engineering-deep-dive",
+      "ok": true,
+      "notes": {
+        "h1": "Experience Engineering Deep Dive",
+        "h2": [],
+        "snippet": "Home Experience Engineering Deep Dive Experience Engineering Deep Dive Modeling sophistication + Nexthink-style insights Global Last 30 days Last 45 days Last 90 days Avg DEX Score Poor 7.1 / 10 Degradation Events/30d 0.2 ++0.0 Degradation Velocity Trend Last 60 days Degradation Velocity +0.0 over period -0.2 0 0.2 0.4 Jul 11 Jul 19 Jul 27 Aug 4 Aug 12 Aug 20 Aug 24 Aug 24 0.1/10 Device Health Mat",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "DEX report views",
+      "id": "dex-view-device-lifecycle-health",
+      "label": "Device Lifecycle & Refresh Readiness",
+      "path": "/experience/dashboard/view/lifecycle-device-health",
+      "catalogId": "device-lifecycle-health",
+      "category": "Device Fleet & Endpoints",
+      "description": "Device age, warranty status, battery wear, vulnerability exposure, and lifecycle risk for refresh planning.",
+      "file": "065-dex-report-views-device-lifecycle-refresh-readiness.png",
+      "finalUrl": "http://localhost:5176/experience/dashboard/view/lifecycle-device-health",
+      "ok": true,
+      "notes": {
+        "h1": "Lifecycle & Device Health Intelligence",
+        "h2": [],
+        "snippet": "Home Lifecycle Device Health Lifecycle & Device Health Intelligence Device age, battery, vulnerability — Cost Optimization Global Last 30 days Last 45 days Last 90 days Patch Compliance Rate 0% Current Device Age Distribution Active 4.1956307885580655 1 6.194261863164499 1 2.7774240808236366 1 3.4481975236710016 1 6.112126339550536 1 3.943748516141912 1 5.194946325861282 1 5.446828598277436 1 4.52",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "DEX report views",
+      "id": "dex-view-right-sizing-performance",
+      "label": "CPU, Memory & Right-Sizing",
+      "path": "/experience/dashboard/view/right-sizing-performance",
+      "catalogId": "right-sizing-performance",
+      "category": "Device Fleet & Endpoints",
+      "description": "Saturation events, headroom, and over/under-provisioned laptops — right-size hardware before users hit limits.",
+      "file": "066-dex-report-views-cpu-memory-right-sizing.png",
+      "finalUrl": "http://localhost:5176/experience/dashboard/view/right-sizing-performance",
+      "ok": true,
+      "notes": {
+        "h1": "Right-Sizing & Performance Optimization",
+        "h2": [],
+        "snippet": "Home Right Sizing Performance Right-Sizing & Performance Optimization CPU, memory, over/under-provision — Cost Optimization Global Last 30 days Last 45 days Last 90 days CPU Utilization Histogram 30 days 58.297820601148544 1 41.10513727097978 1 44.54434207651098 1 47.62553393807735 1 77.29901023910298 1 36.64219106898924 1 78.93357462910416 1 28.41180698474652 1 88 1 56.26441592673499 1 Overprovis",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "DEX report views",
+      "id": "dex-view-application-experience",
+      "label": "Business Application Health",
+      "path": "/experience/dashboard/view/application-experience-report",
+      "catalogId": "application-experience",
+      "category": "Applications on Endpoints",
+      "description": "ERP, Office, and line-of-business app stability scores, crash rates, and license utilization on managed PCs.",
+      "file": "067-dex-report-views-business-application-health.png",
+      "finalUrl": "http://localhost:5176/experience/dashboard/view/application-experience-report",
+      "ok": true,
+      "notes": {
+        "h1": "Application Experience",
+        "h2": [],
+        "snippet": "Home Application Experience Report Application Experience Business and collaboration application performance scores Global Last 30 days Last 45 days Last 90 days Business Applications Score Poor 0.0 / 10 -0.0 Productivity & Collaboration Score Watch 6.5 / 10 Application Stability Score Poor 6.3 / 10 Business Application Scores Current Outlook Good 7.83 /10 Microsoft Teams Good 7.82 /10 Intranet Go",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "DEX report views",
+      "id": "dex-view-application-stability",
+      "label": "App Crashes & Instability",
+      "path": "/experience/dashboard/view/autonomous-operations-control",
+      "catalogId": "application-stability",
+      "category": "Applications on Endpoints",
+      "description": "Crash frequency, degradation velocity, and devices with recurring application failures.",
+      "file": "068-dex-report-views-app-crashes-instability.png",
+      "finalUrl": "http://localhost:5176/experience/dashboard/view/autonomous-operations-control",
+      "ok": true,
+      "notes": {
+        "h1": "Autonomous Operations Control",
+        "h2": [],
+        "snippet": "Home Autonomous Operations Control Autonomous Operations Control Guided triage + self-healing Global Last 30 days Last 45 days Last 90 days Ticket Deflection Rate 99% ++4.3 Ticket Deflection Trend Last 90 days Ticket Deflection +0.0 over period 98.2 98.4 98.6 98.8 99 Jul 11 Jul 19 Jul 27 Aug 4 Aug 12 Aug 20 Aug 24 Aug 24 98.6/10 Resolution by Type Last 30 days Middle East 100 Europe 98.0 Americas ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "DEX report views",
+      "id": "dex-view-license-software-efficiency",
+      "label": "Software Inventory & License Use",
+      "path": "/experience/dashboard/view/license-software-efficiency",
+      "catalogId": "license-software-efficiency",
+      "category": "Applications on Endpoints",
+      "description": "Installed software utilization, reclaimable licenses, and unused apps across the endpoint estate.",
+      "file": "069-dex-report-views-software-inventory-license-use.png",
+      "finalUrl": "http://localhost:5176/experience/dashboard/view/license-software-efficiency",
+      "ok": true,
+      "notes": {
+        "h1": "License & Software Efficiency",
+        "h2": [],
+        "snippet": "Home License Software Efficiency License & Software Efficiency License utilization, reclaimable licenses — Cost Optimization Global Last 30 days Last 45 days Last 90 days License Utilization Installed apps ERP 68% Acrobat Reader 68% Intranet 68% Salesforce 68% SAP 68% Corporate VPN 66% Microsoft Teams 66% ServiceNow 65% Outlook 64% Reclaimable Licenses Current Corporate VPN 0.0 Outlook 0.0 Intrane",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "DEX report views",
+      "id": "dex-view-collaboration-experience",
+      "label": "Teams, Outlook & Meeting Apps",
+      "path": "/experience/dashboard/view/autonomous-operations-control",
+      "catalogId": "collaboration-experience",
+      "category": "Applications on Endpoints",
+      "description": "Collaboration tool performance on endpoints — crashes, latency impact, and auto-remediation outcomes.",
+      "file": "070-dex-report-views-teams-outlook-meeting-apps.png",
+      "finalUrl": "http://localhost:5176/experience/dashboard/view/autonomous-operations-control",
+      "ok": true,
+      "notes": {
+        "h1": "Autonomous Operations Control",
+        "h2": [],
+        "snippet": "Home Autonomous Operations Control Autonomous Operations Control Guided triage + self-healing Global Last 30 days Last 45 days Last 90 days Ticket Deflection Rate 99% ++4.3 Ticket Deflection Trend Last 90 days Ticket Deflection +0.0 over period 98.2 98.4 98.6 98.8 99 Jul 11 Jul 19 Jul 27 Aug 4 Aug 12 Aug 20 Aug 24 Aug 24 98.6/10 Resolution by Type Last 30 days Middle East 100 Europe 98.0 Americas ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "DEX report views",
+      "id": "dex-view-network-vpn-quality",
+      "label": "Network, Wi‑Fi & VPN Quality",
+      "path": "/experience/dashboard/view/network-experience-report",
+      "catalogId": "network-vpn-quality",
+      "category": "Network & Remote Access",
+      "description": "Latency, jitter, and packet loss for office and remote workers — tie network issues to DEX drops.",
+      "file": "071-dex-report-views-network-wi-fi-vpn-quality.png",
+      "finalUrl": "http://localhost:5176/experience/dashboard/view/network-experience-report",
+      "ok": true,
+      "notes": {
+        "h1": "Network Experience",
+        "h2": [],
+        "snippet": "Home Network Experience Report Network Experience Connectivity, latency, and infrastructure performance Global Last 30 days Last 45 days Last 90 days Infrastructure Performance Score Poor 5.8 / 10 -0.3 Avg Round-Trip Latency 131 ms Last 30 days Packet Loss 2% % Last 30 days Network Performance by Location Current Americas Watch 6.07 /10 APAC Watch 6.00 /10 Europe Poor 5.93 /10 Middle East Poor 5.3",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "DEX report views",
+      "id": "dex-view-anomaly-degradation",
+      "label": "Device Degradation & Anomalies",
+      "path": "/experience/dashboard/view/anomaly-degradation-intelligence",
+      "catalogId": "anomaly-degradation",
+      "category": "Network & Remote Access",
+      "description": "Devices trending worse: degradation events, stability variance, and MTTR for endpoint incidents by team.",
+      "file": "072-dex-report-views-device-degradation-anomalies.png",
+      "finalUrl": "http://localhost:5176/experience/dashboard/view/anomaly-degradation-intelligence",
+      "ok": true,
+      "notes": {
+        "h1": "Anomaly & Degradation Intelligence",
+        "h2": [],
+        "snippet": "Home Anomaly Degradation Intelligence Anomaly & Degradation Intelligence Anomaly clustering + trend detection Global Last 30 days Last 45 days Last 90 days Avg Degradation Frequency 0.2 -0.0 Degradation Event Frequency 60 Days Degradation Event Frequency +0.0 over period -0.2 0 0.2 0.4 Jul 11 Jul 19 Jul 27 Aug 4 Aug 12 Aug 20 Aug 24 Aug 24 0.1/10 Degradation Event Accumulation Last 60 days Degrada",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "DEX report views",
+      "id": "dex-view-employee-sentiment",
+      "label": "Employee Device Satisfaction",
+      "path": "/experience/dashboard/view/employee-experience-report",
+      "catalogId": "employee-sentiment",
+      "category": "Workforce Experience",
+      "description": "End-user sentiment on devices, boot speed, and IT support — scores from DEX pulse surveys.",
+      "file": "073-dex-report-views-employee-device-satisfaction.png",
+      "finalUrl": "http://localhost:5176/experience/dashboard/view/employee-experience-report",
+      "ok": true,
+      "notes": {
+        "h1": "Employee Experience",
+        "h2": [],
+        "snippet": "Home Employee Experience Report Employee Experience Employee sentiment, satisfaction breakdown, and complaint themes Global Last 30 days Last 45 days Last 90 days Employee Sentiment Score Watch 6.8 / 10 -0.3 Total Respondents 1.33k Current Digital Experience Score Watch 7.1 / 10 Sentiment Trend Last 45 days Sentiment +0.2 over period 6.6 6.7 6.8 6.9 Jul 11 Jul 19 Jul 27 Aug 4 Aug 12 Aug 20 Aug 24 ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "DEX report views",
+      "id": "dex-view-employee-insights",
+      "label": "Top Employee Complaints (IT)",
+      "path": "/experience/dashboard/view/employee-experience-report",
+      "catalogId": "employee-insights",
+      "category": "Workforce Experience",
+      "description": "What users report: slow laptops, VPN, apps, printers, and meeting rooms — prioritized by volume.",
+      "file": "074-dex-report-views-top-employee-complaints-it.png",
+      "finalUrl": "http://localhost:5176/experience/dashboard/view/employee-experience-report",
+      "ok": true,
+      "notes": {
+        "h1": "Employee Experience",
+        "h2": [],
+        "snippet": "Home Employee Experience Report Employee Experience Employee sentiment, satisfaction breakdown, and complaint themes Global Last 30 days Last 45 days Last 90 days Employee Sentiment Score Watch 6.8 / 10 -0.3 Total Respondents 1.33k Current Digital Experience Score Watch 7.1 / 10 Sentiment Trend Last 45 days Sentiment +0.2 over period 6.6 6.7 6.8 6.9 Jul 11 Jul 19 Jul 27 Aug 4 Aug 12 Aug 20 Aug 24 ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "DEX report views",
+      "id": "dex-view-industry-benchmark",
+      "label": "DEX vs Industry Benchmark",
+      "path": "/experience/dashboard/view/adoption-benchmarks-report",
+      "catalogId": "industry-benchmark",
+      "category": "Benchmarks & Fleet Planning",
+      "description": "Compare your endpoint DEX and boot/login performance against peer organizations.",
+      "file": "075-dex-report-views-dex-vs-industry-benchmark.png",
+      "finalUrl": "http://localhost:5176/experience/dashboard/view/adoption-benchmarks-report",
+      "ok": true,
+      "notes": {
+        "h1": "End-User Experience Improvement",
+        "h2": [],
+        "snippet": "Home Adoption Benchmarks Report End-User Experience Improvement Satisfaction vs endpoint performance across domains Global Last 30 days Last 45 days Last 90 days End-User Satisfaction Index Watch 6.8 / 10 -0.2 Endpoint Performance Index Poor 6.2 / 10 Digital Experience Score Watch 7.1 / 10 Satisfaction by Location Current Americas Watch 6.83 /10 Europe Watch 6.72 /10 Middle East Watch 6.69 /10 APA",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "DEX report views",
+      "id": "dex-view-internal-benchmark-dept",
+      "label": "DEX by Site, Persona & Working Style",
+      "path": "/experience/dashboard/view/adoption-benchmarks-report",
+      "catalogId": "internal-benchmark-dept",
+      "category": "Benchmarks & Fleet Planning",
+      "description": "Internal benchmark: office vs remote, region, and role — find where device experience lags.",
+      "file": "076-dex-report-views-dex-by-site-persona-working-style.png",
+      "finalUrl": "http://localhost:5176/experience/dashboard/view/adoption-benchmarks-report",
+      "ok": true,
+      "notes": {
+        "h1": "End-User Experience Improvement",
+        "h2": [],
+        "snippet": "Home Adoption Benchmarks Report End-User Experience Improvement Satisfaction vs endpoint performance across domains Global Last 30 days Last 45 days Last 90 days End-User Satisfaction Index Watch 6.8 / 10 -0.2 Endpoint Performance Index Poor 6.2 / 10 Digital Experience Score Watch 7.1 / 10 Satisfaction by Location Current Americas Watch 6.83 /10 Europe Watch 6.72 /10 Middle East Watch 6.69 /10 APA",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "DEX report views",
+      "id": "dex-view-predictive-risk",
+      "label": "Predictive Device Risk",
+      "path": "/experience/dashboard/view/predictive-risk-modeling",
+      "catalogId": "predictive-risk",
+      "category": "Benchmarks & Fleet Planning",
+      "description": "Forecast devices at risk of failure, chronic degradation, and refresh candidates before tickets spike.",
+      "file": "077-dex-report-views-predictive-device-risk.png",
+      "finalUrl": "http://localhost:5176/experience/dashboard/view/predictive-risk-modeling",
+      "ok": true,
+      "notes": {
+        "h1": "Predictive & Risk Modeling",
+        "h2": [],
+        "snippet": "Home Predictive Risk Modeling Predictive & Risk Modeling Forecast basis, chronic device density — Open Forum / Innovation Global Last 30 days Last 45 days Last 90 days Degradation Velocity Trend High-risk cohort Degradation Velocity +0.0 over period -0.2 0 0.2 0.4 Jul 11 Jul 19 Jul 27 Aug 4 Aug 12 Aug 20 Aug 24 Aug 24 0.1/10 Lifecycle Risk Forecast Basis 90 days Lifecycle Risk Forecast Basis +0.0 ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "DEX report views",
+      "id": "dex-view-autonomous-operations",
+      "label": "Endpoint Auto-Remediation",
+      "path": "/experience/dashboard/view/autonomous-operations-control",
+      "catalogId": "autonomous-operations",
+      "category": "IT Service & Remediation",
+      "description": "Self-heal success rate on devices, ticket deflection, and RCA confidence for endpoint issues.",
+      "file": "078-dex-report-views-endpoint-auto-remediation.png",
+      "finalUrl": "http://localhost:5176/experience/dashboard/view/autonomous-operations-control",
+      "ok": true,
+      "notes": {
+        "h1": "Autonomous Operations Control",
+        "h2": [],
+        "snippet": "Home Autonomous Operations Control Autonomous Operations Control Guided triage + self-healing Global Last 30 days Last 45 days Last 90 days Ticket Deflection Rate 99% ++4.3 Ticket Deflection Trend Last 90 days Ticket Deflection +0.0 over period 98.2 98.4 98.6 98.8 99 Jul 11 Jul 19 Jul 27 Aug 4 Aug 12 Aug 20 Aug 24 Aug 24 98.6/10 Resolution by Type Last 30 days Middle East 100 Europe 98.0 Americas ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "DEX report views",
+      "id": "dex-view-itsm-ticket-optimization",
+      "label": "Device-Related Ticket Volume",
+      "path": "/experience/dashboard/view/itsm-ticket-optimization",
+      "catalogId": "itsm-ticket-optimization",
+      "category": "IT Service & Remediation",
+      "description": "Help-desk tickets tied to endpoints, deflection from automation, and cost per device incident.",
+      "file": "079-dex-report-views-device-related-ticket-volume.png",
+      "finalUrl": "http://localhost:5176/experience/dashboard/view/itsm-ticket-optimization",
+      "ok": true,
+      "notes": {
+        "h1": "ITSM & Ticket Optimization",
+        "h2": [],
+        "snippet": "Home Itsm Ticket Optimization ITSM & Ticket Optimization Ticket volume, deflection, and savings Global Last 30 days Last 45 days Last 90 days Annual Ticket Savings (USD) 167,229 Last 60 days Ticket Deflection % 99% ++4.3 Avg Ticket Cost (USD) 39.8 Current Issues Detected vs Resolved Last 60 days Issues Detected vs Resolved +0.0 over period 297266.6 297266.8 297267 297267.2 297267.4 Jul 11 Jul 19 J",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "DEX report views",
+      "id": "dex-view-mttr-efficiency",
+      "label": "Endpoint Incident MTTR",
+      "path": "/experience/dashboard/view/mttr-operational-efficiency",
+      "catalogId": "mttr-efficiency",
+      "category": "IT Service & Remediation",
+      "description": "Mean time to restore device experience — resolution speed by fault domain and persona.",
+      "file": "080-dex-report-views-endpoint-incident-mttr.png",
+      "finalUrl": "http://localhost:5176/experience/dashboard/view/mttr-operational-efficiency",
+      "ok": true,
+      "notes": {
+        "h1": "MTTR & Operational Efficiency",
+        "h2": [],
+        "snippet": "Home Mttr Operational Efficiency MTTR & Operational Efficiency Mean time to repair, resolution velocity Global Last 30 days Last 45 days Last 90 days Avg MTTR (minutes) 0.0 Last 90 days Avg Degradation Duration (min) 0.0 ++0.0 MTTR Trend Last 90 days MTTR +0.0 over period -0.4 -0.2 0 0.2 0.4 Jul 11 Jul 19 Jul 27 Aug 4 Aug 12 Aug 20 Aug 24 Aug 24 0.0/10 Resolution Count by Type Last 30 days Middle ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "DEX report views",
+      "id": "dex-view-financial-roi",
+      "label": "Device Ops — Cost & ROI",
+      "path": "/experience/dashboard/view/financial-impact-roi",
+      "catalogId": "financial-roi",
+      "category": "IT Service & Remediation",
+      "description": "CapEx avoided through right-sizing, ticket savings, and lifecycle governance on the PC fleet.",
+      "file": "081-dex-report-views-device-ops-cost-roi.png",
+      "finalUrl": "http://localhost:5176/experience/dashboard/view/financial-impact-roi",
+      "ok": true,
+      "notes": {
+        "h1": "Financial Impact & ROI",
+        "h2": [],
+        "snippet": "Home Financial Impact Roi Financial Impact & ROI CapEx + OpEx + ticket savings — Cost Optimization Global Last 30 days Last 45 days Last 90 days CapEx Avoidance (USD) 2,020,000 FY CapEx Avoidance Projection FY CapEx Avoidance Projection +0.0 over period 2019999.6 2019999.8 2020000 2020000.2 2020000.4 Jul 11 Jul 19 Jul 27 Aug 4 Aug 12 Aug 20 Aug 24 Aug 24 2020000.0/10 Ticket Cost Reduction FY Ticke",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "DEX report views",
+      "id": "dex-view-security-compliance",
+      "label": "Endpoint Compliance & Posture",
+      "path": "/experience/dashboard/view/governance-privilege-control",
+      "catalogId": "security-compliance",
+      "category": "IT Service & Remediation",
+      "description": "Patch compliance, vulnerability exposure, and governance scores across managed devices.",
+      "file": "082-dex-report-views-endpoint-compliance-posture.png",
+      "finalUrl": "http://localhost:5176/experience/dashboard/view/governance-privilege-control",
+      "ok": true,
+      "notes": {
+        "h1": "Governance & Privilege Control",
+        "h2": [],
+        "snippet": "Home Governance Privilege Control Governance & Privilege Control Compliance, vulnerability, escalation Global Last 30 days Last 45 days Last 90 days Patch Compliance Rate Poor 8.2 / 10 -0.4 Escalation Trend 90 Days Escalation +0.0 over period 1345.6 1345.8 1346 1346.2 1346.4 Jul 11 Jul 19 Jul 27 Aug 4 Aug 12 Aug 20 Aug 24 Aug 24 1346.0/10 Compliance Score by Site Current Europe Good 8.20 /10 APAC ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Create / edit overlays",
+      "id": "overlay-users-create",
+      "label": "Users — Create overlay",
+      "path": "/settings/users",
+      "openNames": [
+        {}
+      ],
+      "file": "083-create-edit-overlays-users-create-overlay.png",
+      "finalUrl": "http://localhost:5176/settings/users",
+      "ok": true,
+      "notes": {
+        "h1": "User accounts",
+        "h2": [
+          "Create user"
+        ],
+        "snippet": "Home Users Users RBAC SSO / SAML MFA Policy User accounts 43 records · Search users, open profiles, and manage roles and access. Create Columns All users 43 Pending approval 0 / Filters Email First Name Last Name Status User Type Last Login Tenant admin@nanoheal.com admin nanoheal Active Nanoheal 8/9/2026, 10:30:20 AM Axiom_4, Goliath_Tech, Krungsri_Kyndryl, , , , , Aug_17 prerana.prabhu@nanoheal.",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Create / edit overlays",
+      "id": "overlay-classification-create",
+      "label": "Classification — Create overlay",
+      "path": "/devices/organization/device-classification",
+      "openNames": [
+        {}
+      ],
+      "file": "084-create-edit-overlays-classification-create-overlay.png",
+      "finalUrl": "http://localhost:5176/devices/organization/device-classification",
+      "ok": true,
+      "notes": {
+        "h1": "Device classifications",
+        "h2": [
+          "New classification"
+        ],
+        "snippet": "Home Device Classification Device classifications 89 classifications · Group devices by classification for targeting and policy. Create Columns / Filters Name Type Machine group Device Count Created By Created On Last Modified Engineering CSV Machine group 1 admin admin@nanoheal.com 7/22/2025, 5:06:04 PM 10/22/2025, 6:05:59 PM India_South Manual Machine group 3 admin admin@nanoheal.com 11/20/2025,",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Create / edit overlays",
+      "id": "overlay-tenants-create",
+      "label": "Tenants — Create overlay",
+      "path": "/settings/organization/tenants",
+      "openNames": [
+        {}
+      ],
+      "file": "085-create-edit-overlays-tenants-create-overlay.png",
+      "finalUrl": "http://localhost:5176/settings/organization/tenants",
+      "ok": true,
+      "notes": {
+        "h1": "Tenants",
+        "h2": [
+          "Create tenant"
+        ],
+        "snippet": "Home Tenants Tenants 31 records · Browse sites and open tenant settings, versions, and security. Create Columns / Filters ID Tenant Name Organization Tenant key Contact email Active installs License pool 1 Default nanoheal-deploy-default-site-1 0 5e9d7820… (Unlimited) 8 Axiom_4 4992455840 admin@nanoheal.com 4 de2cca9a… (100 seats) 9 Goliath_Tech 6901049927 admin@nanoheal.com 0 6bc04ecb… (100 seats",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Create / edit overlays",
+      "id": "overlay-automation-create",
+      "label": "Automation — Create overlay",
+      "path": "/actions/library",
+      "openNames": [
+        {}
+      ],
+      "file": "086-create-edit-overlays-automation-create-overlay.png",
+      "finalUrl": "http://localhost:5176/actions/library/visual-builder",
+      "ok": true,
+      "notes": {
+        "h1": "Workflow builder",
+        "h2": [
+          "What needs fixing?"
+        ],
+        "snippet": "Home Visual Builder Workflow builder What needs fixing? Describe the issue in natural language. We'll suggest a workflow you can customise. What needs fixing? / to automation library Type a problem to continue Continue QUICK STARTS ⚡ 60 - Clear files from folders and sub-folders ⚡ 73 - System Action ⚡ 269 - Display Message to User ⚡ 288 - Software Patch Blank workflow Start from scratch with a bla",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Create / edit overlays",
+      "id": "overlay-data-collection-create",
+      "label": "Data Collection — Create overlay",
+      "path": "/actions/catalogs/data-collection",
+      "openNames": [
+        {}
+      ],
+      "file": "087-create-edit-overlays-data-collection-create-overlay.png",
+      "finalUrl": "http://localhost:5176/actions/catalogs/data-collection",
+      "ok": true,
+      "notes": {
+        "h1": "Data collection",
+        "h2": [
+          "Create data collection profile",
+          "What do you want to monitor?"
+        ],
+        "snippet": "Home Data Collection Data collection 9 · Profiles for performance, storage, user activity, and network monitoring. Create Columns / Filters Profile Description Monitoring Collectors Status Last modified Disk health Disk health — 0 Not Attached 3 days ago Device health Device health — 0 Not Attached 3 days ago Network Monitoring - for Sales Team Collects network connectivity and related network inf",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Create / edit overlays",
+      "id": "overlay-device-protection-create",
+      "label": "Device Protection — Create overlay",
+      "path": "/actions/catalogs/device-protection",
+      "openNames": [
+        {}
+      ],
+      "file": "088-create-edit-overlays-device-protection-create-overlay.png",
+      "finalUrl": "http://localhost:5176/actions/catalogs/device-protection",
+      "ok": true,
+      "notes": {
+        "h1": "Protection policies",
+        "h2": [
+          "Create protection profile",
+          "Which policies do you need?"
+        ],
+        "snippet": "Home Device Protection Protection policies 7 · Profiles for registry, services, application control, paths, and USB. Create Columns / Filters Profile Policies Count Status Last modified spooler check 0 Not Attached — new device 0 Not Attached — device neww 0 Not Attached — device 0 Not Attached — Interactive logon: machine inactivity limit 0 Active — Microsoft Defender: real-time protection 0 Acti",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Create / edit overlays",
+      "id": "overlay-integrations-add",
+      "label": "Integrations — Add connector",
+      "path": "/settings/integrations",
+      "openNames": [
+        {},
+        {},
+        {}
+      ],
+      "file": "089-create-edit-overlays-integrations-add-connector.png",
+      "finalUrl": "http://localhost:5176/settings/integrations",
+      "ok": true,
+      "notes": {
+        "h1": "Connectors",
+        "h2": [
+          "Add connector"
+        ],
+        "snippet": "Home Integrations Connectors API Keys API catalog Event Subscriptions Connectors 5 connectors · Connect Nanoheal to a product (ServiceNow, Teams, Slack). To send Nanoheal events to a URL, use Event Subscriptions. Add connector Columns / Filters Site Name Type Description Status Connection Created Axiom HQ ServiceNow Production ServiceNow Bidirectional ITSM sync for incidents, change requests, and ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Create / edit overlays",
+      "id": "overlay-inventory-add-device",
+      "label": "Inventory — Add device",
+      "path": "/devices/inventory/census",
+      "openNames": [
+        {}
+      ],
+      "file": "090-create-edit-overlays-inventory-add-device.png",
+      "finalUrl": "http://localhost:5176/devices/inventory/census",
+      "ok": true,
+      "notes": {
+        "h1": "Devices",
+        "h2": [
+          "Add device"
+        ],
+        "snippet": "Home Devices Inventory Devices 63 devices · Healthy 0 Pending sync 0 · Inventory, classify, and manage managed endpoints. Add device Export Columns All Devices 63 Windows 47 macOS 10 Android 0 Linux 5 Unknown / Filters Device / Endpoint Status OS Last seen Agent Installed date MTL-NB-FIN-08 — Microsoft Windows 11 Pro 10.0.22631 4/2/2026, 5:15:08 PM 2.8.2.1185 2/16/2026, 5:15:08 PM RETAIL-POS-STORE",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": true,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Create / edit overlays",
+      "id": "overlay-score-models-create",
+      "label": "Score Models — Create overlay",
+      "path": "/compliance/policy/score-models",
+      "ok": false,
+      "error": "No create control",
+      "notes": {
+        "snippet": "Score Models list has no Create control in this build; list/read only.",
+        "comingSoon": false
+      }
+    },
+    {
+      "section": "Create / edit overlays",
+      "id": "overlay-swd-create",
+      "label": "Software Distribution — Create overlay",
+      "path": "/devices/software/software-distribution",
+      "file": "099-create-edit-overlays-software-distribution-create-overlay.png",
+      "finalUrl": "http://localhost:5176/devices/software/software-distribution",
+      "ok": true,
+      "notes": {
+        "h1": "Profile builder",
+        "snippet": "Home Software Distribution Profile builder DRAFT Load 7-Zip example Design History Switch to Form View ✓ Package 2 Build 3 Options 4 Review Operating system Which OS should these patches run on? Select OS BUILD SEQUENCE 1 action — pick a type or configure below the card. 1 action Add action DO — ACTION Action Pick Download file or Execute command below this card. Incomplete Pick Download file or E",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Create / edit overlays",
+      "id": "overlay-workflow-blank",
+      "label": "Workflow Builder — Blank workflow",
+      "path": "/actions/library/visual-builder",
+      "file": "093-create-edit-overlays-workflow-builder-blank-workflow.png",
+      "finalUrl": "http://localhost:5176/actions/library/visual-builder",
+      "ok": true,
+      "notes": {
+        "h1": "Workflow builder",
+        "h2": [],
+        "snippet": "Home Visual Builder Workflow builder DRAFT 1 Actions 2 Details 3 Review WORKFLOW TIMELINE Click WHEN to change the trigger, then add what should run next. 0 actions WHEN When triggered manually DO Add your first action Pick what the device should do after this trigger — from Assets or by pressing /. Add action or press / COMPLETE Device remediation finished ACTIONS Select a step on the timeline to",
+        "comingSoon": false,
+        "stillLoading": false,
+        "overlayOpen": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Device detail",
+      "id": "device-detail-drawer",
+      "label": "Inventory — Device detail drawer",
+      "path": "/devices/inventory/census",
+      "kind": "drawer",
+      "file": "104-device-detail-inventory-drawer.png",
+      "ok": true,
+      "finalUrl": "http://localhost:5176/devices/inventory/census",
+      "notes": {
+        "h1": "Devices",
+        "snippet": "Home Devices Inventory Devices 63 devices · Healthy 0 Pending sync 0 · Inventory, classify, and manage managed endpoints. Add device Export Columns All Devices 63 Windows 47 macOS 10 Android 0 Linux 5 Unknown / Filters Device / Endpoint Status OS Last seen Agent Installed date MTL-NB-FIN-08 — Microsoft Windows 11 Pro 10.0.22631 4/2/2026, 5:15:08 PM 2.8.2.1185 2/16/2026, 5:15:08 PM RETAIL-POS-STORE",
+        "comingSoon": false,
+        "stillLoading": false
+      }
+    },
+    {
+      "section": "Device detail",
+      "id": "device-detail-full",
+      "label": "Device detail — full page",
+      "path": "/system-settings/census/07746bef-d0d1-2aac-2a6d-32289b3c50de",
+      "file": "105-device-detail-full-page.png",
+      "ok": true,
+      "finalUrl": "http://localhost:5176/system-settings/census/07746bef-d0d1-2aac-2a6d-32289b3c50de",
+      "notes": {
+        "h1": "",
+        "snippet": "Home 07746bef D0d1 2aac 2a6d 32289b3c50de",
+        "comingSoon": false,
+        "stillLoading": false
+      }
+    },
+    {
+      "section": "Create / edit overlays",
+      "id": "overlay-users-edit",
+      "label": "Users — Detail / edit drawer",
+      "path": "/settings/users",
+      "kind": "drawer",
+      "file": "106-create-edit-overlays-users-detail-drawer.png",
+      "ok": true,
+      "finalUrl": "http://localhost:5176/settings/users",
+      "notes": {
+        "h1": "User accounts",
+        "snippet": "Home Users Users RBAC SSO / SAML MFA Policy User accounts 43 records · Search users, open profiles, and manage roles and access. Create Columns All users 43 Pending approval 0 / Filters Email First Name Last Name Status User Type Last Login Tenant admin@nanoheal.com admin nanoheal Active Nanoheal 8/9/2026, 10:30:20 AM Axiom_4, Goliath_Tech, Krungsri_Kyndryl, , , , , Aug_17 prerana.prabhu@nanoheal.",
+        "comingSoon": false,
+        "stillLoading": false
+      }
+    },
+    {
+      "section": "Workflow Builder deep",
+      "id": "wf-hub",
+      "label": "01 Hub — templates & create custom",
+      "path": "/actions/library/visual-builder",
+      "file": "111-workflow-builder-deep-01-hub-templates-create-custom.png",
+      "finalUrl": "http://localhost:5176/actions/library/visual-builder",
+      "ok": true,
+      "notes": {
+        "h1": "Workflow builder",
+        "snippet": "Home Visual Builder Workflow builder What needs fixing? Describe the issue in natural language. We'll suggest a workflow you can customise. What needs fixing? / to automation library Type a problem to continue Continue QUICK STARTS 🖥 Slow Computer 🧹 Recover Disk Space 🔄 Restart Application 🌐 Repair VPN ⚡ High CPU 🖨 Printer Issues Blank workflow Start from scratch with a blank canvas AUTOMATIO",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Workflow Builder deep",
+      "id": "wf-actions",
+      "label": "02 Actions canvas",
+      "path": "/actions/library/visual-builder",
+      "file": "112-workflow-builder-deep-02-actions-canvas.png",
+      "finalUrl": "http://localhost:5176/actions/library/visual-builder",
+      "ok": true,
+      "notes": {
+        "h1": "Disk Cleanup",
+        "snippet": "Home Visual Builder Disk Cleanup DRAFT Workflow builder 1 Actions 2 Details 3 Review Workflow valid Complete device condition rules Live validation WORKFLOW TIMELINE Drag actions to reorder · click to configure 8 actions Add action WHEN Event: High disk usage alert DO Copy of Copy of Copy of Clear disk spac sch new DART 269269 - Display Message to User Action risk: Low Msg Box Title: Clear disk sp",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Workflow Builder deep",
+      "id": "wf-details",
+      "label": "03 Details — When (On demand / Event / Schedule)",
+      "path": "/actions/library/visual-builder",
+      "file": "113-workflow-builder-deep-03-details-when-on-demand-event-schedule.png",
+      "finalUrl": "http://localhost:5176/actions/library/visual-builder",
+      "ok": true,
+      "notes": {
+        "h1": "Disk Cleanup",
+        "snippet": "Home Visual Builder Disk Cleanup DRAFT Workflow builder ✓ Actions 2 Details 3 Review Workflow valid Complete device condition rules Live validation WORKFLOW TIMELINE Drag actions to reorder · click to configure 8 actions Add action WHEN Event: High disk usage alert DO Copy of Copy of Copy of Clear disk spac sch new DART 269269 - Display Message to User Action risk: Low Msg Box Title: Clear disk sp",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Workflow Builder deep",
+      "id": "wf-when-ondemand",
+      "label": "04 When — On demand (selfhelp)",
+      "path": "/actions/library/visual-builder",
+      "file": "114-workflow-builder-deep-04-when-on-demand-selfhelp.png",
+      "finalUrl": "http://localhost:5176/actions/library/visual-builder",
+      "ok": true,
+      "notes": {
+        "h1": "Disk Cleanup",
+        "snippet": "Home Visual Builder Disk Cleanup DRAFT Workflow builder ✓ Actions 2 Details 3 Review Workflow valid Trigger configured Live validation WORKFLOW TIMELINE Drag actions to reorder · click to configure 8 actions Add action WHEN On demand: High disk usage alert DO Copy of Copy of Copy of Clear disk spac sch new DART 269269 - Display Message to User Action risk: Low Msg Box Title: Clear disk spac sch DO",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Workflow Builder deep",
+      "id": "wf-when-event",
+      "label": "05 When — Event Trigger (autoheal)",
+      "path": "/actions/library/visual-builder",
+      "file": "115-workflow-builder-deep-05-when-event-trigger-autoheal.png",
+      "finalUrl": "http://localhost:5176/actions/library/visual-builder",
+      "ok": true,
+      "notes": {
+        "h1": "Disk Cleanup",
+        "snippet": "Home Visual Builder Disk Cleanup DRAFT Workflow builder ✓ Actions 2 Details 3 Review Workflow valid Complete device condition rules Live validation WORKFLOW TIMELINE Drag actions to reorder · click to configure 8 actions Add action WHEN Event: High disk usage alert DO Copy of Copy of Copy of Clear disk spac sch new DART 269269 - Display Message to User Action risk: Low Msg Box Title: Clear disk sp",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Workflow Builder deep",
+      "id": "wf-when-schedule",
+      "label": "06 When — Schedule (scheduler)",
+      "path": "/actions/library/visual-builder",
+      "file": "116-workflow-builder-deep-06-when-schedule-scheduler.png",
+      "finalUrl": "http://localhost:5176/actions/library/visual-builder",
+      "ok": true,
+      "notes": {
+        "h1": "Disk Cleanup",
+        "snippet": "Home Visual Builder Disk Cleanup DRAFT Workflow builder ✓ Actions 2 Details 3 Review Workflow valid Trigger configured Live validation WORKFLOW TIMELINE Drag actions to reorder · click to configure 8 actions Add action WHEN every weekday at 9:00 AM DO Copy of Copy of Copy of Clear disk spac sch new DART 269269 - Display Message to User Action risk: Low Msg Box Title: Clear disk spac sch DO Copy of",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Workflow Builder deep",
+      "id": "wf-conditions",
+      "label": "07 Conditions — Matches / Does not match",
+      "path": "/actions/library/visual-builder",
+      "file": "117-workflow-builder-deep-07-conditions-matches-does-not-match.png",
+      "finalUrl": "http://localhost:5176/actions/library/visual-builder",
+      "ok": true,
+      "notes": {
+        "h1": "Disk Cleanup",
+        "snippet": "Home Visual Builder Disk Cleanup DRAFT Workflow builder ✓ Actions 2 Details 3 Review Workflow valid Trigger configured Live validation WORKFLOW TIMELINE Drag actions to reorder · click to configure 8 actions Add action WHEN every weekday at 9:00 AM DO Copy of Copy of Copy of Clear disk spac sch new DART 269269 - Display Message to User Action risk: Low Msg Box Title: Clear disk spac sch DO Copy of",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Workflow Builder deep",
+      "id": "wf-review",
+      "label": "08 Review before save",
+      "path": "/actions/library/visual-builder",
+      "file": "118-workflow-builder-deep-08-review-before-save.png",
+      "finalUrl": "http://localhost:5176/actions/library/visual-builder",
+      "ok": true,
+      "notes": {
+        "h1": "Disk Cleanup",
+        "snippet": "Home Visual Builder Disk Cleanup DRAFT Workflow builder ✓ Actions 2 Details 3 Review Workflow valid Trigger configured Live validation WORKFLOW TIMELINE Drag actions to reorder · click to configure 8 actions Add action WHEN every weekday at 9:00 AM DO Copy of Copy of Copy of Clear disk spac sch new DART 269269 - Display Message to User Action risk: Low Msg Box Title: Clear disk spac sch DO Copy of",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Workflow Builder deep",
+      "id": "wf-inspector",
+      "label": "09 Library inspector — edit / link",
+      "path": "/actions/library",
+      "file": "119-workflow-builder-deep-09-library-inspector-edit-link.png",
+      "finalUrl": "http://localhost:5176/actions/library",
+      "ok": true,
+      "notes": {
+        "h1": "Profiles",
+        "snippet": "Home Library Profiles Playbooks Profiles 51 profiles · Browse, create, and assign profiles. Create Columns / Filters Name Description Type Status Last Modified Teams Cache Remediation Recovers a broken Microsoft Teams desktop session after crashes or a stuck “Signing in…” loop. Stops hung Teams processes, clears corrupted cache folders, relaunches the client, and confirms the app reaches the main ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Workflow Builder deep",
+      "id": "wf-link-scope",
+      "label": "10 Link scope confirm",
+      "path": "/actions/library",
+      "file": "120-workflow-builder-deep-10-link-scope-confirm.png",
+      "finalUrl": "http://localhost:5176/actions/library",
+      "ok": true,
+      "notes": {
+        "h1": "Profiles",
+        "snippet": "Home Library Profiles Playbooks Profiles 51 profiles · Browse, create, and assign profiles. Create Columns / Filters Name Description Type Status Last Modified Teams Cache Remediation Recovers a broken Microsoft Teams desktop session after crashes or a stuck “Signing in…” loop. Stops hung Teams processes, clears corrupted cache folders, relaunches the client, and confirms the app reaches the main ",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Software Distribution deep",
+      "id": "swd-list",
+      "label": "01 Install profiles list",
+      "path": "/devices/software/software-distribution",
+      "file": "121-software-distribution-deep-01-install-profiles-list.png",
+      "finalUrl": "http://localhost:5176/devices/software/software-distribution",
+      "ok": true,
+      "notes": {
+        "h1": "Software install profiles",
+        "snippet": "Home Software Distribution Software install profiles Software uninstall profiles Reusable SWD snippets Deploy Software install profiles 3 profiles · Profiles that install software on managed devices. Create profile Columns / Filters Profile name Category Description Status Created Modified Uninstall Legacy Agent uninstallation Removes superseded agent builds before a major upgrade. Active 8/25/202",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Software Distribution deep",
+      "id": "swd-create",
+      "label": "02 Create software distribution profile",
+      "path": "/devices/software/software-distribution",
+      "file": "122-software-distribution-deep-02-create-software-distribution-profile.png",
+      "finalUrl": "http://localhost:5176/devices/software/software-distribution",
+      "ok": true,
+      "notes": {
+        "h1": "Profile builder",
+        "snippet": "Home Software Distribution Profile builder DRAFT Load 7-Zip example Design History Switch to Form View ✓ Package 2 Build 3 Options 4 Review Operating system Which OS should these patches run on? Select OS BUILD SEQUENCE 1 action — pick a type or configure below the card. 1 action Add action DO — ACTION Action Pick Download file or Execute command below this card. Incomplete Pick Download file or E",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Software Distribution deep",
+      "id": "swd-deploy-tab",
+      "label": "05 Deploy tab",
+      "path": "/devices/software/swd-push-audit",
+      "file": "106-manage-deploy-seeded.png",
+      "finalUrl": "http://localhost:5176/devices/software/swd-push-audit",
+      "ok": true,
+      "notes": {
+        "h1": "Software distribution — Deploy",
+        "snippet": "Home Swd Push Audit Software distribution — Deploy 0 rows · Deploy queue and per-device audit for software install and uninstall jobs. Columns / Filters No deploy rows Rows appear after software distribution jobs are pushed to devices.",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    },
+    {
+      "section": "Software Distribution deep",
+      "id": "swd-deploy-page",
+      "label": "06 Deploy page (queue & audit)",
+      "path": "/devices/software/swd-push-audit",
+      "file": "106-manage-deploy-seeded.png",
+      "finalUrl": "http://localhost:5176/devices/software/swd-push-audit",
+      "ok": true,
+      "notes": {
+        "h1": "Software distribution — Deploy",
+        "snippet": "Home Swd Push Audit Software distribution — Deploy 0 rows · Deploy queue and per-device audit for software install and uninstall jobs. Columns / Filters No deploy rows Rows appear after software distribution jobs are pushed to devices.",
+        "comingSoon": false,
+        "stillLoading": false,
+        "title": "nanoheal - V1.2"
+      }
+    }
+  ],
+  "pages": [
+    {
+      "id": "automate-scheduling",
+      "section": "Recapture",
+      "label": "automate-scheduling",
+      "file": "047-disabled-menu-scheduling.png",
+      "path": "/actions/scheduling",
+      "finalUrl": "http://localhost:5176/actions/scheduling",
+      "ok": true,
+      "notes": {
+        "h1": "Schedules",
+        "snippet": "Home Scheduling Schedules Deployed workflows on a recurring schedule. Edit cadence here — build workflows in Workflow Builder. No scheduled deployments yet Publish a workflow with \"Run on Schedule\" in Workflow Builder.",
+        "title": "nanoheal - V1.2"
+      },
+      "recapturedAt": "2026-08-25T12:50:39.219Z"
+    },
+    {
+      "id": "monitoring-profiles",
+      "section": "Recapture",
+      "label": "monitoring-profiles",
+      "file": "095-disabled-menu-monitoring.png",
+      "path": "/actions/catalogs/monitoring",
+      "finalUrl": "http://localhost:5176/actions/catalogs/monitoring",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "snippet": "Home Monitoring",
+        "title": "nanoheal - V1.2"
+      },
+      "recapturedAt": "2026-08-25T12:50:47.374Z"
+    },
+    {
+      "id": "admin-deployment",
+      "section": "Recapture",
+      "label": "admin-deployment",
+      "file": "096-disabled-menu-deployment.png",
+      "path": "/settings/deployment",
+      "finalUrl": "http://localhost:5176/settings/deployment",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "snippet": "Home Deployment",
+        "title": "nanoheal - V1.2"
+      },
+      "recapturedAt": "2026-08-25T12:50:55.229Z"
+    },
+    {
+      "id": "version-catalog",
+      "section": "Recapture",
+      "label": "version-catalog",
+      "file": "097-disabled-menu-version-catalog.png",
+      "path": "/settings/agents",
+      "finalUrl": "http://localhost:5176/settings/agents",
+      "ok": true,
+      "notes": {
+        "h1": "Version catalog",
+        "snippet": "Home Agent Management Versions & rings Device updates Version catalog Uploads Version catalog Loading… · Client versions and platforms sites can target for updates. Add catalog entry Columns / Filters",
+        "title": "nanoheal - V1.2"
+      },
+      "recapturedAt": "2026-08-25T12:51:06.013Z"
+    },
+    {
+      "id": "gpo-policies",
+      "section": "Recapture",
+      "label": "gpo-policies",
+      "file": "098-disabled-menu-gpo-policies.png",
+      "path": "/compliance/gpo-policies",
+      "finalUrl": "http://localhost:5176/compliance/gpo-policies",
+      "ok": true,
+      "notes": {
+        "h1": "",
+        "snippet": "Home Gpo Policies",
+        "title": "nanoheal - V1.2"
+      },
+      "recapturedAt": "2026-08-25T12:51:14.413Z"
+    },
+    {
+      "id": "compliance-policy-execution",
+      "section": "Recapture",
+      "label": "compliance-policy-execution",
+      "file": "058-disabled-menu-policy-execution.png",
+      "path": "/compliance/policy-execution",
+      "finalUrl": "http://localhost:5176/compliance/policy-execution",
+      "ok": true,
+      "notes": {
+        "h1": "Policy execution",
+        "snippet": "Home Policy Execution Policy execution 6 records · Per-device status for policy execution runs. Columns / Filters Policy definition Device ID Status Last run Error Retries 3 98422983-d9dc-b7b7-12a5-28a3addadf3e success 8/25/2026, 4:39:16 PM 0 2 3f921c51-492c-a61f-c948-c47b8a51d042 success 8/25/2026, 4:59:16 PM 0 1 814e491d-aa30-b6f8-7055-0f16d7f7adad running 8/25/2026, 5:19:16 PM 0 3 159c2dfc-9796",
+        "title": "nanoheal - V1.2"
+      },
+      "recapturedAt": "2026-08-25T12:51:22.259Z"
+    },
+    {
+      "id": "actions-results",
+      "section": "Recapture",
+      "label": "actions-results",
+      "file": "103-manage-execution-history-seeded.png",
+      "path": "/manage/execution-history",
+      "finalUrl": "http://localhost:5176/manage/execution-history",
+      "ok": true,
+      "notes": {
+        "h1": "Execution history",
+        "snippet": "Home Execution History Executions / Logs Queue Execution history 195 executions · Solutions pushed to devices — success, failed, and pending outcomes. Columns / Filters Automation / Profile Machine Agent Type DART Batch Status Queued At Executed At Disk Cleanup — free space safely NHL100050 Nanoheal Endpoint Agent remediation 304 0 Success 8/25/2026, 5:30:38 PM 8/25/2026, 5:30:38 PM VPN Repair — r",
+        "title": "nanoheal - V1.2"
+      },
+      "recapturedAt": "2026-08-25T12:51:30.665Z"
+    },
+    {
+      "id": "swd-push-audit",
+      "section": "Recapture",
+      "label": "swd-push-audit",
+      "file": "106-manage-deploy-seeded.png",
+      "path": "/devices/software/swd-push-audit",
+      "finalUrl": "http://localhost:5176/devices/software/swd-push-audit",
+      "ok": true,
+      "notes": {
+        "h1": "Software distribution — Deploy",
+        "snippet": "Home Swd Push Audit Software distribution — Deploy 9 rows · Deploy queue and per-device audit for software install and uninstall jobs. Columns / Filters Batch ID Profile Name Machine Agent Name Status Pushed At Executed At 88006 Install 7-Zip (x64) CORP-DESKTOP-7XKM92L Nanoheal Endpoint Agent Active 8/25/2026, 4:00:38 PM 8/25/2026, 4:10:38 PM 88007 Install Contoso Agent ENG-MAC-JCHEN-01 Nanoheal E",
+        "title": "nanoheal - V1.2"
+      },
+      "recapturedAt": "2026-08-25T12:51:38.564Z"
+    },
+    {
+      "id": "census",
+      "section": "Recapture",
+      "label": "census",
+      "file": "104-device-detail-inventory-drawer.png",
+      "path": "/devices/inventory/census",
+      "finalUrl": "http://localhost:5176/devices/inventory/census",
+      "ok": true,
+      "notes": {
+        "h1": "Devices",
+        "snippet": "Home Devices Inventory Devices 63 devices · Healthy … Pending sync … Errors … · Inventory, classify, and manage managed endpoints. Add device Export Columns All Devices 63 Windows 47 macOS 10 Android 0 Linux 5 Unknown ··· / Filters Device / Endpoint Status OS Last seen Agent Installed date MTL-NB-FIN-08 — Microsoft Windows 11 Pro 10.0.22631 4/2/2026, 5:15:08 PM 2.8.2.1185 2/16/2026, 5:15:08 PM RET",
+        "title": "nanoheal - V1.2"
+      },
+      "recapturedAt": "2026-08-25T12:51:47.182Z"
+    },
+    {
+      "id": "selfhelp-library",
+      "section": "Recapture",
+      "label": "selfhelp-library",
+      "file": "125-automate-selfhelp-library.png",
+      "path": "/actions/library",
+      "finalUrl": "http://localhost:5176/actions/library",
+      "ok": true,
+      "notes": {
+        "h1": "Profiles",
+        "snippet": "Home Library Profiles Playbooks Profiles 51 profiles · Clear filters · Browse, create, and assign profiles. Create Columns / Filters Name Description Type Status Last Modified Disk Cleanup — free space safely Finds temporary and cache files, then frees disk space without removing user documents. selfhelp Active 8/25/2026, 6:19:03 PM Disk Cleanup Cleans up unwanted files, caches, logs, and other un",
+        "title": "nanoheal - V1.2"
+      },
+      "recapturedAt": "2026-08-25T12:51:58.595Z"
+    },
+    {
+      "id": "autoheal-library",
+      "section": "Recapture",
+      "label": "autoheal-library",
+      "file": "126-automate-autoheal-library.png",
+      "path": "/actions/library",
+      "finalUrl": "http://localhost:5176/actions/library",
+      "ok": true,
+      "notes": {
+        "h1": "Profiles",
+        "snippet": "Home Library Profiles Playbooks Profiles 51 profiles · Clear filters · Browse, create, and assign profiles. Create Columns / Filters Name Description Type Status Last Modified VPN Repair — reconnect & verify Restarts the VPN client, clears stuck tunnels, and verifies connectivity after failure. autoheal Active 8/25/2026, 6:19:03 PM 1–25 of 51 Show 10 25 50 100 per page Prev 1/3 Next",
+        "title": "nanoheal - V1.2"
+      },
+      "recapturedAt": "2026-08-25T12:52:10.359Z"
+    }
+  ],
+  "recaptureBlankScreens": {
+    "at": "2026-08-25T12:52:10.359Z",
+    "count": 11,
+    "note": "Pass after audits-list-read Prisma handler + walkthrough seed (execution_status, schedules, VC)"
+  }
+}

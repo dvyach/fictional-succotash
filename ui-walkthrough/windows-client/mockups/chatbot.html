@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nanoheal — Chat FAB closed</title>
+  <style>
+    /* Closed state: WidgetIframe FAB — Nanoheal icon, bottom-right, no blue circle */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      background: #c5ccd6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    }
+    .frame {
+      position: relative;
+      width: 1024px;
+      max-width: 100%;
+      aspect-ratio: 1024 / 552;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.22);
+      border-radius: 4px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .frame > img.landing {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top left;
+    }
+    .fab {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      width: 48px;
+      height: 48px;
+      border: none;
+      border-radius: 50%;
+      background: transparent;
+      cursor: pointer;
+      z-index: 20;
+      display: grid;
+      place-items: center;
+      padding: 0;
+    }
+    .fab img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      display: block;
+      filter: drop-shadow(0 2px 6px rgba(15, 23, 42, 0.22));
+    }
+  </style>
+</head>
+<body>
+  <div class="frame" aria-label="Landing with Nanoheal chat FAB">
+    <img class="landing" src="landing-bg.png" alt="Existing Nanoheal landing page" />
+    <button type="button" class="fab" title="Open chat" aria-label="Open Nanoheal chat">
+      <img src="logo-icon.png" alt="" />
+    </button>
+  </div>
+</body>
+</html>

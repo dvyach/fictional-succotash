@@ -40,7 +40,7 @@ Only tables with `V2` in the name were analyzed (historical live audit). Demo se
 1. `compliance_v2`
 2. `events_v2`
 3. `inventory_v2`
-4. `network_telemetry_v2`
+4. `network_connection_telemetry_v2` (formerly `network_telemetry_v2`)
 5. `process_telemetry_metrics_v2`
 6. `software_inventory_v2`
 7. `system_telemetry_metrics_v2`
@@ -55,7 +55,7 @@ Non-V2 tables (`system`, `process`, `aimx`, etc.) were intentionally ignored.
 |-------|------|--------------------|-------------------|----------------|-----------|
 | `system_telemetry_metrics_v2` | 5,040 | 1 | 8 | 8 | ~2026-07-01 → 2026-08-10 |
 | `process_telemetry_metrics_v2` | 6,720 | 1 | 8 | 8 | same |
-| `network_telemetry_v2` | 4,736 | 1 | 8 | 8 | same |
+| `network_connection_telemetry_v2` | 4,736 | 1 | 8 | 8 | same |
 | `url_telemetry_v2` | 1,330 | 1 | 8 | 8 | same |
 | `compliance_v2` | 1,968 | 1 | 8 | 8 | same |
 | `inventory_v2` | 48 | 1 | 8 | 8 | same |
@@ -118,10 +118,11 @@ Non-V2 tables (`system`, `process`, `aimx`, etc.) were intentionally ignored.
 
 **Insufficient for:** app launch time, hang duration, UI freeze detection, foreground vs background, productivity impact.
 
-### 3.3 `network_telemetry_v2` — connection-level network metrics
+### 3.3 `network_connection_telemetry_v2` — process/connection network metrics
 
-**Metrics:** `round_trip_time`, `dns_lookup_time`, `data_sent`, `data_received`, `tcp_established_connections`, NIC speeds  
-**Dimensions:** protocol, local/remote address/port, connection_state, process_name/pid  
+**Metrics:** `avg_rtt_ms` (was `round_trip_time`), `dns_lookup_time`, `data_sent`, `data_received`, `tcp_established_connections`, packet loss / retransmits  
+**Dimensions:** protocol, local/remote address/port, `connection_state`, `process_name`/`process_id`  
+**NIC upload/download:** machine counters on `system_telemetry_metrics_v2` only (not this table)
 
 **Strong signal in sample:** extreme RTT/DNS outliers on specific machines (p95 RTT tens of seconds) — classic “average hides the problem” case.
 
@@ -177,7 +178,7 @@ customer_id + machine_id
         │
         ├─ system_telemetry_metrics_v2   (device metrics @ server_time)
         ├─ process_telemetry_metrics_v2  (process metrics @ server_time)
-        ├─ network_telemetry_v2          (conn metrics @ server_time)
+        ├─ network_connection_telemetry_v2 (conn metrics @ server_time)
         ├─ url_telemetry_v2              (http metrics @ server_time)
         ├─ events_v2                     (discrete events @ server_time)
         ├─ compliance_v2                 (control observations)

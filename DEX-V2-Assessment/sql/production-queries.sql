@@ -39,9 +39,9 @@ SELECT machine_id, user_name, device_group,
   PERCENTILE(metric_value, 95) AS p95_rtt,
   MAX(metric_value) AS max_rtt,
   COUNT(*) AS samples
-FROM network_telemetry_v2
+FROM network_connection_telemetry_v2
 WHERE customer_id = :customer_id
-  AND metric_name = 'round_trip_time'
+  AND metric_name = 'avg_rtt_ms'
   AND server_time >= :from_ms AND server_time < :to_ms
 GROUP BY machine_id, user_name, device_group
 ORDER BY p95_rtt DESC;
